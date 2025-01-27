@@ -5,6 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chennai tourism</title>
+
+<script>
+    function show1()
+    {
+        let h = document.getElementsByClassName('menu').style.visibility='hidden';
+
+        if(h==hidden){
+        let v = document.getElementsByClassName('menu').style.visibility= 'visible';
+        }
+        else{
+        let v=document.getElementsByClassName('menu').style.visibility='hidden';
+        }
+    }
+    function show() {
+    let menu = document.getElementsByClassName('menu')[0]; // Get the first (and only) element with class 'menu'
+    
+    // Toggle visibility based on current state
+    if (menu.style.visibility === 'hidden') {
+        menu.style.visibility = 'visible';
+    } else {
+        menu.style.visibility = 'hidden';
+    }
+}
+
+</script>
     <style>
         h1 {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -207,13 +232,47 @@
             margin: 10px;
             font-size: 40px;
         }
+        .menu{
+            visibility: hidden;
+            position:absolute;
+            font-size: 20px;
+            width: 100px;
+            height: 40px;
+            margin: 10px;
+            border: 0px;
+            box-shadow: 2px 3px 3px;
+        }
+        .menu1{
+            width: 200px;
+            height:40px;
+            margin-left:65px;
+            margin-top:2px;
+        }
+        .menu2{
+            width: 200px;
+            height:40px;
+            margin-left:65px;
+            margin-top:2px;
+        }
+        .menu3{
+            width: 200px;
+            height:40px;
+            margin-left:65px;
+            margin-top:2px;
+        }
+        .menu4{
+            width: 200px;
+            height:40px;
+            margin-left:65px;
+            margin-top:2px;
+        }
     </style>
 </head>
 
 <body>
     <div class="main">
         <div class="icons">
-            <button class="options"></button>
+            <button class="options" onclick="show()"></button>
             <button class="plane"><span class="tooltip">Book your Flight</span></button>
             <button class="food"><span class="tooltip">Food </span></button>
             <button class="hotel"><span class="tooltip">Top hotels</span></button>
@@ -224,19 +283,26 @@
 
 
         </div>
+        <div class="menu">
+            <button class="menu1">Plan Your Tour now!</button>
+            <button class="menu2">About Us</button>
+            <button class="menu3">Contact Us</button>
+            <button class="menu4">FAQs</button>
+        </div>
+
         <div class="title">
             <h1>Sou-Journ</h1>
             <h3>-Explore the essence of Chennai</h3>
             <div class="themes">
                 <h3 class="thmtitle">Pick your favourite theme</h1>
-                    <button class="thm1"></button>
-                    <button class="thm2"></button>
-                    <button class="thm3"></button>
-                    <button class="thm4"></button>
-                    <button class="thm5"></button>
-                    <button class="thm6"></button>
-                    <button class="thm7"></button>
-                    <button class="thm8"></button>
+                    <button class="thm1"><span class="tooltip">Explore Malls in Chennai</span></button>
+                    <button class="thm2"><span class="tooltip">Spend Time in your Favourite Beach</span></button>
+                    <button class="thm3"><span class="tooltip">Get Amused by the Wildlife</span></button>
+                    <button class="thm4"><span class="tooltip">Delicious Food Streets</span></button>
+                    <button class="thm5"><span class="tooltip">Parks for all Ages</span></button>
+                    <button class="thm6"><span class="tooltip">Go Divine with all Religions</span></button>
+                    <button class="thm7"><span class="tooltip"></span></button>
+                    <button class="thm8"><span class="tooltip"></span></button>
             </div>
         </div>
     </div>
