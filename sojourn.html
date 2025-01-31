@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Destinations of World</title>
     <style>
-        body{
+        body {
             font-family: Rubik, sans-serif;
         }
-        h1{
-            font-family:Spectral, serif;
+
+        h1 {
+            font-family: Spectral, serif;
             font-size: 40px;
+            color: lightskyblue;
+            text-shadow: rgb(0, 0, 0) 2px 2px 1px;
         }
-        .icons{
+
+        .icons {
+            position: fixed;
             background-color: black;
             display: flex;
             flex-direction: column;
-            width:60px;
+
+
+        }
+
+        .tooltip {
+            visibility: hidden;
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+
+        }
+
+        button {
+            font-size: 25px;
+        }
+
+        button:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-    <h1 class="Title">Sou-Journ</h1><hr>
+    <h1 class="Title">Sou-Journ</h1>
+    <hr>
     <div class="main">
         <div class="icons">
-            <button class="options" onclick="show()"></button>
-            <button class="plane"><span class="tooltip">Book your Flight</span></button>
-            <button class="food"><span class="tooltip">Food </span></button>
-            <button class="hotel"><span class="tooltip">Top hotels</span></button>
-            <button class="packages"><span class="tooltip">Packages</span></button>
-            <button class="events"><span class="tooltip">Special events</span></button>
-            <button class="reviews"><span class="tooltip">Reviews</span></button>
-            <button class="cash"><span class="tooltip">Price</span></button>
+            <button class="options" onclick="show()"><i class="fa-solid fa-bars"></i></button>
+            <button class="plane"><i class="fa-solid fa-plane-departure"></i><span class="tooltip">Book your
+                    Flight</span></button>
+            <button class="food"><i class="fa-solid fa-bowl-food"></i><span class="tooltip">Food </span></button>
+            <button class="hotel"><i class="fa-solid fa-hotel"></i><span class="tooltip">Top hotels</span></button>
+            <button class="packages"><i class="fa-solid fa-truck-fast"></i><span
+                    class="tooltip">Packages</span></button>
+            <button class="events"><i class="fa-solid fa-calendar-days"></i><span class="tooltip">Special
+                    events</span></button>
+            <button class="reviews"><i class="fa-solid fa-star"></i><span class="tooltip">Reviews</span></button>
+            <button class="cash"><i class="fa-solid fa-money-check-dollar"></i><span
+                    class="tooltip">Price</span></button>
         </div>
     </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
 </body>
+
 </html>

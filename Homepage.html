@@ -7,26 +7,13 @@
     <title>Chennai tourism</title>
 
     <script>
-        function show1() {
-            let h = document.getElementsByClassName('menu').style.visibility = 'hidden';
-
-            if (h == hidden) {
-                let v = document.getElementsByClassName('menu').style.visibility = 'visible';
-            }
-            else {
-                let v = document.getElementsByClassName('menu').style.visibility = 'hidden';
-            }
-        }
         function show() {
-            let menu = document.getElementsByClassName('menu')[0]; // Get the first (and only) element with class 'menu'
+            let menu = document.querySelector('.menu'); // Selects the first element with class 'menu'
 
-            // Toggle visibility based on current state
-            if (menu.style.visibility === 'hidden') {
-                menu.style.visibility = 'visible';
-            } else {
-                menu.style.visibility = 'hidden';
-            }
+            // Toggle visibility
+            menu.style.visibility = menu.style.visibility === 'hidden' ? 'visible' : 'hidden';
         }
+
 
     </script>
     <link rel="stylesheet" href="Homepage.css">
@@ -43,9 +30,8 @@
             <button class="events"><span class="tooltip">Special events</span></button>
             <button class="reviews"><span class="tooltip">Reviews</span></button>
             <button class="cash"><span class="tooltip">Price</span></button>
-
-
         </div>
+
         <div class="menu">
             <button class="menu1">Plan Your Tour now!</button>
             <button class="menu2">About Us</button>
@@ -58,15 +44,15 @@
             <h3>-Explore the essence of Chennai</h3>
             <div class="themes">
                 <h3 class="thmtitle">Pick your favourite theme</h1>
-                    <button class="thm1"><span class="tooltip">Explore Malls in Chennai</span></button>
-                    <button class="thm2"><span class="tooltip">Spend Time in your Favourite Beach</span></button>
-                    <button class="thm3"><span class="tooltip">Get Amused by the Wildlife</span></button>
-                    <button class="thm4"><span class="tooltip">Delicious Food from top restaurants </span></button>
-                    <button class="thm5"><span class="tooltip">Explore temples and Rich culture of
+                    <button class="thm thm1"><span class="tooltip">Explore Malls in Chennai</span></button>
+                    <button class="thm thm2"><span class="tooltip">Spend Time in your Favourite Beach</span></button>
+                    <button class="thm thm3"><span class="tooltip">Get Amused by the Wildlife</span></button>
+                    <button class="thm thm4"><span class="tooltip">Delicious Food from top restaurants </span></button>
+                    <button class="thm thm5"><span class="tooltip">Explore temples and Rich culture of
                             Madras</span></button>
-                    <button class="thm6"><span class="tooltip">From Cathedral to St Thomas</span></button>
-                    <button class="thm7"><span class="tooltip">Never ending 1000 Light Mosque</span></button>
-                    <button class="thm8"><span class="tooltip">Nothing equals alone time in a evening
+                    <button class="thm thm6"><span class="tooltip">From Cathedral to St Thomas</span></button>
+                    <button class="thm thm7"><span class="tooltip">Never ending 1000 Light Mosque</span></button>
+                    <button class="thm thm8"><span class="tooltip">Nothing equals alone time in a evening
                             park</span></button>
 
 
@@ -74,27 +60,13 @@
 
                     <div class="divmain">
 
-                        <div class="div1">
-
-                        </div>
-                        <div class="div2">
-
-                        </div>
-                        <div class="div3">
-
-                        </div>
-                        <div class="div4">
-
-                        </div>
-                        <div class="div5">
-
-                        </div>
-                        <div class="div6">
-
-                        </div>
-                        <div class="div7">
-
-                        </div>
+                        <div class="div div1"></div>
+                        <div class="div div2"></div>
+                        <div class="div div3"></div>
+                        <div class="div div4"></div>
+                        <div class="div div5"></div>
+                        <div class="div div6"></div>
+                        <div class="div div7"></div>
                     </div>
 
 
