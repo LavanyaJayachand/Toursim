@@ -110,15 +110,30 @@
         }
 
         .bg {
-            width: 200px;
-            height: 300px;
-            background-image: url('//img.freepik.com/premium-photo/beautiful-nature-scenery-wallpaper-view_1123191-1127.jpg')
+            width: 900px;
+            height: 500px;
+            background-color: burlywood;
         }
 
         .thm,
         .ico {
             visibility: hidden;
         }
+        .in{
+            height:40px;
+            width:600px;
+            margin-top: -100px;
+            position:absolute;
+            margin-left:400px;
+            font-size: 18px;
+        }
+        .search{
+            position:absolute;
+            margin-left:966px;
+            margin-top:-100px;
+            height:45px;
+        }
+        
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -152,10 +167,33 @@
                 src="https://cdn4.iconfinder.com/data/icons/edit-glyph/64/edit-comment-feed-write-256.png"
                 width="50"><span class="tooltip">Price</span></button>
     </div>
-    <div class="bg">
 
+    <form action="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist" method="get">
+
+        
+        
+
+
+
+
+        <input class="in" type="text" list="suggestions" placeholder="Search your Destination"><button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <datalist id="suggestions">
+            
+            <option value="England">
+            <option value="Singapore">
+            <option value="Australia">
+            <option value="North America">
+            <option value="Nepal">
+
+       </datalist>
+    </form>
+    <div class="bg">
+ 
     </div>
+    
     <div class="Themes">
+
+
         <button class="hey" onclick="Toggle('thm')">
 
             <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
