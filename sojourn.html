@@ -13,19 +13,26 @@
         h1 {
             font-family: Spectral, serif;
             font-size: 40px;
-            color:rgb(180, 198, 218);
+            color: rgb(180, 198, 218);
             text-shadow: rgb(0, 0, 0) 2px 2px 1px;
         }
 
+        .Title {
+            margin-left: 100px;
+        }
+
         .icons {
+            margin-top: -100px;
             position: fixed;
-            background-color: black;
+
             display: flex;
             flex-direction: column;
+            width: 90px;
+
         }
 
         .tooltip {
-            visibility: hidden;
+            width: 130px;
             position: absolute;
             bottom: 70px;
             left: 50%;
@@ -35,43 +42,83 @@
             padding: 5px;
             border-radius: 5px;
             font-size: 14px;
-            white-space: nowrap;
+            white-space: normal;
             opacity: 0;
             transition: opacity 0.3s;
+            z-index: 9999;
+            word-wrap: break-word;
         }
 
         button {
             font-family: Rubik, sans-serif;
             font-size: 25px;
-            
+            position: relative;
+
         }
 
         button:hover .tooltip {
             visibility: visible;
             opacity: 1;
         }
-        .Themes{
-            background-color: rgb(163, 2, 2);
-            width:150px;
+
+        .Themes {
+            margin-top: 70px;
+            position: fixed;
+            top: 50px;
+            /* Adjust this value as needed */
+            right: 10px;
+            /* Adjust this value as needed */
+            width: 150px;
+            height: 600px;
+            /* Set a fixed height */
+
             display: flex;
             flex-direction: column;
-            justify-content:flex-end;
             font-family: Rubik, sans-serif;
-            margin-left:1160px;
+            overflow-y: auto;
+            /* Enables vertical scrolling */
+            scrollbar-width: thin;
+            /* For Firefox */
         }
-        img{
-        margin:10px;
-        border:2px solid black;
-        }
-        
-.thm{
-    background-color: brown;
-   
-}
-.where{
-    font-family: Spectral,sans-serif;
-}
 
+        .Themes,
+        button {
+            overflow: visible;
+        }
+
+
+        img {
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+
+
+        .where {
+            font-family: Spectral, sans-serif;
+            float: right;
+            margin-top: -90px;
+
+        }
+
+        .hey {
+            height: 100px;
+            width: 150px;
+            float: right;
+            position: fixed;
+            margin-top: -110px;
+        }
+
+        .bg {
+            width: 200px;
+            height: 300px;
+            background-image: url('//img.freepik.com/premium-photo/beautiful-nature-scenery-wallpaper-view_1123191-1127.jpg')
+        }
+
+        .thm,
+        .ico {
+            visibility: hidden;
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -80,39 +127,95 @@
 <body>
     <h1 class="Title">Sou-Journ</h1>
     <hr>
-    
-        <div class="icons">
-            <button class="options" onclick="show()"><i class="fa-solid fa-bars"></i></button>
-            <button class="plane"><i class="fa-solid fa-plane-departure"></i><span class="tooltip">Book your
-                    Flight</span></button>
-            <button class="food"><i class="fa-solid fa-bowl-food"></i><span class="tooltip">Food </span></button>
-            <button class="hotel"><i class="fa-solid fa-hotel"></i><span class="tooltip">Top hotels</span></button>
-            <button class="packages"><i class="fa-solid fa-truck-fast"></i><span
-                    class="tooltip">Packages</span></button>
-            <button class="events"><i class="fa-solid fa-calendar-days"></i><span class="tooltip">Special
-                    events</span></button>
-            <button class="reviews"><i class="fa-solid fa-star"></i><span class="tooltip">Reviews</span></button>
-            <button class="cash"><i class="fa-solid fa-money-check-dollar"></i><span
-                    class="tooltip">Price</span></button>
-        </div>
-        
 
-        <div class="Themes">
-            <button class="where">Where to Start?</button>
-                    <button class="thm thm1">
+    <div class="icons">
+        <button class=" options" onclick="Toggle('ico')"><img
+                src="https://cdn2.iconfinder.com/data/icons/essentials-8/100/Menu-512.png" width="45"></button>
+        <button class="ico plane"><img
+                src="https://th.bing.com/th/id/OIP.uwF5PnA2HTmwjvrA2jKAtwHaHa?rs=1&pid=ImgDetMain" width="50"><span
+                class="tooltip">Book your Flight</span></button>
+        <button class="ico food"><img
+                src="https://th.bing.com/th/id/OIP.amSOwQhvzDFvr5T9wrTiQgHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7"
+                width="50"><span class="tooltip">Food </span></button>
+        <button class="ico hotel"><img
+                src="https://cdn.iconscout.com/icon/premium/png-512-thumb/living-room-1447724-1224138.png"
+                width="50"><span class="tooltip">Top hotels</span></button>
+        <button class="ico packages">
+            <img src="https://www.citypng.com/public/uploads/preview/money-cash-black-icon-transparent-png-11636944062qw6ybhhwy8.png"
+                width="50"><span class="tooltip">Packages</span></button>
+        <button class="ico events"><img src="https://icon-library.com/images/tour-icon-png/tour-icon-png-22.jpg"
+                width="50"><span class="tooltip">Special events</span></button>
+        <button class="ico reviews"><img
+                src="https://th.bing.com/th/id/OIP.VMWS1G-rMjkWp2DBA_pinwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3"
+                width="50"><span class="tooltip">Reviews</span></button>
+        <button class="ico cash"><img
+                src="https://cdn4.iconfinder.com/data/icons/edit-glyph/64/edit-comment-feed-write-256.png"
+                width="50"><span class="tooltip">Price</span></button>
+    </div>
+    <div class="bg">
 
-                        <img src="https://img.freepik.com/premium-photo/modern-bright-shopping-mall-interior-with-shoppers-escalator_14117-612734.jpg" width="100" > <span class="tooltip">Explore Malls in Chennai</span></button>
-                    <button class="thm thm2"><img src="https://img.freepik.com/premium-vector/top-view-ocean-beach-with-soft-waves-summer-landscape-flat-landscap-vector-art-illustration_36900-3645.jpg?w=996" width="100" ><span class="tooltip">Spend Time in your Favourite Beach</span></button>
-                    <button class="thm thm3"><img src="https://img.freepik.com/premium-photo/block-print-style-artwork-tiger-nature_785229-4835.jpg" width="100" ><span class="tooltip">Get Amused by the Wildlife</span></button>
-                    <button class="thm thm4"><img src="https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yNF9zaW1wbGlmaWVkX3dlc3Rlcm5fc3R5bGVfcmVzdHVhcmFudF9taW5pbWFsaV8zOGEyNGJiOS0zMDQxLTQ5NDYtOWYxNS0zYjg4YzZiOTExZmVfMS5qcGc.jpg" width="100"><span class="tooltip">Delicious Food from top restaurants </span></button>
-                    <button class="thm thm5"><img src="https://png.pngtree.com/thumb_back/fw800/background/20230411/pngtree-park-childrens-slide-background-image_2189406.jpg" width="100" ><span class="tooltip">Explore temples and Rich culture of
-                            Madras</span></button>
-                    <button class="thm thm6"><img src="https://img.freepik.com/premium-vector/india-monuments-vector-illustration_953932-6950.jpg" width="100" ><span class="tooltip">From Cathedral to St Thomas</span></button>
-                    <button class="thm thm7"><img src="https://ofonetree.com/wp-content/uploads/2024/01/image-879.png" width="100"><span class="tooltip">Never ending 1000 Light Mosque</span></button>
-                    <button class="thm thm8"><img src="https://www.creativefabrica.com/wp-content/uploads/2023/04/05/Islamic-Mosque-flat-illustration-free-Graphics-66333305-1.jpeg" width="100"><span class="tooltip">Nothing equals alone time in a evening
-                            park</span></button>
-        </div>
+    </div>
+    <div class="Themes">
+        <button class="hey" onclick="Toggle('thm')">
+
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
+                width="100"> <span class="tooltip">Confused where to Start?</span></button>
+
+
+
+        <button class=" thm thm1">
+
+            <img src="https://img.freepik.com/premium-photo/modern-bright-shopping-mall-interior-with-shoppers-escalator_14117-612734.jpg"
+                width="100"> <span class="tooltip">Explore Malls in Chennai</span></button>
+
+        <button class=" thm thm2"><img
+                src="https://img.freepik.com/premium-vector/top-view-ocean-beach-with-soft-waves-summer-landscape-flat-landscap-vector-art-illustration_36900-3645.jpg?w=996"
+                width="100"><span class="tooltip">Spend Time in your Favourite Beach</span></button>
+
+        <button class=" thm thm3"><img
+                src="https://img.freepik.com/premium-photo/block-print-style-artwork-tiger-nature_785229-4835.jpg"
+                width="100"><span class="tooltip">Get Amused by the Wildlife</span></button>
+
+        <button class=" thm thm4"><img
+                src="https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yNF9zaW1wbGlmaWVkX3dlc3Rlcm5fc3R5bGVfcmVzdHVhcmFudF9taW5pbWFsaV8zOGEyNGJiOS0zMDQxLTQ5NDYtOWYxNS0zYjg4YzZiOTExZmVfMS5qcGc.jpg"
+                width="100"><span class="tooltip">Delicious Food from top restaurants </span></button>
+
+        <button class=" thm thm5"><img
+                src="https://png.pngtree.com/thumb_back/fw800/background/20230411/pngtree-park-childrens-slide-background-image_2189406.jpg"
+                width="100"><span class="tooltip">Explore temples and Rich culture of
+                Madras</span></button>
+
+        <button class=" thm thm6"><img
+                src="https://img.freepik.com/premium-vector/india-monuments-vector-illustration_953932-6950.jpg"
+                width="100"><span class="tooltip">From Cathedral to St Thomas</span></button>
+
+        <button class=" thm thm7"><img src="https://ofonetree.com/wp-content/uploads/2024/01/image-879.png"
+                width="100"><span class="tooltip">Never ending 1000 Light Mosque</span></button>
+
+        <button class=" thm thm8"><img
+                src="https://www.creativefabrica.com/wp-content/uploads/2023/04/05/Islamic-Mosque-flat-illustration-free-Graphics-66333305-1.jpeg"
+                width="100"><span class="tooltip">Nothing equals alone time in a evening
+                park</span></button>
+    </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
+
+    <script>
+
+
+        function Toggle(className) {
+            let a = document.getElementsByClassName(className);
+            for (let i = 0; i < a.length; i++) {
+                if (a[i].style.visibility == "visible") {
+                    a[i].style.visibility = "hidden";
+                }
+                else {
+                    a[i].style.visibility = "visible";
+                }
+            }
+        }
+
+
+    </script>
 </body>
 
 </html>
