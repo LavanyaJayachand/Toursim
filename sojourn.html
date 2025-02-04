@@ -8,13 +8,13 @@
     <style>
         body {
             font-family: Rubik, sans-serif;
-
+background-color: rgb(250, 250, 250);
         }
 
         h1 {
             font-family: Spectral, serif;
             font-size: 40px;
-            color: rgb(180, 198, 218);
+            color: rgb(155, 179, 206);
             text-shadow: rgb(0, 0, 0) 2px 2px 1px;
         }
 
@@ -57,6 +57,7 @@
             font-size: 25px;
             position: relative;
 
+
         }
 
         button:hover .tooltip {
@@ -69,7 +70,7 @@
             top: 120px;
             right: 10px;
             width: 150px;
-            height: 600px;
+            height: 500px;
             display: flex;
             flex-direction: column;
             overflow-y: scroll;
@@ -107,16 +108,38 @@
             position: fixed;
             margin-top: -110px;
         }
+        .in{
+            position:absolute;
+            height:30px;
+            width:400px;
+            margin-left:400px;
+            margin-top:-90px;
 
-        .bg {
-            width: 200px;
-            height: 300px;
-            background-image: url('//img.freepik.com/premium-photo/beautiful-nature-scenery-wallpaper-view_1123191-1127.jpg');
         }
+.search{
+    
+            position:absolute;
+            height:36px;
+            width:40px;
+            margin-left:800px;
+            margin-top:-90px;
+}
+        
 
         .thm,
         .ico {
             visibility: hidden;
+            
+        }
+        .ss-container{
+            background-color: #98b993;
+            height:400px;
+            width:800px;
+            margin:50px;
+        }
+        .ss{
+            width:100px;
+            height:auto;
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
@@ -142,11 +165,11 @@
         <button class="ico packages">
             <img src="https://www.citypng.com/public/uploads/preview/money-cash-black-icon-transparent-png-11636944062qw6ybhhwy8.png"
                 width="50"><span class="tooltip">Packages</span></button>
-        <button class="ico events"><img src="https://icon-library.com/images/tour-icon-png/tour-icon-png-22.jpg"
-                width="50"><span class="tooltip">Special events</span></button>
+        <button class="ico events"><img src="https://cdn4.iconfinder.com/data/icons/business-risks-10/48/ustomer_satisfaction_user_star_feedback_rating-1024.png"
+                width="50"><span class="tooltip">Reviews</span></button>
         <button class="ico reviews"><img
                 src="https://th.bing.com/th/id/OIP.VMWS1G-rMjkWp2DBA_pinwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3"
-                width="50"><span class="tooltip">Reviews</span></button>
+                width="50"><span class="tooltip">Special events</span></button>
         <button class="ico cash"><img
                 src="https://cdn4.iconfinder.com/data/icons/edit-glyph/64/edit-comment-feed-write-256.png"
                 width="50"><span class="tooltip">Price</span></button>
@@ -167,9 +190,7 @@
     </form>
 
 
-    <div class="bg">
-
-    </div>
+    
     <div class="Themes">
         <button class="hey" onclick="Toggle('thm')">
 
@@ -212,6 +233,52 @@
                 width="100"><span class="tooltip">Nothing equals alone time in a evening
                 park</span></button>
     </div>
+
+<div class = "ss-container">
+
+    <div class="ss"> 
+        <img src="https://imgcld.yatra.com/ytimages/image/upload/v1433743550/Mahabalipuram_5.jpg">
+
+    </div>
+    <div class="ss">
+        <img src="https://th.bing.com/th/id/OIP.NXVswM-oOzTAmh8OPFLbuAHaE6?rs=1&pid=ImgDetMain">
+
+    </div>
+    <div class="ss">
+        <img src="https://th.bing.com/th/id/OIP.BkOsJ5vSWXeA8NOOkZwyiQAAAA?w=450&h=450&rs=1&pid=ImgDetMain">
+
+    </div>
+    <div class="ss">
+        <img src="https://th.bing.com/th/id/OIP.RAJLjvTl8xDJXaP7UNpYsQHaEK?rs=1&pid=ImgDetMain">
+    </div>
+    <div class="ss">
+        <img src="https://yometro.com/images/places/Semmozhi-Poonga.jpg">
+
+    </div>
+
+
+
+    <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
 
     <script>
