@@ -8,6 +8,7 @@
     <style>
         body {
             font-family: Rubik, sans-serif;
+
         }
 
         h1 {
@@ -30,6 +31,8 @@
             width: 90px;
 
         }
+
+
 
         .tooltip {
             width: 130px;
@@ -62,26 +65,22 @@
         }
 
         .Themes {
-            margin-top: 70px;
             position: fixed;
-            top: 50px;
-            /* Adjust this value as needed */
+            top: 120px;
             right: 10px;
-            /* Adjust this value as needed */
             width: 150px;
             height: 600px;
-            /* Set a fixed height */
-
             display: flex;
             flex-direction: column;
-            font-family: Rubik, sans-serif;
-            overflow-y: auto;
-            /* Enables vertical scrolling */
+            overflow-y: scroll;
+            /* Force scrollbar */
             scrollbar-width: thin;
-            /* For Firefox */
+            -ms-overflow-style: scrollbar;
+            background-color: #ffffff;
         }
 
-        .Themes,
+
+
         button {
             overflow: visible;
         }
@@ -110,30 +109,14 @@
         }
 
         .bg {
-            width: 900px;
-            height: 500px;
-            background-color: burlywood;
+            width: 200px;
+            height: 300px;
+            background-image: url('//img.freepik.com/premium-photo/beautiful-nature-scenery-wallpaper-view_1123191-1127.jpg');
         }
 
         .thm,
         .ico {
             visibility: hidden;
-        }
-
-        .in {
-            height: 40px;
-            width: 600px;
-            margin-top: -100px;
-            position: absolute;
-            margin-left: 400px;
-            font-size: 18px;
-        }
-
-        .search {
-            position: absolute;
-            margin-left: 966px;
-            margin-top: -100px;
-            height: 45px;
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
@@ -168,14 +151,7 @@
                 src="https://cdn4.iconfinder.com/data/icons/edit-glyph/64/edit-comment-feed-write-256.png"
                 width="50"><span class="tooltip">Price</span></button>
     </div>
-
     <form action="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist" method="get">
-
-
-
-
-
-
 
         <input class="in" type="text" list="suggestions" placeholder="Search your Destination"><button class="search"><i
                 class="fa-solid fa-magnifying-glass"></i></button>
@@ -189,13 +165,12 @@
 
         </datalist>
     </form>
+
+
     <div class="bg">
 
     </div>
-
     <div class="Themes">
-
-
         <button class="hey" onclick="Toggle('thm')">
 
             <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
