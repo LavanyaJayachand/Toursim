@@ -1,0 +1,151 @@
+body {
+    font-family: Rubik, sans-serif;
+    background-color: rgba(255, 255, 255, 0.468);
+}
+
+h1 {
+    font-family: Spectral, serif;
+    font-size: 40px;
+    color: rgb(155, 179, 206);
+    text-shadow: rgb(0, 0, 0) 2px 2px 1px;
+}
+
+.Title {
+    margin-left: 100px;
+}
+
+.icons {
+    margin-top: -100px;
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+
+}
+
+
+
+.tooltip {
+    width: 130px;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: normal;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 9999;
+    word-wrap: break-word;
+}
+
+button {
+    font-family: Rubik, sans-serif;
+    font-size: 25px;
+    position: relative;
+
+
+}
+
+button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.Themes {
+    position: fixed;
+    top: 120px;
+    right: 10px;
+    width: 150px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    /* Force scrollbar */
+    scrollbar-width: thin;
+    -ms-overflow-style: scrollbar;
+    background-color: #ffffff;
+}
+
+
+
+button {
+    overflow: visible;
+}
+
+
+img {
+    margin: 10px;
+    border: 2px solid black;
+}
+
+
+
+.where {
+    font-family: Spectral, sans-serif;
+    float: right;
+    margin-top: -90px;
+
+}
+
+.hey {
+    height: 100px;
+    width: 150px;
+    float: right;
+    position: fixed;
+    margin-top: -110px;
+}
+
+.in {
+    position: absolute;
+    height: 30px;
+    width: 400px;
+    margin-left: 400px;
+    margin-top: -90px;
+
+}
+
+.search {
+
+    position: absolute;
+    height: 36px;
+    width: 40px;
+    margin-left: 800px;
+    margin-top: -90px;
+}
+
+
+.thm,
+.ico {
+    visibility: hidden;
+
+}
+.ssimg{
+    width:400px;
+    height:250px;
+    vertical-align: middle;
+}
+.ss-container{
+    background-color: blueviolet;
+    width:700px;
+    height:400px;
+    margin-left:100px;
+    position:relative;
+}
+.ss{
+
+}
+.prev,.next{
+    cursor: pointer;
+    position:absolute;
+    top:50%;
+    color: rgb(68, 5, 5);
+    user-select:none;
+    z-index:99999;
+    margin-left:300px;
+}

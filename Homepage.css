@@ -70,7 +70,7 @@ button:hover .tooltip {
 }
 
 .options {
-
+    
     background-image: url("https://cdn2.iconfinder.com/data/icons/essentials-8/100/Menu-512.png");
     background-size: cover;
 
@@ -111,66 +111,88 @@ button:hover .tooltip {
     background-size: cover;
 }
 
-
 .themes {
     background-color: white;
     height: 3400px;
-    width: 100%;
+    width: 1200px;
     margin-left: 50px;
+    justify-items: center;
     margin-top: -40px;
     padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.thm {
-    width: 170px;
-    height: 115px;
-    margin: 35px;
-    background-size: cover;
-    transition: 0.3s ease-in-out;
-}
-
-.thm:hover {
-    transform: scale(1.05);
 }
 
 .thm1 {
+    width: 170px;
+    height: 115px;
+    margin: 35px;
     background-image: url("https://img.freepik.com/premium-photo/modern-bright-shopping-mall-interior-with-shoppers-escalator_14117-612734.jpg");
+    background-size: cover;
 }
 
 .thm2 {
+    width: 170px;
+    height: 115px;
+    margin: 35px;
     background-image: url("https://img.freepik.com/premium-vector/top-view-ocean-beach-with-soft-waves-summer-landscape-flat-landscap-vector-art-illustration_36900-3645.jpg?w=996");
+    background-size: cover;
 }
 
 .thm3 {
+    width: 170px;
+    height: 115px;
+    margin: 35px;
     background-image: url("https://img.freepik.com/premium-photo/block-print-style-artwork-tiger-nature_785229-4835.jpg");
+    background-size: cover;
 }
 
 .thm4 {
-    background-image: url("https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9zci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yNF9zaW1wbGlmaWVkX3dlc3Rlcm5fc3R5bGVfcmVzdHVhcmFudF9taW5pbWFsaV8zOGEyNGJiOS0zMDQxLTQ5NDYtOWYxNS0zYjg4YzZiOTExZmVfMS5qcGc.jpg");
+    width: 170px;
+    height: 115px;
+    margin: 35px;
+    background-image: url("https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yNF9zaW1wbGlmaWVkX3dlc3Rlcm5fc3R5bGVfcmVzdHVhcmFudF9taW5pbWFsaV8zOGEyNGJiOS0zMDQxLTQ5NDYtOWYxNS0zYjg4YzZiOTExZmVfMS5qcGc.jpg");
+    background-size: cover;
 }
 
 .thm5 {
+    width: 170px;
+    height: 115px;
+    margin: 35px;
     background-image: url("https://img.freepik.com/premium-vector/india-monuments-vector-illustration_953932-6950.jpg");
+    background-size: cover;
 }
 
 .thm6 {
+    width: 170px;
+    height: 115px;
+    margin: 35px;
     background-image: url("https://ofonetree.com/wp-content/uploads/2024/01/image-879.png");
+    background-size: cover;
 }
 
 .thm7 {
+    width: 170px;
+    height: 115px;
+    margin: 35px;
     background-image: url("https://www.creativefabrica.com/wp-content/uploads/2023/04/05/Islamic-Mosque-flat-illustration-free-Graphics-66333305-1.jpeg");
+    background-size: cover;
 }
 
 .thm8 {
+    width: 170px;
+    height: 115px;
+    margin: 35px;
     background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20230411/pngtree-park-childrens-slide-background-image_2189406.jpg");
+    background-size: cover;
 }
 
-
-
-
+.thm9 {
+    width: 170px;
+    height: 115px;
+    margin: 35px;
+    background-image: url();
+    background-size: cover;
+}
 
 .thmtitle {
     padding: 10px;
@@ -181,7 +203,7 @@ button:hover .tooltip {
 .menu {
     visibility: hidden;
     position: absolute;
-    position: fixed;
+    position:fixed;
     font-size: 18px;
     width: 100px;
     height: 40px;
@@ -233,47 +255,131 @@ button:hover .tooltip {
     margin-left: -500px;
 }
 
-/* Base Class for common properties */
-.div {
+.divmain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    width: 1200px;
+    background-color: rgb(6, 61, 8);
+    padding: 20px;
+}
+
+.div1 {
     width: 300px;
     height: 200px;
-    border: 4px solid white;
-    background-size: cover;
+    border : 4px solid white;
+    background-image: url("https://imgcld.yatra.com/ytimages/image/upload/t_seo_Magnum_w_350_h_300_c_fill_g_auto_q_auto:good_f_jpg/v1433743550/Mahabalipuram_5.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     margin: 20px;
     margin-top: 40px;
+}
+
+.div1:hover {
+    transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
 
-.div:hover {
-    transform: scale(1.05);
-}
-
-/* Specific Image Classes */
-.div1 {
-    background-image: url("https://imgcld.yatra.com/ytimages/image/upload/t_seo_Magnum_w_350_h_300_c_fill_g_auto_q_auto:good_f_jpg/v1433743550/Mahabalipuram_5.jpg");
-}
-
 .div2 {
+    width: 300px;
+    height: 200px;
+    border : 4px solid white;
+    background-size: cover;
     background-image: url("https://hblimg.mmtcdn.com/content/hubble/img/additionalttdimages/mmt/activities/m_Government_Museum_Chennai_3_l_360_640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.div2:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 
 .div3 {
+    width: 300px;
+    height: 200px;
+    border : 4px solid white;
+    background-size: cover;
     background-image: url("https://i0.wp.com/indiashine.net/wp-content/uploads/2021/01/dreamstime_m_110159304.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    margin-top: 40px;
 }
 
+.div3:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+
 .div4 {
+    width: 300px;
+    height: 200px;
+    border : 4px solid white;
+    background-size: cover;
     background-image: url("https://4.bp.blogspot.com/-AtLJQsxESt4/Wb--h8YnTZI/AAAAAAAABdE/wgBb5Z6-cxgiv_WsNO_mK6y9WGS4Yy08QCLcBGAs/s1600/20170917_161759.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.div4:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 
 .div5 {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    border : 4px solid white;
     background-image: url("https://4.bp.blogspot.com/-AtLJQsxESt4/Wb--h8YnTZI/AAAAAAAABdE/wgBb5Z6-cxgiv_WsNO_mK6y9WGS4Yy08QCLcBGAs/s1600/20170917_161759.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.div5:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 
 .div6 {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    border : 4px solid white;
     background-image: url("https://4.bp.blogspot.com/-AtLJQsxESt4/Wb--h8YnTZI/AAAAAAAABdE/wgBb5Z6-cxgiv_WsNO_mK6y9WGS4Yy08QCLcBGAs/s1600/20170917_161759.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.div6:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 
 .div7 {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    border : 4px solid white;
     background-image: url("https://4.bp.blogspot.com/-AtLJQsxESt4/Wb--h8YnTZI/AAAAAAAABdE/wgBb5Z6-cxgiv_WsNO_mK6y9WGS4Yy08QCLcBGAs/s1600/20170917_161759.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.div7:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
