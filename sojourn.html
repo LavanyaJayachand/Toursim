@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Rubik, sans-serif;
-background-color: rgb(250, 250, 250);
+            background-color: rgba(255, 255, 255, 0.468);
         }
 
         h1 {
@@ -108,38 +108,134 @@ background-color: rgb(250, 250, 250);
             position: fixed;
             margin-top: -110px;
         }
-        .in{
-            position:absolute;
-            height:30px;
-            width:400px;
-            margin-left:400px;
-            margin-top:-90px;
+
+        .in {
+            position: absolute;
+            height: 30px;
+            width: 400px;
+            margin-left: 400px;
+            margin-top: -90px;
 
         }
-.search{
-    
-            position:absolute;
-            height:36px;
-            width:40px;
-            margin-left:800px;
-            margin-top:-90px;
-}
-        
+
+        .search {
+
+            position: absolute;
+            height: 36px;
+            width: 40px;
+            margin-left: 800px;
+            margin-top: -90px;
+        }
+
 
         .thm,
         .ico {
             visibility: hidden;
-            
+
         }
-        .ss-container{
-            background-color: #98b993;
-            height:400px;
-            width:800px;
-            margin:50px;
+
+        .ss-container {
+            box-sizing: border-box;
+            position: relative;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            overflow: hidden;
+            height: 500px;
+            max-width: 900px;
+            margin: 50px;
         }
-        .ss{
-            width:100px;
-            height:auto;
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .ss {
+            display: none;
+            width: 100px;
+            height: auto;
+
+        }
+
+        .ssimg {
+            vertical-align: middle;
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
@@ -165,7 +261,8 @@ background-color: rgb(250, 250, 250);
         <button class="ico packages">
             <img src="https://www.citypng.com/public/uploads/preview/money-cash-black-icon-transparent-png-11636944062qw6ybhhwy8.png"
                 width="50"><span class="tooltip">Packages</span></button>
-        <button class="ico events"><img src="https://cdn4.iconfinder.com/data/icons/business-risks-10/48/ustomer_satisfaction_user_star_feedback_rating-1024.png"
+        <button class="ico events"><img
+                src="https://cdn4.iconfinder.com/data/icons/business-risks-10/48/ustomer_satisfaction_user_star_feedback_rating-1024.png"
                 width="50"><span class="tooltip">Reviews</span></button>
         <button class="ico reviews"><img
                 src="https://th.bing.com/th/id/OIP.VMWS1G-rMjkWp2DBA_pinwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3"
@@ -190,7 +287,7 @@ background-color: rgb(250, 250, 250);
     </form>
 
 
-    
+
     <div class="Themes">
         <button class="hey" onclick="Toggle('thm')">
 
@@ -233,29 +330,52 @@ background-color: rgb(250, 250, 250);
                 width="100"><span class="tooltip">Nothing equals alone time in a evening
                 park</span></button>
     </div>
+    <h1>Explore top sites
+    </h1>
+    <div class="ss-container">
 
-<div class = "ss-container">
+        <div class="ss fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="ssimg" src="https://imgcld.yatra.com/ytimages/image/upload/v1433743550/Mahabalipuram_5.jpg">
+            <div class="text">Caption Text</div>
 
-    <div class="ss"> 
-        <img src="https://imgcld.yatra.com/ytimages/image/upload/v1433743550/Mahabalipuram_5.jpg">
+        </div>
+        <div class="ss fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="ssimg" src="https://th.bing.com/th/id/OIP.NXVswM-oOzTAmh8OPFLbuAHaE6?rs=1&pid=ImgDetMain">
+            <div class="text">Caption Text</div>
+
+        </div>
+        <div class="ss fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="ssimg"
+                src="https://th.bing.com/th/id/OIP.BkOsJ5vSWXeA8NOOkZwyiQAAAA?w=450&h=450&rs=1&pid=ImgDetMain">
+            <div class="text">Caption Text</div>
+
+        </div>
+        <div class="ss fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="ssimg" src="https://th.bing.com/th/id/OIP.RAJLjvTl8xDJXaP7UNpYsQHaEK?rs=1&pid=ImgDetMain">
+            <div class="text">Caption Text</div>
+
+        </div>
+        <div class="ss fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="ssimg" src="https://yometro.com/images/places/Semmozhi-Poonga.jpg">
+            <div class="text">Caption Text</div>
+
+
+        </div>
+
+
+        <a class="prev" onclick="ssplus(-1)"></a>
+        <a class="next" onclick="ssplus(+1)"></a>
+
+
+
+
 
     </div>
-    <div class="ss">
-        <img src="https://th.bing.com/th/id/OIP.NXVswM-oOzTAmh8OPFLbuAHaE6?rs=1&pid=ImgDetMain">
-
-    </div>
-    <div class="ss">
-        <img src="https://th.bing.com/th/id/OIP.BkOsJ5vSWXeA8NOOkZwyiQAAAA?w=450&h=450&rs=1&pid=ImgDetMain">
-
-    </div>
-    <div class="ss">
-        <img src="https://th.bing.com/th/id/OIP.RAJLjvTl8xDJXaP7UNpYsQHaEK?rs=1&pid=ImgDetMain">
-    </div>
-    <div class="ss">
-        <img src="https://yometro.com/images/places/Semmozhi-Poonga.jpg">
-
-    </div>
-
 
 
     <div class="dots-container">
@@ -264,7 +384,7 @@ background-color: rgb(250, 250, 250);
         <span class="dot"></span>
     </div>
 
-</div>
+
 
 
 
@@ -282,6 +402,34 @@ background-color: rgb(250, 250, 250);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
 
     <script>
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("ss");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
 
 
         function Toggle(className) {
