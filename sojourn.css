@@ -125,27 +125,3 @@ img {
     visibility: hidden;
 
 }
-.ssimg{
-    width:400px;
-    height:250px;
-    vertical-align: middle;
-}
-.ss-container{
-    background-color: blueviolet;
-    width:700px;
-    height:400px;
-    margin-left:100px;
-    position:relative;
-}
-.ss{
-
-}
-.prev,.next{
-    cursor: pointer;
-    position:absolute;
-    top:50%;
-    color: rgb(68, 5, 5);
-    user-select:none;
-    z-index:99999;
-    margin-left:300px;
-}

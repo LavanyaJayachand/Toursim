@@ -41,15 +41,14 @@
     </div>
     <form action="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist" method="get">
 
-        <input class="in" type="text" list="suggestions" placeholder="Search your Destination"><button class="search"><i
+        <input class="in" type="text" list="suggestions" placeholder="Search your Destination"><button class="search" onclick="switchh(event)"><i
                 class="fa-solid fa-magnifying-glass"></i></button>
         <datalist id="suggestions">
 
-            <option value="England">
-            <option value="Singapore">
-            <option value="Australia">
-            <option value="North America">
-            <option value="Nepal">
+            <option value="whatsapp" id="wa">
+            <option value="youtube" id="yo">
+            <option value="w3schools" id="ws">
+            
 
         </datalist>
     </form>
@@ -100,42 +99,8 @@
     </div>
     <h1>Explore top sites
     </h1>
-    <div class="ss-container">
-
-        <div class="ss fade">
-            <div class="numbertext">1 / 3</div>
-            <img class="ssimg" src="https://imgcld.yatra.com/ytimages/image/upload/v1433743550/Mahabalipuram_5.jpg">
-            <div class="text">Caption Text</div>
-
-        </div>
-        <div class="ss fade">
-            <div class="numbertext">1 / 3</div>
-            <img class="ssimg" src="https://th.bing.com/th/id/OIP.NXVswM-oOzTAmh8OPFLbuAHaE6?rs=1&pid=ImgDetMain">
-            <div class="text">Caption Text</div>
-
-        </div>
-        <div class="ss fade">
-            <div class="numbertext">1 / 3</div>
-            <img class="ssimg"
-                src="https://th.bing.com/th/id/OIP.BkOsJ5vSWXeA8NOOkZwyiQAAAA?w=450&h=450&rs=1&pid=ImgDetMain">
-            <div class="text">Caption Text</div>
-
-        </div>
-       
-
-
-        <a class="prev" onclick="ssplus(-1)"></a>
-        <a class="next" onclick="ssplus(+1)"></a>
-    </div>
-
-
-    <div class="dots-container">
-        <span class="dot" onclick="currentss(1)"></span>
-        <span class="dot" onclick="currentss(2)"></span>
-        <span class="dot" onclick="currentss(3)"></span>
-    </div>
-
-
+    <div class="explore"> </div>
+   
 
 
 
