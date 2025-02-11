@@ -8,6 +8,65 @@
     <link rel="stylesheet" href="sojourn.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        body{
+                height: 1000px;
+        }
+        .explore{
+             background-color: rgb(147, 183, 236);
+             width:1100px;
+             height:500px;
+             margin-left:100px;
+        }
+        .exptitle{
+                margin-left:100px;
+        }
+        .expimg{
+                
+                border:0;
+                margin-top:50px;
+                margin-left:50px;
+                
+        }
+        @keyframes cycleImages {
+       0%, 33.33% {
+        opacity: 1; /* Show the image */
+        }
+        66.66%, 100% {
+         opacity: 0; /* Hide the image */
+        }
+     }
+
+        .image-container {
+      position: relative;
+      width: 1200px; /* Set width for images */
+      background-color: grey;
+      margin: 0 auto;
+       /* Hide images that are not active */
+    }
+    
+    
+        /* Style for each image */
+        .explore {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0; /* Initially hide all images */
+            animation: cycleImages 9s infinite;
+        }
+    .e1{
+       animation-delay: 0s;
+    }
+    .e2{
+       animation-delay: 3s;
+    }
+    .e3{
+       animation-delay: 6s;
+    }
+    </style>
 </head>
 
 <body>
@@ -97,20 +156,24 @@
                 width="100"><span class="tooltip">Nothing equals alone time in a evening
                 park</span></button>
     </div>
-    <h1>Explore top sites
+    <h1 class="exptitle">Explore top sites
     </h1>
-    <div class="explore"> </div>
+    <div class="image-container">
+        <div class="explore e1"> 
+            <img class="expimg" src="https://yometro.com/images/places/Semmozhi-Poonga.jpg" width="600" height="400">
+        </div>
+
+        <div class="explore e2"> 
+            <img class="expimg" src="https://th.bing.com/th?id=OLC.5kbUPt6sCNYedw480x360&w=280&h=140&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" width="600" height="400">
+        </div>
+   
+        <div class="explore e3"> 
+            <img class="expimg" src="https://4.bp.blogspot.com/-AtLJQsxESt4/Wb--h8YnTZI/AAAAAAAABdE/wgBb5Z6-cxgiv_WsNO_mK6y9WGS4Yy08QCLcBGAs/s1600/20170917_161759.jpg" width="600" height="400">
+        </div>
+    </div>
    
 
-
-
-
-
-
-
-
-
-
+   
 
 
 
