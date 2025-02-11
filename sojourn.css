@@ -6,7 +6,7 @@ body {
 h1 {
     font-family: Spectral, serif;
     font-size: 40px;
-    color: rgb(155, 179, 206);
+    color: rgb(38, 153, 44);
     text-shadow: rgb(0, 0, 0) 2px 2px 1px;
 }
 
@@ -17,11 +17,10 @@ h1 {
 .icons {
     margin-top: -100px;
     position: fixed;
-
     display: flex;
     flex-direction: column;
-    width: 90px;
-
+    width: 85px;
+    
 }
 
 
@@ -69,7 +68,7 @@ button:hover .tooltip {
     /* Force scrollbar */
     scrollbar-width: thin;
     -ms-overflow-style: scrollbar;
-    background-color: #ffffff;
+    background-color: #1f1414;
 }
 
 
@@ -94,11 +93,13 @@ img {
 }
 
 .hey {
+    margin-left:1173px;
     height: 100px;
     width: 150px;
     float: right;
     position: fixed;
     margin-top: -110px;
+
 }
 
 .in {
@@ -111,17 +112,15 @@ img {
 }
 
 .search {
-
     position: absolute;
     height: 36px;
     width: 40px;
     margin-left: 800px;
     margin-top: -90px;
 }
-
-
-.thm,
-.ico {
-    visibility: hidden;
-
+.ico,.thm{
+visibility: hidden;
 }
+
+
+

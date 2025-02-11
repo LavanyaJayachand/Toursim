@@ -12,14 +12,12 @@
         <style>
                 body {
                         height: 1000px;
+                        background-color: rgb(198, 202, 202);
                 }
 
-                .explore {
-                        background-color: rgb(39, 90, 167);
-                        width: 1100px;
-                        height: 500px;
-                        margin-left: 100px;
-                }
+
+                
+                
 
                 .exptitle {
                         margin-left: 100px;
@@ -30,6 +28,7 @@
                         border: 0;
                         margin-top: 50px;
                         margin-left: 50px;
+
 
                 }
 
@@ -49,21 +48,24 @@
                 }
 
                 .image-container {
+                      
                         position: relative;
-                        width: 1200px;
+                        width: 900px;
                         /* Set width for images */
                         background-color: grey;
                         margin: 0 auto;
                         /* Hide images that are not active */
+
                 }
 
 
                 /* Style for each image */
                 .explore {
+                        margin:-20px;
                         position: absolute;
                         top: 0;
                         left: 0;
-                        width: 100%;
+                        
                         height: 100%;
                         opacity: 0;
                         /* Initially hide all images */
@@ -90,9 +92,11 @@
                 }
 
                 .cont {
-                        width: 1170px;
-                        height: 550px;
-                        background-color: rgb(210, 228, 154);
+                        width: 1050px;
+                        height: 450px;
+                        background-color: rgb(255, 255, 255);
+                        box-shadow:10px 10px 15px black;
+                        
                         display: flex;
                         justify-content: space-around;
                         margin: 20px;
@@ -100,8 +104,8 @@
                 }
 
                 .content {
-
-                        font-size: 20px;
+         
+                        font-size: 16px;
                         font-family: Rubik;
                         padding: 30px;
                         margin-top: 50px;
@@ -110,13 +114,13 @@
 
                 .i-title {
                         margin: 10px;
-                        margin-top: 40px;
+                        margin-top: 50px;
                         margin-bottom: -40px;
                         margin-left: 30px;
                         border: 0;
                         padding: 15px;
                         font-family: Spectral, serif;
-                        font-size: 40px;
+                        font-size: 37px;
 
 
                 }
@@ -127,6 +131,7 @@
                 }
 
                 .rate {
+                        font-size: 20px;
                         margin-top: -20px;
                         margin-left: 30px;
                 }
@@ -178,15 +183,15 @@
         </form>
 
 
+        <button class="hey" onclick="Toggle('thm')">
 
-        <div class="Themes">
-                <button class="hey" onclick="Toggle('thm')">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
+                        width="100"> <span class="tooltip">Confused where to Start?</span></button>
 
-                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
-                                width="100"> <span class="tooltip">Confused where to Start?</span></button>
+        <div class="thm Themes">
+               
 
-
-
+           <div class="scrol">
                 <button class=" thm thm1">
 
                         <img src="https://img.freepik.com/premium-photo/modern-bright-shopping-mall-interior-with-shoppers-escalator_14117-612734.jpg"
@@ -220,6 +225,7 @@
                                 src="https://www.creativefabrica.com/wp-content/uploads/2023/04/05/Islamic-Mosque-flat-illustration-free-Graphics-66333305-1.jpeg"
                                 width="100"><span class="tooltip">Nothing equals alone time in a evening
                                 park</span></button>
+             </div>                   
         </div>
         <h1 class="exptitle">Explore top sites
         </h1>
@@ -231,7 +237,7 @@
                                         <h2 class="i-title">Semmozhi Poonga</h1>
                                                 <img class="expimg"
                                                         src="https://yometro.com/images/places/Semmozhi-Poonga.jpg"
-                                                        width="600" height="400">
+                                                        width="500" height="300">
                                 </div>
                                 <div class="para-hold">
                                         <p class="content">Semmozhi Poonga is one of the most visited botanical gardens
@@ -243,7 +249,7 @@
                                                 tourists. A huge parking lot, a canteen that serves delicious
                                                 refreshments, and
                                                 a beautiful artificial pond with ducks that are the children’s favorite,
-                                                Semmozhi Poonga has become a must visit destination in the city.</p>
+                                                Semmozhi Poonga has become a must visit destination in the city.<a href="more.html">..more</a></p>
                                         <h2 class="rate">4.4 ★ ★ ★ ★ ☆ (over 70)</h2><br>
                                         <h2 class="rate">From ₹10 to ₹100</h2>
                                 </div>
@@ -259,7 +265,7 @@
                                         <h2 class="i-title">Vandaloor Zoo</h1>
                                                 <img class="expimg"
                                                         src="https://www.veethi.com/images/city-images/fullsize/Chennai-2233.jpg"
-                                                        width="600" height="400">
+                                                        width="500" height="300">
                                 </div>
                                 <div class="para-hold">
                                         <p class="content">Arignar Anna Zoological Park was the first Zoo established in
@@ -269,7 +275,7 @@
                                                 Zoo" in the country with a top score of 82% in the first Management
                                                 Effectiveness Evaluation conducted by the Central Zoo Authority, MOEF &
                                                 CC.<a href="more.html">..more</a>.</p>
-                                        <h2 class="rate">4.4 ★ ★ ★ ★ ☆ (over 70)</h2><br>
+                                        <h2 class="rate">4.5 ★ ★ ★ ★ ☆ (over 70)</h2><br>
                                         <h2 class="rate">From ₹10 to ₹100</h2>
                                 </div>
 
@@ -281,14 +287,14 @@
                         <div class="cont">
 
                                 <div class="img-hold">
-                                        <h2 class="i-title">Semmozhi Poonga</h1>
+                                        <h2 class="i-title">Marina beach</h1>
                                                 <img class="expimg"
                                                         src="https://static.toiimg.com/photo/79753510/MARINA.jpg?width=748&resize=4"
-                                                        width="600" height="400">
+                                                        width="500" height="300">
                                 </div>
                                 <div class="para-hold">
-                                        <p class="content">.<a href="more.html">..more</a></p>
-                                        <h2 class="rate">4.4 ★ ★ ★ ★ ☆ (over 70)</h2><br>
+                                        <p class="content">Marina Beach is known for its golden sand and shimmering water. A symphony of rhythmic waves beckons, lulling you into a state of calmness and encouraging you to bask in the peaceful surroundings. Whether you're seeking relaxation, recreation, or cultural immersion, Marina Beach has something for everyone..<a href="more.html">..more</a></p>
+                                        <h2 class="rate">4.2 ★ ★ ★ ★ ☆ (over 70)</h2><br>
                                         <h2 class="rate">From ₹10 to ₹100</h2>
                                 </div>
 
