@@ -2,185 +2,324 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourist Destinations of World</title>
-    <link rel="stylesheet" href="sojourn.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tourist Destinations of World</title>
+        <link rel="stylesheet" href="sojourn.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <style>
-        body{
-                height: 1000px;
-        }
-        .explore{
-             background-color: rgb(147, 183, 236);
-             width:1100px;
-             height:500px;
-             margin-left:100px;
-        }
-        .exptitle{
-                margin-left:100px;
-        }
-        .expimg{
-                
-                border:0;
-                margin-top:50px;
-                margin-left:50px;
-                
-        }
-        @keyframes cycleImages {
-       0%, 33.33% {
-        opacity: 1; /* Show the image */
-        }
-        66.66%, 100% {
-         opacity: 0; /* Hide the image */
-        }
-     }
+        <style>
+                body {
+                        height: 1000px;
+                }
 
-        .image-container {
-      position: relative;
-      width: 1200px; /* Set width for images */
-      background-color: grey;
-      margin: 0 auto;
-       /* Hide images that are not active */
-    }
-    
-    
-        /* Style for each image */
-        .explore {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0; /* Initially hide all images */
-            animation: cycleImages 9s infinite;
-        }
-    .e1{
-       animation-delay: 0s;
-    }
-    .e2{
-       animation-delay: 3s;
-    }
-    .e3{
-       animation-delay: 6s;
-    }
-    </style>
+                .explore {
+                        background-color: rgb(39, 90, 167);
+                        width: 1100px;
+                        height: 500px;
+                        margin-left: 100px;
+                }
+
+                .exptitle {
+                        margin-left: 100px;
+                }
+
+                .expimg {
+
+                        border: 0;
+                        margin-top: 50px;
+                        margin-left: 50px;
+
+                }
+
+                @keyframes cycleImages {
+
+                        0%,
+                        33.33% {
+                                opacity: 1;
+                                /* Show the image */
+                        }
+
+                        66.66%,
+                        100% {
+                                opacity: 0;
+                                /* Hide the image */
+                        }
+                }
+
+                .image-container {
+                        position: relative;
+                        width: 1200px;
+                        /* Set width for images */
+                        background-color: grey;
+                        margin: 0 auto;
+                        /* Hide images that are not active */
+                }
+
+
+                /* Style for each image */
+                .explore {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        /* Initially hide all images */
+                        animation: cycleImages 9s infinite;
+                }
+
+                .e1 {
+                        animation-delay: 0s;
+
+
+
+                }
+
+                .e2 {
+                        animation-delay: 3s;
+
+
+                }
+
+                .e3 {
+                        animation-delay: 6s;
+
+
+                }
+
+                .cont {
+                        width: 1170px;
+                        height: 550px;
+                        background-color: rgb(210, 228, 154);
+                        display: flex;
+                        justify-content: space-around;
+                        margin: 20px;
+                        margin-left: -100px;
+                }
+
+                .content {
+
+                        font-size: 20px;
+                        font-family: Rubik;
+                        padding: 30px;
+                        margin-top: 50px;
+                        line-height: 1.5;
+                }
+
+                .i-title {
+                        margin: 10px;
+                        margin-top: 40px;
+                        margin-bottom: -40px;
+                        margin-left: 30px;
+                        border: 0;
+                        padding: 15px;
+                        font-family: Spectral, serif;
+                        font-size: 40px;
+
+
+                }
+
+                .img-hold {
+
+                        margin-top: -50px;
+                }
+
+                .rate {
+                        margin-top: -20px;
+                        margin-left: 30px;
+                }
+        </style>
 </head>
 
 <body>
-    <h1 class="Title">Sou-Journ</h1>
-    <hr>
+        <h1 class="Title">Sou-Journ</h1>
+        <hr>
 
-    <div class="icons">
-        <button class=" options" onclick="Toggle('ico')"><img
-                src="https://cdn2.iconfinder.com/data/icons/essentials-8/100/Menu-512.png" width="45"></button>
-        <button class="ico plane"><img
-                src="https://th.bing.com/th/id/OIP.uwF5PnA2HTmwjvrA2jKAtwHaHa?rs=1&pid=ImgDetMain" width="50"><span
-                class="tooltip">Book your Flight</span></button>
-        <button class="ico food"><img
-                src="https://th.bing.com/th/id/OIP.amSOwQhvzDFvr5T9wrTiQgHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7"
-                width="50"><span class="tooltip">Food </span></button>
-        <button class="ico hotel"><img
-                src="https://cdn.iconscout.com/icon/premium/png-512-thumb/living-room-1447724-1224138.png"
-                width="50"><span class="tooltip">Top hotels</span></button>
-        <button class="ico packages">
-            <img src="https://www.citypng.com/public/uploads/preview/money-cash-black-icon-transparent-png-11636944062qw6ybhhwy8.png"
-                width="50"><span class="tooltip">Packages</span></button>
-        <button class="ico events"><img
-                src="https://cdn4.iconfinder.com/data/icons/business-risks-10/48/ustomer_satisfaction_user_star_feedback_rating-1024.png"
-                width="50"><span class="tooltip">Reviews</span></button>
-        <button class="ico reviews"><img
-                src="https://th.bing.com/th/id/OIP.VMWS1G-rMjkWp2DBA_pinwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3"
-                width="50"><span class="tooltip">Special events</span></button>
-        <button class="ico cash"><img
-                src="https://cdn4.iconfinder.com/data/icons/edit-glyph/64/edit-comment-feed-write-256.png"
-                width="50"><span class="tooltip">Price</span></button>
-    </div>
-    <form action="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist" method="get">
+        <div class="icons">
+                <button class=" options" onclick="Toggle('ico')"><img
+                                src="https://cdn2.iconfinder.com/data/icons/essentials-8/100/Menu-512.png"
+                                width="45"></button>
+                <button class="ico plane"><img
+                                src="https://th.bing.com/th/id/OIP.uwF5PnA2HTmwjvrA2jKAtwHaHa?rs=1&pid=ImgDetMain"
+                                width="50"><span class="tooltip">Book your Flight</span></button>
+                <button class="ico food"><img
+                                src="https://th.bing.com/th/id/OIP.amSOwQhvzDFvr5T9wrTiQgHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7"
+                                width="50"><span class="tooltip">Food </span></button>
+                <button class="ico hotel"><img
+                                src="https://cdn.iconscout.com/icon/premium/png-512-thumb/living-room-1447724-1224138.png"
+                                width="50"><span class="tooltip">Top hotels</span></button>
+                <button class="ico packages">
+                        <img src="https://www.citypng.com/public/uploads/preview/money-cash-black-icon-transparent-png-11636944062qw6ybhhwy8.png"
+                                width="50"><span class="tooltip">Packages</span></button>
+                <button class="ico events"><img
+                                src="https://cdn4.iconfinder.com/data/icons/business-risks-10/48/ustomer_satisfaction_user_star_feedback_rating-1024.png"
+                                width="50"><span class="tooltip">Reviews</span></button>
+                <button class="ico reviews"><img
+                                src="https://th.bing.com/th/id/OIP.VMWS1G-rMjkWp2DBA_pinwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3"
+                                width="50"><span class="tooltip">Special events</span></button>
+                <button class="ico cash"><img
+                                src="https://cdn4.iconfinder.com/data/icons/edit-glyph/64/edit-comment-feed-write-256.png"
+                                width="50"><span class="tooltip">Price</span></button>
+        </div>
+        <form action="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist" method="get">
 
-        <input class="in" type="text" list="suggestions" placeholder="Search your Destination"><button class="search" onclick="switchh(event)"><i
-                class="fa-solid fa-magnifying-glass"></i></button>
-        <datalist id="suggestions">
+                <input class="in" type="text" list="suggestions" placeholder="Search your Destination"><button
+                        class="search" onclick="switchh(event)"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <datalist id="suggestions">
 
-            <option value="whatsapp" id="wa">
-            <option value="youtube" id="yo">
-            <option value="w3schools" id="ws">
-            
-
-        </datalist>
-    </form>
+                        <option value="whatsapp" id="wa">
+                        <option value="youtube" id="yo">
+                        <option value="w3schools" id="ws">
 
 
-
-    <div class="Themes">
-        <button class="hey" onclick="Toggle('thm')">
-
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
-                width="100"> <span class="tooltip">Confused where to Start?</span></button>
+                </datalist>
+        </form>
 
 
 
-        <button class=" thm thm1">
+        <div class="Themes">
+                <button class="hey" onclick="Toggle('thm')">
 
-            <img src="https://img.freepik.com/premium-photo/modern-bright-shopping-mall-interior-with-shoppers-escalator_14117-612734.jpg"
-                width="100"> <span class="tooltip">Explore Malls in Chennai</span></button>
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
+                                width="100"> <span class="tooltip">Confused where to Start?</span></button>
 
-        <button class=" thm thm2"><img
-                src="https://img.freepik.com/premium-vector/top-view-ocean-beach-with-soft-waves-summer-landscape-flat-landscap-vector-art-illustration_36900-3645.jpg?w=996"
-                width="100"><span class="tooltip">Spend Time in your Favourite Beach</span></button>
 
-        <button class=" thm thm3"><img
-                src="https://img.freepik.com/premium-photo/block-print-style-artwork-tiger-nature_785229-4835.jpg"
-                width="100"><span class="tooltip">Get Amused by the Wildlife</span></button>
 
-        <button class=" thm thm4"><img
-                src="https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yNF9zaW1wbGlmaWVkX3dlc3Rlcm5fc3R5bGVfcmVzdHVhcmFudF9taW5pbWFsaV8zOGEyNGJiOS0zMDQxLTQ5NDYtOWYxNS0zYjg4YzZiOTExZmVfMS5qcGc.jpg"
-                width="100"><span class="tooltip">Delicious Food from top restaurants </span></button>
+                <button class=" thm thm1">
 
-        <button class=" thm thm5"><img
-                src="https://png.pngtree.com/thumb_back/fw800/background/20230411/pngtree-park-childrens-slide-background-image_2189406.jpg"
-                width="100"><span class="tooltip">Explore temples and Rich culture of
-                Madras</span></button>
+                        <img src="https://img.freepik.com/premium-photo/modern-bright-shopping-mall-interior-with-shoppers-escalator_14117-612734.jpg"
+                                width="100"> <span class="tooltip">Explore Malls in Chennai</span></button>
 
-        <button class=" thm thm6"><img
-                src="https://img.freepik.com/premium-vector/india-monuments-vector-illustration_953932-6950.jpg"
-                width="100"><span class="tooltip">From Cathedral to St Thomas</span></button>
+                <button class=" thm thm2"><img
+                                src="https://img.freepik.com/premium-vector/top-view-ocean-beach-with-soft-waves-summer-landscape-flat-landscap-vector-art-illustration_36900-3645.jpg?w=996"
+                                width="100"><span class="tooltip">Spend Time in your Favourite Beach</span></button>
 
-        <button class=" thm thm7"><img src="https://ofonetree.com/wp-content/uploads/2024/01/image-879.png"
-                width="100"><span class="tooltip">Never ending 1000 Light Mosque</span></button>
+                <button class=" thm thm3"><img
+                                src="https://img.freepik.com/premium-photo/block-print-style-artwork-tiger-nature_785229-4835.jpg"
+                                width="100"><span class="tooltip">Get Amused by the Wildlife</span></button>
 
-        <button class=" thm thm8"><img
-                src="https://www.creativefabrica.com/wp-content/uploads/2023/04/05/Islamic-Mosque-flat-illustration-free-Graphics-66333305-1.jpeg"
-                width="100"><span class="tooltip">Nothing equals alone time in a evening
-                park</span></button>
-    </div>
-    <h1 class="exptitle">Explore top sites
-    </h1>
-    <div class="image-container">
-        <div class="explore e1"> 
-            <img class="expimg" src="https://yometro.com/images/places/Semmozhi-Poonga.jpg" width="600" height="400">
+                <button class=" thm thm4"><img
+                                src="https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yNF9zaW1wbGlmaWVkX3dlc3Rlcm5fc3R5bGVfcmVzdHVhcmFudF9taW5pbWFsaV8zOGEyNGJiOS0zMDQxLTQ5NDYtOWYxNS0zYjg4YzZiOTExZmVfMS5qcGc.jpg"
+                                width="100"><span class="tooltip">Delicious Food from top restaurants </span></button>
+
+                <button class=" thm thm5"><img
+                                src="https://png.pngtree.com/thumb_back/fw800/background/20230411/pngtree-park-childrens-slide-background-image_2189406.jpg"
+                                width="100"><span class="tooltip">Explore temples and Rich culture of
+                                Madras</span></button>
+
+                <button class=" thm thm6"><img
+                                src="https://img.freepik.com/premium-vector/india-monuments-vector-illustration_953932-6950.jpg"
+                                width="100"><span class="tooltip">From Cathedral to St Thomas</span></button>
+
+                <button class=" thm thm7"><img src="https://ofonetree.com/wp-content/uploads/2024/01/image-879.png"
+                                width="100"><span class="tooltip">Never ending 1000 Light Mosque</span></button>
+
+                <button class=" thm thm8"><img
+                                src="https://www.creativefabrica.com/wp-content/uploads/2023/04/05/Islamic-Mosque-flat-illustration-free-Graphics-66333305-1.jpeg"
+                                width="100"><span class="tooltip">Nothing equals alone time in a evening
+                                park</span></button>
+        </div>
+        <h1 class="exptitle">Explore top sites
+        </h1>
+        <div class="image-container">
+                <div class="explore e1">
+                        <div class="cont">
+
+                                <div class="img-hold">
+                                        <h2 class="i-title">Semmozhi Poonga</h1>
+                                                <img class="expimg"
+                                                        src="https://yometro.com/images/places/Semmozhi-Poonga.jpg"
+                                                        width="600" height="400">
+                                </div>
+                                <div class="para-hold">
+                                        <p class="content">Semmozhi Poonga is one of the most visited botanical gardens
+                                                in all
+                                                of Chennai. The beautiful landscaping at the garden has not only made it
+                                                a
+                                                delight for the daily morning walkers but has also attracted film makers
+                                                and
+                                                tourists. A huge parking lot, a canteen that serves delicious
+                                                refreshments, and
+                                                a beautiful artificial pond with ducks that are the children’s favorite,
+                                                Semmozhi Poonga has become a must visit destination in the city.</p>
+                                        <h2 class="rate">4.4 ★ ★ ★ ★ ☆ (over 70)</h2><br>
+                                        <h2 class="rate">From ₹10 to ₹100</h2>
+                                </div>
+
+                        </div>
+                </div>
+
+
+                <div class="explore e1">
+                        <div class="cont">
+
+                                <div class="img-hold">
+                                        <h2 class="i-title">Semmozhi Poonga</h1>
+                                                <img class="expimg"
+                                                        src="https://www.veethi.com/images/city-images/fullsize/Chennai-2233.jpg"
+                                                        width="600" height="400">
+                                </div>
+                                <div class="para-hold">
+                                        <p class="content">Semmozhi Poonga is one of the most visited botanical gardens
+                                                in all
+                                                of Chennai. The beautiful landscaping at the garden has not only made it
+                                                a
+                                                delight for the daily morning walkers but has also attracted film makers
+                                                and
+                                                tourists. A huge parking lot, a canteen that serves delicious
+                                                refreshments, and
+                                                a beautiful artificial pond with ducks that are the children’s favorite,
+                                                Semmozhi Poonga has become a must visit destination in the city.</p>
+                                        <h2 class="rate">4.4 ★ ★ ★ ★ ☆ (over 70)</h2><br>
+                                        <h2 class="rate">From ₹10 to ₹100</h2>
+                                </div>
+
+                        </div>
+                </div>
+
+
+                <div class="explore e1">
+                        <div class="cont">
+
+                                <div class="img-hold">
+                                        <h2 class="i-title">Semmozhi Poonga</h1>
+                                                <img class="expimg"
+                                                        src="https://yometro.com/images/places/Semmozhi-Poonga.jpg"
+                                                        width="600" height="400">
+                                </div>
+                                <div class="para-hold">
+                                        <p class="content">Semmozhi Poonga is one of the most visited botanical gardens
+                                                in all
+                                                of Chennai. The beautiful landscaping at the garden has not only made it
+                                                a
+                                                delight for the daily morning walkers but has also attracted film makers
+                                                and
+                                                tourists. A huge parking lot, a canteen that serves delicious
+                                                refreshments, and
+                                                a beautiful artificial pond with ducks that are the children’s favorite,
+                                                Semmozhi Poonga has become a must visit destination in the city.<a
+                                                        href="more.html">..more</a></p>
+                                        <h2 class="rate">4.4 ★ ★ ★ ★ ☆ (over 70)</h2><br>
+                                        <h2 class="rate">From ₹10 to ₹100</h2>
+                                </div>
+
+                        </div>
+                </div>
+
+
         </div>
 
-        <div class="explore e2"> 
-            <img class="expimg" src="https://th.bing.com/th?id=OLC.5kbUPt6sCNYedw480x360&w=280&h=140&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" width="600" height="400">
-        </div>
-   
-        <div class="explore e3"> 
-            <img class="expimg" src="https://4.bp.blogspot.com/-AtLJQsxESt4/Wb--h8YnTZI/AAAAAAAABdE/wgBb5Z6-cxgiv_WsNO_mK6y9WGS4Yy08QCLcBGAs/s1600/20170917_161759.jpg" width="600" height="400">
-        </div>
-    </div>
-   
-
-   
 
 
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
 
-    <script src="sojourn.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
+
+        <script src="sojourn.js"></script>
 </body>
 
 </html>
