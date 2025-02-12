@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThemeExtension</title>
+    <style>
+
+        body{
+            margin:0px;
+        }
+        .mimg{
+            width:100%;
+            vertical-align: middle;
+        }
+        * {
+         box-sizing: border-box;
+        }
+        .container{
+            position:relative;
+        }
+        .prev,.next{
+            position: absolute;
+            cursor: pointer;
+            top:40%;
+            width:auto;
+            padding:16px;
+            margin-top:-50px;
+            color: blueviolet;
+            font-size: 20px;
+            border-radius:0 3px 3px 0;
+            
+        }
+        .prev:hover,
+        .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        }
+
+       .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+       }
+
+       .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.caption-container{
+    display:flex;
+    justify-content:space-around;
+    background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+
+
+
+        .slide{
+            display: none;
+        }
+        .s-cont{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="numbertext">1 / 6</div>
+            <img class="mimg" src="" width="500px" height="300px">
+        </div>
+
+        <div class="slide">
+            <div class="numbertext">2 / 6</div>
+            <img class="mimg" src="" width="500px" height="300px">
+        </div>
+
+        <div class="slide">
+            <div class="numbertext">3 / 6</div>
+            <img class="mimg" src="" width="500px" height="300px">
+        </div>
+
+        <div class="slide">
+            <div class="numbertext">4 / 6</div>
+            <img class="mimg" src="" width="500px" height="300px">
+        </div>
+
+        <div class="slide">
+            <div class="numbertext">5 / 6</div>
+            <img class="mimg" src="" width="500px" height="300px">
+        </div>
+
+        <div class="slide">
+            <div class="numbertext">6 / 6</div>
+            <img class="mimg" src="" width="500px" height="300px">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(+1)">❯</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+     <div class="row">
+        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+
+        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+
+        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+
+        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+
+        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+
+        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+     </div>
+    </div>
+    
+
+
+    
+
+
+
+
+    </div>
+</body>
+</html>
