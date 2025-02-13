@@ -42,12 +42,12 @@
        }
 
        .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+       color: #f2f2f2;
+       font-size: 12px;
+       padding: 8px 12px;
+       position: absolute;
+      top: 0;
+     }
 .caption-container{
     display:flex;
     justify-content:space-around;
@@ -55,7 +55,17 @@
   padding: 2px 16px;
   color: white;
 }
+.active,.demo:hover{
+    opacity:1;
 
+}
+.demo{
+    opacity:0.6;
+}
+.column{
+    width:16.16%;
+    float:left;
+}
 
 
 
@@ -71,22 +81,22 @@
     <div class="container">
         <div class="slide">
             <div class="numbertext">1 / 6</div>
-            <img class="mimg" src="" width="500px" height="300px">
+            <img class="mimg " src="https://www.veethi.com/images/city-images/fullsize/Chennai-2233.jpg" width="500px" height="300px">
         </div>
 
         <div class="slide">
             <div class="numbertext">2 / 6</div>
-            <img class="mimg" src="" width="500px" height="300px">
+            <img class="mimg" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/living-room-1447724-1224138.png" width="500px" height="300px">
         </div>
 
         <div class="slide">
             <div class="numbertext">3 / 6</div>
-            <img class="mimg" src="" width="500px" height="300px">
+            <img class="mimg" src="https://www.veethi.com/images/city-images/fullsize/Chennai-2233.jpg" width="500px" height="300px">
         </div>
 
         <div class="slide">
             <div class="numbertext">4 / 6</div>
-            <img class="mimg" src="" width="500px" height="300px">
+            <img class="mimg" src="https://static.toiimg.com/photo/79753510/MARINA.jpg?width=748&resize=4" width="500px" height="300px">
         </div>
 
         <div class="slide">
@@ -129,5 +139,40 @@
 
 
     </div>
+
+
+    <script>
+        let slideImage=1;
+        showSlides(slideImage);
+
+        function plusSlides(n)
+        {
+            showSlides(slideImage+=1);
+        }
+        function currentSlide(n){
+            showSlides(slideImage=n);
+        }
+
+        function showSlides(n){
+            let i=1;
+            let slides=document.getElementsByClassName('slide');
+            let dots=document.getElementsByClassName('caption');
+            let captionText=document.getElementById('mimg');
+        }
+
+        if(n>slides.length){
+            slideImage=1;
+        }
+        if(n<1){
+            slideImage=slides.length;
+        }
+        for(i=0;i<dots.length;i++){
+            slides[i].style.display=none;
+        }
+        for(i=0;i<dots.length;i++){
+            dots[i].className=dots[i].className.replace('active');
+        }
+        
+    </script>
 </body>
 </html>
