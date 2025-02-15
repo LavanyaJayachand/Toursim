@@ -1,178 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThemeExtension</title>
-    <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
 
-        body{
-            margin:0px;
-        }
-        .mimg{
-            width:100%;
-            vertical-align: middle;
-        }
-        * {
-         box-sizing: border-box;
-        }
-        .container{
-            position:relative;
-        }
-        .prev,.next{
-            position: absolute;
-            cursor: pointer;
-            top:40%;
-            width:auto;
-            padding:16px;
-            margin-top:-50px;
-            color: blueviolet;
-            font-size: 20px;
-            border-radius:0 3px 3px 0;
-            
-        }
-        .prev:hover,
-        .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-       .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-       }
+    .container {
+      position: relative;
+      width:40%;
+    }
 
-       .numbertext {
-       color: #f2f2f2;
-       font-size: 12px;
-       padding: 8px 12px;
-       position: absolute;
-      top: 0;
-     }
-.caption-container{
-    display:flex;
-    justify-content:space-around;
-    background-color: #222;
-  padding: 2px 16px;
-  color: white;
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    /* Buttons for next and previous images */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      cursor: pointer;
+      font-size: 24px;
+      user-select: none;
+      transform: translateY(-50%);
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      color: white;
+      padding: 10px;
+    }
+
+    .thumbnail-row {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+
+    .thumbnail {
+      width: 16.66%;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .thumbnail:hover {
+      opacity: 1;
+    }
+
+    /* Style for the active slide */
+    .active {
+      opacity: 1 !important;
+    }
+    .mySlides{
+  width: 540px;   /* Fixed width for slides */
+  height: 300px;  /* Fixed height for slides */
 }
-.active,.demo:hover{
-    opacity:1;
-
-}
-.demo{
-    opacity:0.6;
-}
-.column{
-    width:16.16%;
-    float:left;
-}
-
-
-
-        .slide{
-            display: none;
-        }
-        .s-cont{
-            cursor:pointer;
-        }
-    </style>
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="slide">
-            <div class="numbertext">1 / 6</div>
-            <img class="mimg " src="https://www.veethi.com/images/city-images/fullsize/Chennai-2233.jpg" width="500px" height="300px">
-        </div>
 
-        <div class="slide">
-            <div class="numbertext">2 / 6</div>
-            <img class="mimg" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/living-room-1447724-1224138.png" width="500px" height="300px">
-        </div>
+<h2 style="text-align:center">Slideshow Gallery</h2>
 
-        <div class="slide">
-            <div class="numbertext">3 / 6</div>
-            <img class="mimg" src="https://www.veethi.com/images/city-images/fullsize/Chennai-2233.jpg" width="500px" height="300px">
-        </div>
+<div class="container">
+  <!-- Image Slides -->
+  <div class="slide">
+    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/94/af.jpg" class="mySlides">
+  </div>
+  <div class="slide">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/77/71/a4/guindy-national-park.jpg" class="mySlides">
+  </div>
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/OIP.r2bebXYSpVFo8o9ORpSeHgHaEP?rs=1&pid=ImgDetMain" class="mySlides">
+  </div>
+  <div class="slide">
+    <img src="https://i0.wp.com/farm8.staticflickr.com/7159/6699384555_30f4b7ce8f.jpg?resize=467%2C350" class="mySlides">
+  </div>
+  <div class="slide">
+    <img src="https://ourbetterclass.com/wp-content/uploads/2023/08/snake-park-in-India.jpg" class="mySlides">
+  </div>
 
-        <div class="slide">
-            <div class="numbertext">4 / 6</div>
-            <img class="mimg" src="https://static.toiimg.com/photo/79753510/MARINA.jpg?width=748&resize=4" width="500px" height="300px">
-        </div>
+  <!-- Navigation Buttons -->
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
 
-        <div class="slide">
-            <div class="numbertext">5 / 6</div>
-            <img class="mimg" src="" width="500px" height="300px">
-        </div>
+  <!-- Caption -->
+  <div class="caption-container">
+    <p id="caption">Image Caption</p>
+  </div>
 
-        <div class="slide">
-            <div class="numbertext">6 / 6</div>
-            <img class="mimg" src="" width="500px" height="300px">
-        </div>
+  <!-- Thumbnail Row -->
+  <div class="thumbnail-row">
+    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/94/af.jpg" class="thumbnail" onclick="currentSlide(1)">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/77/71/a4/guindy-national-park.jpg" class="thumbnail" onclick="currentSlide(2)">
+    <img src="https://th.bing.com/th/id/OIP.r2bebXYSpVFo8o9ORpSeHgHaEP?rs=1&pid=ImgDetMain" class="thumbnail" onclick="currentSlide(3)">
+    <img src="https://i0.wp.com/farm8.staticflickr.com/7159/6699384555_30f4b7ce8f.jpg?resize=467%2C350" class="thumbnail" onclick="currentSlide(3)">
+    <img src="https://ourbetterclass.com/wp-content/uploads/2023/08/snake-park-in-India.jpg" class="thumbnail" onclick="currentSlide(3)">
+  </div>
+</div>
 
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(+1)">❯</a>
+<script>
+  let slideIndex = 1;
 
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
+  // Show the current slide
+  showSlides(slideIndex);
 
-     <div class="row">
-        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+  // Show the next or previous slide
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
 
-        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+  // Show the slide clicked in thumbnails
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
 
-        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+  // Function to display the slide
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let thumbnails = document.getElementsByClassName("thumbnail");
+    let captionText = document.getElementById("caption");
 
-        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+    // Loop through all slides and hide them
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
 
-        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
 
-        <div class="column"><img class="s-cont" src="" onclick="currentSlide()"></div>
-     </div>
-    </div>
-    
+    // Loop through thumbnails and remove 'active' class
+    for (i = 0; i < thumbnails.length; i++) {
+      thumbnails[i].classList.remove("active");
+    }
 
+    // Display the current slide and set the active thumbnail
+    slides[slideIndex - 1].style.display = "block";
+    thumbnails[slideIndex - 1].classList.add("active");
 
-    
+    // Set the caption
+    captionText.innerHTML = "Image " + slideIndex;
+  }
+</script>
 
-
-
-
-    </div>
-
-
-    <script>
-        let slideImage=1;
-        showSlides(slideImage);
-
-        function plusSlides(n)
-        {
-            showSlides(slideImage+=1);
-        }
-        function currentSlide(n){
-            showSlides(slideImage=n);
-        }
-
-        function showSlides(n){
-            let i=1;
-            let slides=document.getElementsByClassName('slide');
-            let dots=document.getElementsByClassName('caption');
-            let captionText=document.getElementById('mimg');
-        }
-
-        if(n>slides.length){
-            slideImage=1;
-        }
-        if(n<1){
-            slideImage=slides.length;
-        }
-        for(i=0;i<dots.length;i++){
-            slides[i].style.display=none;
-        }
-        for(i=0;i<dots.length;i++){
-            dots[i].className=dots[i].className.replace('active');
-        }
-        
-    </script>
 </body>
 </html>
