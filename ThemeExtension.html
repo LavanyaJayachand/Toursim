@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
+      margin: 15px;
     }
 
     * {
@@ -14,7 +16,8 @@
 
     .container {
       position: relative;
-      width:40%;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
     }
 
     .slide {
@@ -23,7 +26,8 @@
     }
 
     /* Buttons for next and previous images */
-    .prev, .next {
+    .prev,
+    .next {
       position: absolute;
       top: 50%;
       padding: 10px;
@@ -50,6 +54,8 @@
       display: flex;
       justify-content: space-around;
       margin-top: 10px;
+      width: 100%;
+      margin-left: -10px;
     }
 
     .thumbnail {
@@ -66,97 +72,192 @@
     .active {
       opacity: 1 !important;
     }
-    .mySlides{
-  width: 540px;   /* Fixed width for slides */
-  height: 300px;  /* Fixed height for slides */
-}
+
+    .mySlides {
+      width: 600px;
+      /* Fixed width for slides */
+      height: 300px;
+      /* Fixed height for slides */
+    }
+
+    .main-c {
+      display: flex;
+      padding: 20px;
+    }
+
+    #dynamic {
+      padding: 20px;
+    }
+
+    #dynamic-title {
+      font-family: Spectral, serif;
+      font-size: 40px;
+    }
+
+    #timings,
+    #dynamic-content {
+      font-size: 20px;
+      line-height: 1.5;
+
+      font-family: Rubik, serif;
+    }
+
+    .zoo-title {
+      font-family: Spectral, serif;
+      font-size: 44px;
+
+    }
   </style>
 </head>
+
 <body>
 
-<h2 style="text-align:center">Slideshow Gallery</h2>
+  <h1 class="zoo-title" style="text-align:center">Wildlife in Chennai </h2>
+    <div class="main-c">
 
-<div class="container">
-  <!-- Image Slides -->
-  <div class="slide">
-    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/94/af.jpg" class="mySlides">
-  </div>
-  <div class="slide">
-    <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/77/71/a4/guindy-national-park.jpg" class="mySlides">
-  </div>
-  <div class="slide">
-    <img src="https://th.bing.com/th/id/OIP.r2bebXYSpVFo8o9ORpSeHgHaEP?rs=1&pid=ImgDetMain" class="mySlides">
-  </div>
-  <div class="slide">
-    <img src="https://i0.wp.com/farm8.staticflickr.com/7159/6699384555_30f4b7ce8f.jpg?resize=467%2C350" class="mySlides">
-  </div>
-  <div class="slide">
-    <img src="https://ourbetterclass.com/wp-content/uploads/2023/08/snake-park-in-India.jpg" class="mySlides">
-  </div>
+      <div class="showcase">
+        <div class="container">
+          <!-- Image Slides -->
+          <div class="slide">
+            <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/94/af.jpg" class="mySlides">
+          </div>
+          <div class="slide">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/77/71/a4/guindy-national-park.jpg"
+              class="mySlides">
+          </div>
+          <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.r2bebXYSpVFo8o9ORpSeHgHaEP?rs=1&pid=ImgDetMain" class="mySlides">
+          </div>
+          <div class="slide">
+            <img src="https://i0.wp.com/farm8.staticflickr.com/7159/6699384555_30f4b7ce8f.jpg?resize=467%2C350"
+              class="mySlides">
+          </div>
+          <div class="slide">
+            <img src="https://ourbetterclass.com/wp-content/uploads/2023/08/snake-park-in-India.jpg" class="mySlides">
+          </div>
 
-  <!-- Navigation Buttons -->
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
+          <!-- Navigation Buttons -->
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
 
-  <!-- Caption -->
-  <div class="caption-container">
-    <p id="caption">Image Caption</p>
-  </div>
+          <!-- Caption -->
+          <div class="caption-container">
+            <p id="caption">Image Caption</p>
+          </div>
+        </div>
 
-  <!-- Thumbnail Row -->
-  <div class="thumbnail-row">
-    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/94/af.jpg" class="thumbnail" onclick="currentSlide(1)">
-    <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/77/71/a4/guindy-national-park.jpg" class="thumbnail" onclick="currentSlide(2)">
-    <img src="https://th.bing.com/th/id/OIP.r2bebXYSpVFo8o9ORpSeHgHaEP?rs=1&pid=ImgDetMain" class="thumbnail" onclick="currentSlide(3)">
-    <img src="https://i0.wp.com/farm8.staticflickr.com/7159/6699384555_30f4b7ce8f.jpg?resize=467%2C350" class="thumbnail" onclick="currentSlide(3)">
-    <img src="https://ourbetterclass.com/wp-content/uploads/2023/08/snake-park-in-India.jpg" class="thumbnail" onclick="currentSlide(3)">
-  </div>
-</div>
 
-<script>
-  let slideIndex = 1;
+        <!-- Thumbnail Row -->
+        <div class="thumbnail-row">
+          <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/94/af.jpg" class="thumbnail"
+            onclick="currentSlide(1)">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/77/71/a4/guindy-national-park.jpg"
+            class="thumbnail" onclick="currentSlide(2)">
+          <img src="https://th.bing.com/th/id/OIP.r2bebXYSpVFo8o9ORpSeHgHaEP?rs=1&pid=ImgDetMain" class="thumbnail"
+            onclick="currentSlide(3)">
+          <img src="https://i0.wp.com/farm8.staticflickr.com/7159/6699384555_30f4b7ce8f.jpg?resize=467%2C350"
+            class="thumbnail" onclick="currentSlide(4)">
+          <img src="https://ourbetterclass.com/wp-content/uploads/2023/08/snake-park-in-India.jpg" class="thumbnail"
+            onclick="currentSlide(5)">
+        </div>
+      </div>
+      <div id="dynamic">
+        <h1 id="dynamic-title">Vandalur zoo</h1>
+        <p id="dynamic-content">Arignar Anna Zoological Park was the first Zoo established in the country in 1855. It
+          is
+          one of the largest Zoos in Southeast Asia, spreading across 602 hectares of land. It is one of the most modern
+          and
+          scientifically managed Zoos in the country and it is rated as the "Best Zoo" in the country with a top score
+          of
+          82% in the first Management Effectiveness Evaluation conducted by the Central Zoo Authority, MOEF & CC. The
+          park
+          works with the mission of conservation breeding of rare and endangered animals, veterinary care & conservation
+          education.
+        <p id="timings"><b>Timings:</b>9:00 AM - 5:00 PM (Closed on Tuesdays) </p>
+        </p>
 
-  // Show the current slide
-  showSlides(slideIndex);
+      </div>
+    </div>
 
-  // Show the next or previous slide
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
 
-  // Show the slide clicked in thumbnails
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+    <script>
+      let slideIndex = 1;
 
-  // Function to display the slide
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    let thumbnails = document.getElementsByClassName("thumbnail");
-    let captionText = document.getElementById("caption");
+      // Show the current slide
+      showSlides(slideIndex);
 
-    // Loop through all slides and hide them
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+      // Show the next or previous slide
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
 
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
+      // Show the slide clicked in thumbnails
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
 
-    // Loop through thumbnails and remove 'active' class
-    for (i = 0; i < thumbnails.length; i++) {
-      thumbnails[i].classList.remove("active");
-    }
+      // Function to display the slide
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let thumbnails = document.getElementsByClassName("thumbnail");
+        let captionText = document.getElementById("caption");
 
-    // Display the current slide and set the active thumbnail
-    slides[slideIndex - 1].style.display = "block";
-    thumbnails[slideIndex - 1].classList.add("active");
+        // Loop through all slides and hide them
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
 
-    // Set the caption
-    captionText.innerHTML = "Image " + slideIndex;
-  }
-</script>
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        // Loop through thumbnails and remove 'active' class
+        for (i = 0; i < thumbnails.length; i++) {
+          thumbnails[i].classList.remove("active");
+        }
+
+        // Display the current slide and set the active thumbnail
+        slides[slideIndex - 1].style.display = "block";
+        thumbnails[slideIndex - 1].classList.add("active");
+
+        // Set the caption
+        captionText.innerHTML = "Be the first to Explore the Wild ";
+        if (slideIndex === 1) {
+          document.getElementById('dynamic-title').innerText = "Vandalur zoo";
+          document.getElementById('dynamic-content').innerText = "Arignar Anna Zoological Park was the first Zoo established in the country in 1855. It is one of the largest Zoos in Southeast Asia, spreading across 602 hectares of land.It is one of the most modern and scientifically managed Zoos in the country and it is rated as the Best Zoo in the country with a top score of 82 % in the first Management Effectiveness Evaluation conducted by the Central Zoo Authority, MOEF & CC.The park works with the mission of conservation breeding of rare and endangered animals, veterinary care & conservation education.";
+          document.getElementById('timings').innerText = "Timings: 9:00 AM - 5:00 PM (Closed on Tuesdays)";
+        }
+        else if (slideIndex === 2) {
+          document.getElementById('dynamic-title').innerText = "Guindy National park";
+          document.getElementById('dynamic-content').innerText = "If you want to see wild animals and don’t feel like travelling much deeper into the jungles, then you can always go to Chennai. Guindy National Park, the 8th smallest national park in India is right here within the city limits. Covered with lush green vegetation, Guindy National Park is an idyllic spot to spend a day in the shades of varied species of trees, watching animals. An extension of the grounds surrounding the Tamil Nadu Raj Bhavan (the Governor’s residence), it extends deep inside the Governor’s estate and is filled with picturesque forests, scrubs and streams. ";
+          document.getElementById('timings').innerText = "Timings: 9:00 AM - 6:00 PM (Open every day)";
+
+
+        }
+        else if (slideIndex === 3) {
+          document.getElementById('dynamic-title').innerText = "Crocodile Bank";
+          document.getElementById('dynamic-content').innerText = "One of the popular tourist attractions, Madras Crocodile Bank Trust and Centre for Herpetology (MCBT), commonly known as Crocodile Bank is located 40 kms from the city of Chennai. It is one of the largest reptile zoos in the world, spread across over 8.5 acres of land.Once the need for the conservation of reptiles grew, the Crocodile Bank took up the preservation of turtles, lizards and snakes as well and came to be known as the Madras Crocodile Bank Trust and Center for Herpetology in 2003";
+          document.getElementById('timings').innerText = "Timings: 9:00 AM - 6:00 PM (Open every day)";
+
+        }
+        else if (slideIndex === 4) {
+          document.getElementById('dynamic-title').innerText = "Guindy Childrens park";
+          document.getElementById('dynamic-content').innerText = "Located in the heart of Chennai, Guindy Children's Park is a delightful destination for families and nature lovers. As a part of Guindy National Park, this park offers a unique opportunity to experience wildlife up close in a fun and educational environment.The park is home to various animals, including spotted deer, blackbucks, tortoises, peacocks, and different bird species. It also features a reptile house showcasing snakes and other fascinating creatures. Designed especially for children, the park provides spacious play areas, shaded picnic spots, and engaging exhibits to spark curiosity about nature and conservation.";
+          document.getElementById('timings').innerText = "Timings: 10:00 AM - 6:00 PM (Open every day)";
+
+        }
+        else if (slideIndex === 5) {
+          document.getElementById('dynamic-title').innerText = "Chennai Snake park";
+          document.getElementById('dynamic-content').innerText = "As of now, the Snake Park has on display, 20 species of Indian snakes, all three species of Indian crocodilians, two species of exotic crocodiles, three species of Indian turtles/tortoises, four species of Indian lizards and four species of exotic reptiles (iguanas, slider turtles, spitting cobras, albino pythons) making a total of  36 species.The snakes are all housed in glass - fronted reptile - friendly and visitor - friendly enclosures.";
+          document.getElementById('timings').innerText = "Timings: 9:00 AM - 5:00 PM (Open every day)";
+
+        }
+
+
+
+      }
+    </script>
 
 </body>
+
 </html>

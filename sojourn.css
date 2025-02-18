@@ -105,19 +105,20 @@ img {
 
 .in {
     position: absolute;
-    height: 30px;
+    height: 40px;
     width: 400px;
     margin-left: 400px;
-    margin-top: -90px;
+    margin-top: -70px;
+
 
 }
 
 .search {
     position: absolute;
-    height: 36px;
+    height: 45px;
     width: 40px;
     margin-left: 800px;
-    margin-top: -90px;
+    margin-top: -70px;
 }
 
 .ico,
