@@ -153,7 +153,10 @@
                         margin-top: -70px;
                 }
 
-                .login:hover {}
+                .login:hover {
+                        cursor: pointer;
+                        opacity: 0.6;
+                }
         </style>
 </head>
 
@@ -200,8 +203,10 @@
 
                 </datalist>
 
-                <button class="login">Login<span class="tooltip">for better experience</span> </button>
+          
         </form>
+
+        <button class="login" onclick="window.location.href='login.html'">Login <span class="tooltip">for better experience</span> </button>
 
 
         <button class="hey" onclick="Toggle('thm')">
