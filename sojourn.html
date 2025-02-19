@@ -15,6 +15,65 @@
                         background-color: rgb(198, 202, 202);
                 }
 
+                @keyframes cycleImages {
+    0%, 16.66% {
+        opacity: 1;
+    }
+    33.33%, 50% {
+        opacity: 0;
+    }
+
+    16.66%, 33.33% {
+        opacity: 1;
+    }
+    50%, 66.66% {
+        opacity: 0;
+    }
+
+    66.66%, 83.33% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Apply the animation for all six images */
+.explore {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    animation: cycleImages 18s infinite;
+}
+
+/* Add different delays for each image */
+.e1 {
+    animation-delay: 0s;
+}
+
+.e2 {
+    animation-delay: 3s;
+}
+
+.e3 {
+    animation-delay: 6s;
+}
+
+.e4 {
+    animation-delay: 9s;
+}
+
+.e5 {
+    animation-delay: 12s;
+}
+
+.e6 {
+    animation-delay: 15s;
+}
 
 
 
@@ -32,20 +91,7 @@
 
                 }
 
-                @keyframes cycleImages {
-
-                        0%,
-                        33.33% {
-                                opacity: 1;
-                                /* Show the image */
-                        }
-
-                        66.66%,
-                        100% {
-                                opacity: 0;
-                                /* Hide the image */
-                        }
-                }
+                
 
                 .image-container {
 
@@ -59,45 +105,7 @@
                 }
 
 
-                /* Style for each image */
-                .explore {
-                        margin: -20px;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-
-                        height: 100%;
-                        opacity: 0;
-                        /* Initially hide all images */
-                        animation: cycleImages 9s infinite;
-                }
-
-                .e1 {
-                        animation-delay: 0s;
-
-
-
-                }
-
-                .e2 {
-                        animation-delay: 3s;
-
-
-                }
-
-                .e3 {
-                        animation-delay: 6s;
-
-
-                }
-
-                .e4 {
-                        animation-delay: 9s;
-                }
-
-                .e5 {
-                        animation-delay: 12s;
-                }
+                
 
                 .cont {
                         width: 1050px;
@@ -139,9 +147,20 @@
                 }
 
                 .rate {
-                        font-size: 20px;
+                        font-size: 16px;
                         margin-top: -20px;
                         margin-left: 30px;
+                }
+                .book{
+
+                        font-size: 16px;
+                        margin-top: -20px;
+                        margin-left: 30px;
+                }
+                .book:hover{
+                        cursor: pointer;
+                        background-color: rgb(112, 108, 102);
+
                 }
 
                 .login {
@@ -228,7 +247,7 @@
                                         width="100"><span class="tooltip">Spend Time in your Favourite
                                         Beach</span></button>
 
-                        <button class=" thm thm3"><img
+                        <button class=" thm thm3" onclick="window.location.href='ThemeExtension.html'"><img
                                         src="https://img.freepik.com/premium-photo/block-print-style-artwork-tiger-nature_785229-4835.jpg"
                                         width="100"><span class="tooltip">Get Amused by the Wildlife</span></button>
 
@@ -282,6 +301,7 @@
                                                         href="more.html">..more</a></p>
                                         <h2 class="rate">4.4 ★ ★ ★ ★ ☆ (over 70)</h2><br>
                                         <h2 class="rate">From ₹10 to ₹100</h2>
+                                        <button class="book">Book your Journey</button>
                                 </div>
 
                         </div>
@@ -307,6 +327,8 @@
                                                 CC.<a href="more.html">..more</a>.</p>
                                         <h2 class="rate">4.5 ★ ★ ★ ★ ☆ (over 70)</h2><br>
                                         <h2 class="rate">From ₹10 to ₹100</h2>
+                                        <button class="book">Book your Journey</button>
+
                                 </div>
 
                         </div>
@@ -331,6 +353,8 @@
                                         </p>
                                         <h2 class="rate">4.2 ★ ★ ★ ★ ☆ (over 70)</h2><br>
                                         <h2 class="rate">From ₹10 to ₹100</h2>
+                                        <button class="book">Book your Journey</button>
+
                                 </div>
 
                         </div>
@@ -355,6 +379,8 @@
                                         </p>
                                         <h2 class="rate">4.2 ★ ★ ★ ★ ☆ (over 70)</h2><br>
                                         <h2 class="rate">From ₹10 to ₹100</h2>
+                                        <button class="book">Book your Journey</button>
+
                                 </div>
 
                         </div>
@@ -380,6 +406,8 @@
                                         </p>
                                         <h2 class="rate">4.2 ★ ★ ★ ★ ☆ (over 70)</h2><br>
                                         <h2 class="rate">From ₹10 to ₹100</h2>
+                                        <button class="book">Book your Journey</button>
+
                                 </div>
 
                         </div>

@@ -72,6 +72,13 @@
             margin-left: 14px;
             width: 350px;
         }
+        #mail:hover{
+
+        }
+
+        .tooltip {
+    
+}
     </style>
 </head>
 
@@ -86,18 +93,19 @@
                 <label>Enter Email ID
                 </label>
                 <input id="mail" class="username" type="email" name="email" placeholder="Enter your email" required>
+                <span class="tooltip"></span>
                 <br><br>
 
                 <label>
                     Enter password
                 </label>
-                <input class="username" type="password" placeholder="password"></input><br><br>
+                <input class="username" type="password" placeholder="password" required></input><br><br>
 
                 <label>
                     Enter password
                 </label>
 
-                <input class="username" type="password" placeholder="Confirm password"></input>
+                <input class="username" type="password" placeholder="Confirm password" required></input>
                 <br><br>
                 <br>
                 <button class="b1" type="submit">
@@ -109,8 +117,11 @@
     </div>
 
     <script>
-
-
+    function validate()
+{
+    let email=" ";
+    email = document.getElementById('mail').innerText;
+}
 
     </script>
 
