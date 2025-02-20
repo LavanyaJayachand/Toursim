@@ -15,65 +15,53 @@
                         background-color: rgb(198, 202, 202);
                 }
 
+
+                /* Apply the animation for all six images */
                 @keyframes cycleImages {
-    0%, 16.66% {
-        opacity: 1;
-    }
-    33.33%, 50% {
-        opacity: 0;
-    }
 
-    16.66%, 33.33% {
-        opacity: 1;
-    }
-    50%, 66.66% {
-        opacity: 0;
-    }
+                        0%,
+                        20% {
+                                opacity: 1;
+                        }
 
-    66.66%, 83.33% {
-        opacity: 1;
-    }
+                        25%,
+                        100% {
+                                opacity: 0;
+                        }
+                }
 
-    100% {
-        opacity: 0;
-    }
-}
+                /* Apply the animation for all five images */
+                .explore {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        opacity: 0;
+                        animation: cycleImages 15s infinite;
+                }
 
-/* Apply the animation for all six images */
-.explore {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    animation: cycleImages 18s infinite;
-}
+                /* Add different delays for each image */
+                .e1 {
+                        animation-delay: 0s;
+                }
 
-/* Add different delays for each image */
-.e1 {
-    animation-delay: 0s;
-}
+                .e2 {
+                        animation-delay: 3s;
+                }
 
-.e2 {
-    animation-delay: 3s;
-}
+                .e3 {
+                        animation-delay: 6s;
+                }
 
-.e3 {
-    animation-delay: 6s;
-}
+                .e4 {
+                        animation-delay: 9s;
+                }
 
-.e4 {
-    animation-delay: 9s;
-}
+                .e5 {
+                        animation-delay: 12s;
+                }
 
-.e5 {
-    animation-delay: 12s;
-}
-
-.e6 {
-    animation-delay: 15s;
-}
 
 
 
@@ -91,7 +79,7 @@
 
                 }
 
-                
+
 
                 .image-container {
 
@@ -105,7 +93,7 @@
                 }
 
 
-                
+
 
                 .cont {
                         width: 1050px;
@@ -151,13 +139,15 @@
                         margin-top: -20px;
                         margin-left: 30px;
                 }
-                .book{
+
+                .book {
 
                         font-size: 16px;
                         margin-top: -20px;
                         margin-left: 30px;
                 }
-                .book:hover{
+
+                .book:hover {
                         cursor: pointer;
                         background-color: rgb(112, 108, 102);
 
@@ -222,10 +212,11 @@
 
                 </datalist>
 
-          
+
         </form>
 
-        <button class="login" onclick="window.location.href='login.html'">Login <span class="tooltip">for better experience</span> </button>
+        <button class="login" onclick="window.location.href='login.html'">Login <span class="tooltip">for better
+                        experience</span> </button>
 
 
         <button class="hey" onclick="Toggle('thm')">
