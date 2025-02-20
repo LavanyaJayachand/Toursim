@@ -15,20 +15,21 @@
       box-sizing: border-box;
     }
 
-    .container {
+    .container2,.container {
       position: relative;
       width: 100%;
       background-color: rgb(255, 255, 255);
     }
 
-    .slide {
+    .slide2,.slide {
       display: none;
       width: 100%;
     }
 
     /* Buttons for next and previous images */
     .prev,
-    .next {
+    .next,
+    .prev2,.next2 {
       position: absolute;
       top: 50%;
       padding: 10px;
@@ -40,18 +41,20 @@
       transform: translateY(-50%);
     }
 
-    .next {
+    .next,.next2 {
       right: 0;
     }
 
-    .caption-container {
+    .caption-container,.caption-container2 {
       text-align: center;
       background-color: #222;
       color: white;
       padding: 10px;
     }
 
-    .thumbnail-row {
+   
+
+    .thumbnail-row,.thumbnail-row2 {
       display: flex;
       justify-content: space-around;
       margin-top: 10px;
@@ -59,51 +62,58 @@
       margin-left: -10px;
     }
 
-    .thumbnail {
+    .thumbnail,.thumbnail2 {
       width: 16.66%;
       cursor: pointer;
       opacity: 0.6;
     }
 
-    .thumbnail:hover {
+    .thumbnail:hover,.thumbnail2:hover {
       opacity: 1;
     }
 
     /* Style for the active slide */
-    .active {
+    .active,.active2 {
       opacity: 1 !important;
     }
 
-    .mySlides {
+    .mySlides,.mySlides2 {
       width: 600px;
       /* Fixed width for slides */
       height: 300px;
       /* Fixed height for slides */
     }
 
-    .main-c {
+    .main-c,.main-c2 {
       display: flex;
       padding: 20px;
     }
 
-    #dynamic {
+    #dynamic,#dynamic2 {
       padding: 20px;
     }
 
-    #dynamic-title {
+    #dynamic-title,#dynamic-title2 {
       font-family: Spectral, serif;
       font-size: 40px;
     }
 
+    #timings2,
+    #dynamic-content2{
+      font-size: 20px;
+      line-height: 1.5;
+
+      font-family: Rubik, serif;
+    }
     #timings,
-    #dynamic-content {
+    #dynamic-content{
       font-size: 20px;
       line-height: 1.5;
 
       font-family: Rubik, serif;
     }
 
-    .zoo-title {
+    .zoo-title,.beach-title {
       font-family: Spectral, serif;
       font-size: 44px;
 
@@ -113,7 +123,7 @@
 
 <body>
 
-  <h1 class="zoo-title" style="text-align:center">Wildlife in Chennai </h2>
+  <h1 class="zoo-title" style="text-align:center">Wildlife in Chennai </h1>
     <div class="main-c">
 
       <div class="showcase">
@@ -182,6 +192,74 @@
 
     <br>
     <hr>
+
+    <h1 class="beach-title" style="text-align:center">Waves in Chennai </h1>
+      <div class="main-c2">
+  
+        <div class="showcase2">
+          <div class="container2">
+            <!-- Image Slides -->
+            <div class="slide2">
+              <img src="https://dp5zphk8udxg9.cloudfront.net/wp-content/uploads/2019/01/shutterstock_1120849187.jpg" class="mySlides2">
+            </div>
+            <div class="slide2">
+              <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2d/08/13.jpg"
+                class="mySlides2">
+            </div>
+            <div class="slide2">
+              <img src="https://th.bing.com/th/id/OIP.r2bebXYSpVFo8o9ORpSeHgHaEP?rs=1&pid=ImgDetMain" class="mySlides2">
+            </div>
+            <div class="slide2">
+              <img src="https://i0.wp.com/farm8.staticflickr.com/7159/6699384555_30f4b7ce8f.jpg?resize=467%2C350"
+                class="mySlides2">
+            </div>
+            <div class="slide2">
+              <img src="https://ourbetterclass.com/wp-content/uploads/2023/08/snake-park-in-India.jpg" class="mySlides2">
+            </div>
+  
+            <!-- Navigation Buttons -->
+            <a class="prev2" onclick="plusSlides2(-1)">❮</a>
+            <a class="next2" onclick="plusSlides2(1)">❯</a>
+  
+            <!-- Caption -->
+            <div class="caption-container2">
+              <p id="caption2">Image Caption</p>
+            </div>
+          </div>
+  
+  
+          <!-- Thumbnail Row -->
+          <div class="thumbnail-row2">
+            <img src="https://dp5zphk8udxg9.cloudfront.net/wp-content/uploads/2019/01/shutterstock_1120849187.jpg" class="thumbnail2"
+              onclick="currentSlide2(1)">
+            <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2d/08/13.jpg"
+              class="thumbnail2" onclick="currentSlide2(2)">
+            <img src="https://th.bing.com/th/id/OIP.r2bebXYSpVFo8o9ORpSeHgHaEP?rs=1&pid=ImgDetMain" class="thumbnail2"
+              onclick="currentSlide2(3)">
+            <img src="https://i0.wp.com/farm8.staticflickr.com/7159/6699384555_30f4b7ce8f.jpg?resize=467%2C350"
+              class="thumbnail2" onclick="currentSlide2(4)">
+            <img src="https://ourbetterclass.com/wp-content/uploads/2023/08/snake-park-in-India.jpg" class="thumbnail2"
+              onclick="currentSlide2(5)">
+          </div>
+        </div>
+        <div id="dynamic2">
+          <h1 id="dynamic-title2">Marina Beach</h1>
+          <p id="dynamic-content2">Arignar Anna Zoological Park was the first Zoo established in the country in 1855. It
+            is
+            one of the largest Zoos in Southeast Asia, spreading across 602 hectares of land. It is one of the most modern
+            and
+            scientifically managed Zoos in the country and it is rated as the "Best Zoo" in the country with a top score
+            of
+            82% in the first Management Effectiveness Evaluation conducted by the Central Zoo Authority, MOEF & CC. The
+            park
+            works with the mission of conservation breeding of rare and endangered animals, veterinary care & conservation
+            education.
+          <p id="timings2"><b>Timings:</b>9:00 AM - 5:00 PM (Closed on Tuesdays) </p>
+          </p>
+  
+        </div>
+      </div>
+  
 
 
 

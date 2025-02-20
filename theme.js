@@ -92,37 +92,37 @@ function currentSlide2(n) {
 // Function to display the slide
 function showSlides2(n) {
   let i;
-  let slides = document.getElementsByClassName("slide2");
-  let thumbnails = document.getElementsByClassName("thumbnail2");
-  let captionText = document.getElementById("caption2");
+  let slides2 = document.getElementsByClassName("slide2");
+  let thumbnails2 = document.getElementsByClassName("thumbnail2");
+  let captionText2 = document.getElementById("caption2");
 
   // Loop through all slides and hide them
-  if (n > slides.length) { slideIndex2 = 1 }
-  if (n < 1) { slideIndex2 = slides.length }
+  if (n > slides2.length) { slideIndex2 = 1 }
+  if (n < 1) { slideIndex2 = slides2.length }
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  for (i = 0; i < slides2.length; i++) {
+    slides2[i].style.display = "none";
   }
 
   // Loop through thumbnails and remove 'active' class
-  for (i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].classList.remove("active");
+  for (i = 0; i < thumbnails2.length; i++) {
+    thumbnails2[i].classList.remove("active2");
   }
 
   // Display the current slide and set the active thumbnail
-  slides[slideIndex2 - 1].style.display = "block";
-  thumbnails[slideIndex2 - 1].classList.add("active");
+  slides2[slideIndex2 - 1].style.display = "block";
+  thumbnails2[slideIndex2 - 1].classList.add("active2");
 
   // Set the caption
-  captionText.innerHTML = "Relax and Enjoy the Beach Vibes";
+  captionText2.innerHTML = "Relax and Enjoy the Beach Vibes";
   if (slideIndex2 === 1) {
     document.getElementById('dynamic-title2').innerText = "Marina Beach";
-    document.getElementById('dynamic-content2').innerText = "Marina Beach is one of the longest urban beaches in the world. With golden sands stretching over 13 km, it is a perfect place for evening strolls, local food, and scenic sunsets.";
+    document.getElementById('dynamic-content2').innerText = "Marina Beach is a natural urban beach located along the Bay of Bengal in Chennai. It stretches for about 13 kilometers, from Fort St. George in the north to Besant Nagar in the south, making it the longest natural urban beach in India and the second longest in the world. This sandy beach is a very popular tourist attraction, attracting 30,000 visitors every day. The beach is famous for its beautiful sunrises and sunsets, wide sandy shore and cool breezes. The beach also has various food stalls, souvenir shops and offers activities like horse rides. ";
     document.getElementById('timings2').innerText = "Open 24/7";
   }
   else if (slideIndex2 === 2) {
     document.getElementById('dynamic-title2').innerText = "Elliot's Beach";
-    document.getElementById('dynamic-content2').innerText = "Elliot’s Beach, known for its cleanliness and serenity, is a favorite hangout spot for the locals. It is less crowded compared to Marina Beach, making it an ideal place to relax.";
+    document.getElementById('dynamic-content2').innerText = "Known alternatively as Besant Nagar Beach, or “Bessie” for short, Elliot's Beach sits at the south end of the Marina Beach shore. A former expatriate enclave during Chennai’s colonial era, today the beach attracts throngs of twentysomethings, as well as families looking to avoid the crowds at the more popular Marina Beach.";
     document.getElementById('timings2').innerText = "Open 24/7";
   }
   else if (slideIndex2 === 3) {

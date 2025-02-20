@@ -125,3 +125,267 @@ img {
 .thm {
     visibility: hidden;
 }
+
+body {
+    height: 1000px;
+    background-color: rgb(198, 202, 202);
+}
+
+
+/* Apply the animation for all six images */
+@keyframes cycleImages {
+
+    0%,
+    20% {
+            opacity: 1;
+    }
+
+    25%,
+    100% {
+            opacity: 0;
+    }
+}
+
+/* Apply the animation for all five images */
+.explore {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    animation: cycleImages 15s infinite;
+}
+
+/* Add different delays for each image */
+.e1 {
+    animation-delay: 0s;
+}
+
+.e2 {
+    animation-delay: 3s;
+}
+
+.e3 {
+    animation-delay: 6s;
+}
+
+.e4 {
+    animation-delay: 9s;
+}
+
+.e5 {
+    animation-delay: 12s;
+}
+
+
+
+
+
+.exptitle {
+    margin-left: 100px;
+}
+
+.expimg {
+
+    border: 0;
+    margin-top: 50px;
+    margin-left: 50px;
+
+
+}
+
+
+
+.image-container {
+
+    position: relative;
+    width: 900px;
+    /* Set width for images */
+    background-color: grey;
+    margin: 0 auto;
+    /* Hide images that are not active */
+
+}
+
+
+
+
+.cont {
+    width: 1050px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 15px black;
+
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    margin-left: -100px;
+}
+
+@media(max-width:768px){
+    .cont{
+        
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        
+    }
+    .Title{
+        font-size:7vw;
+    }
+    h1{
+        font-size: 7vw;
+    }
+    .i-title{
+      font-size: 5vw;
+    }
+    .where {
+        font-size: 14px;
+        margin-top: -60px;
+    }
+    .hey {
+        right: 2%;
+        height: 90px;
+        width: 140px;
+        margin-top: -90px;
+    }
+
+    .in {
+        width: 350px;
+        margin-left: 300px;
+        margin-top: -60px;
+    }
+
+    .search {
+        width: 35px;
+        height: 40px;
+        margin-left: 700px;
+        margin-top: -60px;
+    }
+    .img-hold{
+        width:100px;
+        
+        
+    }
+
+    @media (max-width: 480px) {
+        body {
+            font-size: 14px;
+        }
+        .Title {
+            font-size: 8vw; /* Smaller font size for mobile */
+        }
+        h1 {
+            font-size: 8vw;
+        }
+        .i-title {
+            font-size: 6vw;
+        }
+    
+        .cont {
+            width: 100%;
+            flex-direction: column;
+            margin-left: 0;
+        }
+    
+        .image-container {
+            width: 100%;
+        }
+    
+        .img-hold {
+            margin-top: 0;
+        }
+    
+        .where {
+            font-size: 13px;
+            margin-top: -50px;
+        }
+    
+        .hey {
+            right: 10%;
+            height: 80px;
+            width: 130px;
+            margin-top: -80px;
+        }
+    
+        .in {
+            width: 280px;
+            margin-left: 200px;
+            margin-top: -50px;
+        }
+    
+        .search {
+            width: 30px;
+            height: 35px;
+            margin-left: 650px;
+            margin-top: -50px;
+        }
+    }
+    
+    
+}
+
+.content {
+
+    font-size: 16px;
+    font-family: Rubik;
+    padding: 30px;
+    margin-top: 50px;
+    line-height: 1.5;
+}
+
+.i-title {
+    margin: 10px;
+    margin-top: 50px;
+    margin-bottom: -40px;
+    margin-left: 30px;
+    border: 0;
+    padding: 15px;
+    font-family: Spectral, serif;
+    font-size: 37px;
+
+
+}
+
+.img-hold {
+
+    margin-top: -50px;
+}
+
+.rate {
+    font-size: 16px;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+.book {
+
+    font-size: 16px;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+.book:hover {
+    cursor: pointer;
+    background-color: rgb(112, 108, 102);
+
+}
+
+.login {
+    position: absolute;
+    padding: 10px;
+    background-color: rgb(33, 111, 180);
+    color: white;
+    margin-left: 900px;
+    margin-top: -70px;
+}
+
+.login:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+
+    

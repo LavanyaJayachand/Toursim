@@ -9,164 +9,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-        <style>
-                body {
-                        height: 1000px;
-                        background-color: rgb(198, 202, 202);
-                }
-
-
-                /* Apply the animation for all six images */
-                @keyframes cycleImages {
-
-                        0%,
-                        20% {
-                                opacity: 1;
-                        }
-
-                        25%,
-                        100% {
-                                opacity: 0;
-                        }
-                }
-
-                /* Apply the animation for all five images */
-                .explore {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-                        width: 100%;
-                        opacity: 0;
-                        animation: cycleImages 15s infinite;
-                }
-
-                /* Add different delays for each image */
-                .e1 {
-                        animation-delay: 0s;
-                }
-
-                .e2 {
-                        animation-delay: 3s;
-                }
-
-                .e3 {
-                        animation-delay: 6s;
-                }
-
-                .e4 {
-                        animation-delay: 9s;
-                }
-
-                .e5 {
-                        animation-delay: 12s;
-                }
-
-
-
-
-
-                .exptitle {
-                        margin-left: 100px;
-                }
-
-                .expimg {
-
-                        border: 0;
-                        margin-top: 50px;
-                        margin-left: 50px;
-
-
-                }
-
-
-
-                .image-container {
-
-                        position: relative;
-                        width: 900px;
-                        /* Set width for images */
-                        background-color: grey;
-                        margin: 0 auto;
-                        /* Hide images that are not active */
-
-                }
-
-
-
-
-                .cont {
-                        width: 1050px;
-                        height: 450px;
-                        background-color: rgb(255, 255, 255);
-                        box-shadow: 10px 10px 15px black;
-
-                        display: flex;
-                        justify-content: space-around;
-                        margin: 20px;
-                        margin-left: -100px;
-                }
-
-                .content {
-
-                        font-size: 16px;
-                        font-family: Rubik;
-                        padding: 30px;
-                        margin-top: 50px;
-                        line-height: 1.5;
-                }
-
-                .i-title {
-                        margin: 10px;
-                        margin-top: 50px;
-                        margin-bottom: -40px;
-                        margin-left: 30px;
-                        border: 0;
-                        padding: 15px;
-                        font-family: Spectral, serif;
-                        font-size: 37px;
-
-
-                }
-
-                .img-hold {
-
-                        margin-top: -50px;
-                }
-
-                .rate {
-                        font-size: 16px;
-                        margin-top: -20px;
-                        margin-left: 30px;
-                }
-
-                .book {
-
-                        font-size: 16px;
-                        margin-top: -20px;
-                        margin-left: 30px;
-                }
-
-                .book:hover {
-                        cursor: pointer;
-                        background-color: rgb(112, 108, 102);
-
-                }
-
-                .login {
-                        position: absolute;
-                        padding: 10px;
-                        background-color: rgb(33, 111, 180);
-                        color: white;
-                        margin-left: 900px;
-                        margin-top: -70px;
-                }
-
-                .login:hover {
-                        cursor: pointer;
-                        opacity: 0.6;
-                }
-        </style>
+        
 </head>
 
 <body>
@@ -177,13 +20,18 @@
                 <button class=" options" onclick="Toggle('ico')"><img
                                 src="https://cdn2.iconfinder.com/data/icons/essentials-8/100/Menu-512.png"
                                 width="45"></button>
-                <button class="ico plane"><img
+                <button class="ico plane" onclick="window.location.href= 'https://www.kayak.co.in/flight-routes/India-IN0/Chennai-MAA?sck=SEM'"><img
                                 src="https://th.bing.com/th/id/OIP.uwF5PnA2HTmwjvrA2jKAtwHaHa?rs=1&pid=ImgDetMain"
                                 width="50"><span class="tooltip">Book your Flight</span></button>
-                <button class="ico food"><img
+
+
+
+
+                                
+                <button class="ico food" onclick="window.location.href=''"><img
                                 src="https://th.bing.com/th/id/OIP.amSOwQhvzDFvr5T9wrTiQgHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7"
                                 width="50"><span class="tooltip">Food </span></button>
-                <button class="ico hotel"><img
+                <button class="ico hotel" onclick="window.location.href='https://www.kayak.co.in/Chennai-Hotels.13827.hotel.ksp?sck=SEM'"><img
                                 src="https://cdn.iconscout.com/icon/premium/png-512-thumb/living-room-1447724-1224138.png"
                                 width="50"><span class="tooltip">Top hotels</span></button>
                 <button class="ico packages">
