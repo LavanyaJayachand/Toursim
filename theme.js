@@ -122,22 +122,160 @@ function showSlides2(n) {
   }
   else if (slideIndex2 === 2) {
     document.getElementById('dynamic-title2').innerText = "Elliot's Beach";
-    document.getElementById('dynamic-content2').innerText = "Known alternatively as Besant Nagar Beach, or “Bessie” for short, Elliot's Beach sits at the south end of the Marina Beach shore. A former expatriate enclave during Chennai’s colonial era, today the beach attracts throngs of twentysomethings, as well as families looking to avoid the crowds at the more popular Marina Beach.";
+    document.getElementById('dynamic-content2').innerText = "Known alternatively as Besant Nagar Beach, or “Bessie” for short, Elliot's Beach sits at the south end of the Marina Beach shore. A former expatriate enclave during Chennai’s colonial era, today the beach attracts throngs of twentysomethings, as well as families looking to avoid the crowds at the more popular Marina Beach.A prominent landmark on this beach is the Karl Schmidt Memorial. The memorial is named after the Dutch sailor who lost his life trying to save a girl from drowning.";
     document.getElementById('timings2').innerText = "Open 24/7";
   }
   else if (slideIndex2 === 3) {
     document.getElementById('dynamic-title2').innerText = "Covelong Beach";
-    document.getElementById('dynamic-content2').innerText = "Covelong Beach is famous for its water sports activities, including surfing and windsurfing. It’s a great weekend getaway destination with stunning scenic beauty.";
+    document.getElementById('dynamic-content2').innerText = "This charming beach is located in the fishing village of Covelong, located 40 km away from Chennai. The port town of Covelong was established by the Nawab of Carnatic. The original name of this destination is ‘Kovalam’ and the beach is often referred to as the Kovalam beach. The port is visible from the beach and offers the visitors a grand and stunning view. Located in the Coromandel coast along the Bay of Bengal, the Covelong Beach is located on the way to Mahabalipuram, making it a perfect stopover destination for visitors. ";
     document.getElementById('timings2').innerText = "Timings: 6:00 AM - 6:00 PM";
   }
   else if (slideIndex2 === 4) {
     document.getElementById('dynamic-title2').innerText = "Thiruvanmiyur Beach";
-    document.getElementById('dynamic-content2').innerText = "Thiruvanmiyur Beach is a peaceful and less crowded beach, making it perfect for morning jogs and yoga sessions. The sunrise views here are breathtaking.";
+    document.getElementById('dynamic-content2').innerText = "Thiruvanmiyur beach is also one of the most quiet and isolated beaches in Chennai, making it ideal to enjoy the stunning view of the sea. Many people visit the spot to enjoy the sunset view that is quite breathtaking. Smart bike cycling is one initiative that is of attraction here. You can experience the view of the beach by renting cycles and going around. Thiruvanmiyur beach is also a perfect spot for beach sports, if you are into such entertainments. Whether football, volleyball or the local favourite cricket, the beach will for sure be a perfect host";
     document.getElementById('timings2').innerText = "Open 24/7";
   }
   else if (slideIndex2 === 5) {
     document.getElementById('dynamic-title2').innerText = "Neelankarai Beach";
-    document.getElementById('dynamic-content2').innerText = "Neelankarai Beach is known for its natural beauty and quiet atmosphere. It’s a great spot for those looking for a peaceful escape from the city crowd.";
+    document.getElementById('dynamic-content2').innerText = "Like many coastal areas of Chennai, Neelankarai beach also has a rich historical heritage. The name Neelankarai is believed to be derived from the Tamil words neela and karai, which together mean blue noise. The nomenclature refers to the calm blue waters of the Bay of Bengal that gently kiss the sandy shores. For centuries, Neelankarai beach has witnessed the ups and downs of traders, fishermen and sailors. Its history is deeply intertwined with the maritime culture of Chennai, and it offers visitors a glimpse of the past while embracing the present as a tranquil escape";
     document.getElementById('timings2').innerText = "Open 24/7";
   }
 }
+let slideIndex3 = 1;
+
+// Show the current slide
+showSlides3(slideIndex3);
+
+// Show the next or previous slide
+function plusSlides3(n) {
+  showSlides3(slideIndex3 += n);
+}
+
+// Show the slide clicked in thumbnails
+function currentSlide3(n) {
+  showSlides3(slideIndex3 = n);
+}
+
+// Function to display the slide
+function showSlides3(n) {
+  let i;
+  let slides3 = document.getElementsByClassName("slide3");
+  let thumbnails3 = document.getElementsByClassName("thumbnail3");
+  let captionText3 = document.getElementById("caption3");
+
+  // Loop through all slides and hide them
+  if (n > slides3.length) { slideIndex3 = 1 }
+  if (n < 1) { slideIndex3 = slides3.length }
+
+  for (i = 0; i < slides3.length; i++) {
+    slides3[i].style.display = "none";
+  }
+
+  // Loop through thumbnails and remove 'active' class
+  for (i = 0; i < thumbnails3.length; i++) {
+    thumbnails3[i].classList.remove("active3");
+  }
+
+  // Display the current slide and set the active thumbnail
+  slides3[slideIndex3 - 1].style.display = "block";
+  thumbnails3[slideIndex3 - 1].classList.add("active3");
+
+  // Set the caption
+  captionText3.innerHTML = "Explore and find peace";
+  if (slideIndex3 === 1) {
+    document.getElementById('dynamic-title3').innerText = "Sri Aurobindo Ashram";
+    document.getElementById('dynamic-content3').innerText = "Sri Aurobindo Ashram is located in Pondicherry, a small coastal town 160 km south of Chennai, in South India. Visitors wanting to travel to Pondicherry will most likely have to pass through Chennai, whether they arrive there by air, train or road, and thereafter cover the remaining distance to Pondicherry by road, a journey which generally takes about 3 hours.A limited number of rooms are available in Ashram guest houses for visitors coming for a short visit to Sri Aurobindo Ashram. Since accommodation is limited and is often fully booked, it is advisable to make reservations in advance.";
+    document.getElementById('timings3').innerText = "Open 24/7";
+  }
+  else if (slideIndex3 === 2) {
+    document.getElementById('dynamic-title3').innerText = "Semozhi Poonga";
+    document.getElementById('dynamic-content3').innerText = "Semmozhi Poonga is one of the most visited botanical gardens in all of Chennai. The beautiful landscaping at the garden has not only made it a delight for the daily morning walkers but has also attracted film makers and tourists. A huge parking lot, a canteen that serves delicious refreshments, and a beautiful artificial pond with ducks that are the children’s favorite, Semmozhi Poonga has become a must visit destination in the city.";
+    document.getElementById('timings3').innerText = "Open 24/7";
+  }
+  else if (slideIndex3 === 3) {
+    document.getElementById('dynamic-title3').innerText = "Covelong Beach";
+    document.getElementById('dynamic-content3').innerText = "This charming beach is located in the fishing village of Covelong, located 40 km away from Chennai. The port town of Covelong was established by the Nawab of Carnatic. The original name of this destination is ‘Kovalam’ and the beach is often referred to as the Kovalam beach. The port is visible from the beach and offers the visitors a grand and stunning view. Located in the Coromandel coast along the Bay of Bengal, the Covelong Beach is located on the way to Mahabalipuram, making it a perfect stopover destination for visitors. ";
+    document.getElementById('timings3').innerText = "Timings: 6:00 AM - 6:00 PM";
+  }
+  else if (slideIndex3 === 4) {
+    document.getElementById('dynamic-title3').innerText = "Thiruvanmiyur Beach";
+    document.getElementById('dynamic-content3').innerText = "Thiruvanmiyur beach is also one of the most quiet and isolated beaches in Chennai, making it ideal to enjoy the stunning view of the sea. Many people visit the spot to enjoy the sunset view that is quite breathtaking. Smart bike cycling is one initiative that is of attraction here. You can experience the view of the beach by renting cycles and going around. Thiruvanmiyur beach is also a perfect spot for beach sports, if you are into such entertainments. Whether football, volleyball or the local favourite cricket, the beach will for sure be a perfect host";
+    document.getElementById('timings3').innerText = "Open 24/7";
+  }
+  else if (slideIndex3 === 5) {
+    document.getElementById('dynamic-title3').innerText = "Neelankarai Beach";
+    document.getElementById('dynamic-content3').innerText = "Like many coastal areas of Chennai, Neelankarai beach also has a rich historical heritage. The name Neelankarai is believed to be derived from the Tamil words neela and karai, which together mean blue noise. The nomenclature refers to the calm blue waters of the Bay of Bengal that gently kiss the sandy shores. For centuries, Neelankarai beach has witnessed the ups and downs of traders, fishermen and sailors. Its history is deeply intertwined with the maritime culture of Chennai, and it offers visitors a glimpse of the past while embracing the present as a tranquil escape";
+    document.getElementById('timings3').innerText = "Open 24/7";
+  }
+}   
+
+
+
+let slideIndex4 = 1;
+
+// Show the current slide
+showSlides4(slideIndex4);
+
+// Show the next or previous slide
+function plusSlides4(n) {
+  showSlides4(slideIndex4 += n);
+}
+
+// Show the slide clicked in thumbnails
+function currentSlide4(n) {
+  showSlides4(slideIndex4 = n);
+}
+
+// Function to display the slide
+function showSlides4(n) {
+  let i;
+  let slides4 = document.getElementsByClassName("slide4");
+  let thumbnails4 = document.getElementsByClassName("thumbnail4");
+  let captionText4 = document.getElementById("caption4");
+
+  // Loop through all slides and hide them
+  if (n > slides4.length) { slideIndex4 = 1 }
+  if (n < 1) { slideIndex4 = slides4.length }
+
+  for (i = 0; i < slides4.length; i++) {
+    slides4[i].style.display = "none";
+  }
+
+  // Loop through thumbnails and remove 'active' class
+  for (i = 0; i < thumbnails4.length; i++) {
+    thumbnails4[i].classList.remove("active4");
+  }
+
+  // Display the current slide and set the active thumbnail
+  slides4[slideIndex4 - 1].style.display = "block";
+  thumbnails4[slideIndex4 - 1].classList.add("active4");
+
+  // Set the caption
+  captionText4.innerHTML = "Relax and Enjoy the Beach Vibes";
+  if (slideIndex4 === 1) {
+    document.getElementById('dynamic-title4').innerText = "Marina Beach";
+    document.getElementById('dynamic-content4').innerText = "Marina Beach is a natural urban beach located along the Bay of Bengal in Chennai. It stretches for about 13 kilometers, from Fort St. George in the north to Besant Nagar in the south, making it the longest natural urban beach in India and the second longest in the world. This sandy beach is a very popular tourist attraction, attracting 30,000 visitors every day. The beach is famous for its beautiful sunrises and sunsets, wide sandy shore and cool breezes. The beach also has various food stalls, souvenir shops and offers activities like horse rides.";
+    document.getElementById('timings4').innerText = "Open 24/7";
+  }
+  else if (slideIndex4 === 2) {
+    document.getElementById('dynamic-title4').innerText = "Elliot's Beach";
+    document.getElementById('dynamic-content4').innerText = "Known alternatively as Besant Nagar Beach, or “Bessie” for short, Elliot's Beach sits at the south end of the Marina Beach shore. A former expatriate enclave during Chennai’s colonial era, today the beach attracts throngs of twentysomethings, as well as families looking to avoid the crowds at the more popular Marina Beach. A prominent landmark on this beach is the Karl Schmidt Memorial. The memorial is named after the Dutch sailor who lost his life trying to save a girl from drowning.";
+    document.getElementById('timings4').innerText = "Open 24/7";
+  }
+  else if (slideIndex4 === 3) {
+    document.getElementById('dynamic-title4').innerText = "Covelong Beach";
+    document.getElementById('dynamic-content4').innerText = "This charming beach is located in the fishing village of Covelong, located 40 km away from Chennai. The port town of Covelong was established by the Nawab of Carnatic. The original name of this destination is ‘Kovalam’ and the beach is often referred to as the Kovalam beach. The port is visible from the beach and offers the visitors a grand and stunning view. Located in the Coromandel coast along the Bay of Bengal, the Covelong Beach is located on the way to Mahabalipuram, making it a perfect stopover destination for visitors.";
+    document.getElementById('timings4').innerText = "Timings: 6:00 AM - 6:00 PM";
+  }
+  else if (slideIndex4 === 4) {
+    document.getElementById('dynamic-title4').innerText = "Thiruvanmiyur Beach";
+    document.getElementById('dynamic-content4').innerText = "Thiruvanmiyur beach is also one of the most quiet and isolated beaches in Chennai, making it ideal to enjoy the stunning view of the sea. Many people visit the spot to enjoy the sunset view that is quite breathtaking. Smart bike cycling is one initiative that is of attraction here. You can experience the view of the beach by renting cycles and going around. Thiruvanmiyur beach is also a perfect spot for beach sports, if you are into such entertainments. Whether football, volleyball or the local favourite cricket, the beach will for sure be a perfect host.";
+    document.getElementById('timings4').innerText = "Open 24/7";
+  }
+  else if (slideIndex4 === 5) {
+    document.getElementById('dynamic-title4').innerText = "Neelankarai Beach";
+    document.getElementById('dynamic-content4').innerText = "Like many coastal areas of Chennai, Neelankarai beach also has a rich historical heritage. The name Neelankarai is believed to be derived from the Tamil words neela and karai, which together mean blue noise. The nomenclature refers to the calm blue waters of the Bay of Bengal that gently kiss the sandy shores. For centuries, Neelankarai beach has witnessed the ups and downs of traders, fishermen and sailors. Its history is deeply intertwined with the maritime culture of Chennai, and it offers visitors a glimpse of the past while embracing the present as a tranquil escape.";
+    document.getElementById('timings4').innerText = "Open 24/7";
+  }
+}
+
