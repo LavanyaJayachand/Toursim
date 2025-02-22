@@ -193,21 +193,24 @@ function showSlides3(n) {
     document.getElementById('timings3').innerText = "Open 24/7";
   }
   else if (slideIndex3 === 3) {
-    document.getElementById('dynamic-title3').innerText = "Covelong Beach";
-    document.getElementById('dynamic-content3').innerText = "This charming beach is located in the fishing village of Covelong, located 40 km away from Chennai. The port town of Covelong was established by the Nawab of Carnatic. The original name of this destination is ‘Kovalam’ and the beach is often referred to as the Kovalam beach. The port is visible from the beach and offers the visitors a grand and stunning view. Located in the Coromandel coast along the Bay of Bengal, the Covelong Beach is located on the way to Mahabalipuram, making it a perfect stopover destination for visitors. ";
+    document.getElementById('dynamic-title3').innerText = "Chetpet Ecopark";
+    document.getElementById('dynamic-content3').innerText = "Chetpet Ecopark, a major attraction in Chennai, is located on the shore of Chetpet Lake. It is managed by Tamil Nadu Fisheries Development Corporation.In Chetpet Ecopark, you can enjoy activities like walking, jogging, angling, and boating. It has a children’s play area, canteen and an aquarium. You can spot animals and bird statues placed everywhere in this park. It is a major spot where you can relax and enjoy here with your family and friends.";
     document.getElementById('timings3').innerText = "Timings: 6:00 AM - 6:00 PM";
   }
   else if (slideIndex3 === 4) {
-    document.getElementById('dynamic-title3').innerText = "Thiruvanmiyur Beach";
-    document.getElementById('dynamic-content3').innerText = "Thiruvanmiyur beach is also one of the most quiet and isolated beaches in Chennai, making it ideal to enjoy the stunning view of the sea. Many people visit the spot to enjoy the sunset view that is quite breathtaking. Smart bike cycling is one initiative that is of attraction here. You can experience the view of the beach by renting cycles and going around. Thiruvanmiyur beach is also a perfect spot for beach sports, if you are into such entertainments. Whether football, volleyball or the local favourite cricket, the beach will for sure be a perfect host";
+    document.getElementById('dynamic-title3').innerText = "Theosophical Society";
+    document.getElementById('dynamic-content3').innerText = "Theosophical Society is one of the popular attractions in the city of Chennai. A peaceful heaven in the middle of the bustling city situated in Besant Nagar, near Elliot’s beach along the Adyar River. It was founded by Annie Besant in the year 1875. The Society played a vital role in the revival of Hindu culture. It is a lovely oasis in the middle of Chennai.";
     document.getElementById('timings3').innerText = "Open 24/7";
   }
   else if (slideIndex3 === 5) {
-    document.getElementById('dynamic-title3').innerText = "Neelankarai Beach";
-    document.getElementById('dynamic-content3').innerText = "Like many coastal areas of Chennai, Neelankarai beach also has a rich historical heritage. The name Neelankarai is believed to be derived from the Tamil words neela and karai, which together mean blue noise. The nomenclature refers to the calm blue waters of the Bay of Bengal that gently kiss the sandy shores. For centuries, Neelankarai beach has witnessed the ups and downs of traders, fishermen and sailors. Its history is deeply intertwined with the maritime culture of Chennai, and it offers visitors a glimpse of the past while embracing the present as a tranquil escape";
+    document.getElementById('dynamic-title3').innerText = "Anna Tower Park";
+    document.getElementById('dynamic-content3').innerText = "Anna Park is a popular destination with many attractions and activities, making it the perfect place to visit for those seeking relaxation, relaxation and natural beauty. Located in the heart of the crowded city, This Park offers its visitors a peaceful urban environment where they can be in touch with nature and enjoy many fun activities.One of the main reasons to visit Anna Park is its natural beauty and peaceful environment. The park is adorned with green trees, beautiful flowers and well-maintained creating a beautiful place for a walk or picnic.";
     document.getElementById('timings3').innerText = "Open 24/7";
   }
 }   
+
+
+
 
 
 
@@ -251,31 +254,305 @@ function showSlides4(n) {
   thumbnails4[slideIndex4 - 1].classList.add("active4");
 
   // Set the caption
-  captionText4.innerHTML = "Relax and Enjoy the Beach Vibes";
+  captionText4.innerHTML = "";
   if (slideIndex4 === 1) {
-    document.getElementById('dynamic-title4').innerText = "Marina Beach";
-    document.getElementById('dynamic-content4').innerText = "Marina Beach is a natural urban beach located along the Bay of Bengal in Chennai. It stretches for about 13 kilometers, from Fort St. George in the north to Besant Nagar in the south, making it the longest natural urban beach in India and the second longest in the world. This sandy beach is a very popular tourist attraction, attracting 30,000 visitors every day. The beach is famous for its beautiful sunrises and sunsets, wide sandy shore and cool breezes. The beach also has various food stalls, souvenir shops and offers activities like horse rides.";
+    document.getElementById('dynamic-title4').innerText = "Santhome Church";
+    document.getElementById('dynamic-content4').innerText = " Santhome Church in  Chennai also known as Santhome Cathedral Basilica and International Shrine of Saint Thomas Cathedral Basilica, sits on the tomb built over the mortal remains of one of the twelve Apostles of Jesus Christ.The historical significance of this place makes it a holy place  Saint Thomas had come to India in A.D.52, was martyred in A.D.72 and buried in this very site then known as Mylapore.  “San Thome” assumes its name from Saint Thomas.Anyone can visit this sacred place of god and feel his presence in every breath of air.";
     document.getElementById('timings4').innerText = "Open 24/7";
   }
   else if (slideIndex4 === 2) {
-    document.getElementById('dynamic-title4').innerText = "Elliot's Beach";
-    document.getElementById('dynamic-content4').innerText = "Known alternatively as Besant Nagar Beach, or “Bessie” for short, Elliot's Beach sits at the south end of the Marina Beach shore. A former expatriate enclave during Chennai’s colonial era, today the beach attracts throngs of twentysomethings, as well as families looking to avoid the crowds at the more popular Marina Beach. A prominent landmark on this beach is the Karl Schmidt Memorial. The memorial is named after the Dutch sailor who lost his life trying to save a girl from drowning.";
+    document.getElementById('dynamic-title4').innerText = "St. George's Cathedral";
+    document.getElementById('dynamic-content4').innerText = "St. George's Cathedral is the Cathedral Church of the CSI Diocese of Madras. Located at the center of the Capital of Tamil Nadu, this cathedral is a grand and awe-inspiring structure. Known as the grand house of prayer for worshippers who make this place their second home, the cathedral is an idol of grandeur and peace. Being the mother church of the Church of South India Diocese, it also encourages the participation of congregations for the growth and abundance of the rural communities.";
     document.getElementById('timings4').innerText = "Open 24/7";
   }
   else if (slideIndex4 === 3) {
-    document.getElementById('dynamic-title4').innerText = "Covelong Beach";
-    document.getElementById('dynamic-content4').innerText = "This charming beach is located in the fishing village of Covelong, located 40 km away from Chennai. The port town of Covelong was established by the Nawab of Carnatic. The original name of this destination is ‘Kovalam’ and the beach is often referred to as the Kovalam beach. The port is visible from the beach and offers the visitors a grand and stunning view. Located in the Coromandel coast along the Bay of Bengal, the Covelong Beach is located on the way to Mahabalipuram, making it a perfect stopover destination for visitors.";
-    document.getElementById('timings4').innerText = "Timings: 6:00 AM - 6:00 PM";
+    document.getElementById('dynamic-title4').innerText = "The Velankanni Shrine";
+    document.getElementById('dynamic-content4').innerText = "he Velankanni Shrine (Basilica of Our Lady of Good Health) in India is a special place for Christians and its a great spot for pilgrims.Annai Velankanni Church, Tamil Nadu People from all over the world and different religious backgrounds come here to pay their respects.Velankanni church is truly a amazing place to experience spirituality and get closer to God through Velankanni matha Mary, also known as Our Lady of Good Health, is the reason for the shrines existence.";
+    document.getElementById('timings4').innerText = "Open 24/7";
   }
   else if (slideIndex4 === 4) {
-    document.getElementById('dynamic-title4').innerText = "Thiruvanmiyur Beach";
-    document.getElementById('dynamic-content4').innerText = "Thiruvanmiyur beach is also one of the most quiet and isolated beaches in Chennai, making it ideal to enjoy the stunning view of the sea. Many people visit the spot to enjoy the sunset view that is quite breathtaking. Smart bike cycling is one initiative that is of attraction here. You can experience the view of the beach by renting cycles and going around. Thiruvanmiyur beach is also a perfect spot for beach sports, if you are into such entertainments. Whether football, volleyball or the local favourite cricket, the beach will for sure be a perfect host.";
+    document.getElementById('dynamic-title4').innerText = "The Little Mount Church";
+    document.getElementById('dynamic-content4').innerText = "The Little Mount Church, constructed to commemorate the nineteenth centenary of the martyrdom of St. Thomas, has a circular plan designed around a central vertical axis. It signifies that a Christian community is always an inclusive community transcending all human-made distinctions and discriminations.The restored Church has four parts: the arched entrance, the circular Church with a central nave, the aisle around it and the inner chancel of the sanctum. ";
     document.getElementById('timings4').innerText = "Open 24/7";
   }
   else if (slideIndex4 === 5) {
-    document.getElementById('dynamic-title4').innerText = "Neelankarai Beach";
-    document.getElementById('dynamic-content4').innerText = "Like many coastal areas of Chennai, Neelankarai beach also has a rich historical heritage. The name Neelankarai is believed to be derived from the Tamil words neela and karai, which together mean blue noise. The nomenclature refers to the calm blue waters of the Bay of Bengal that gently kiss the sandy shores. For centuries, Neelankarai beach has witnessed the ups and downs of traders, fishermen and sailors. Its history is deeply intertwined with the maritime culture of Chennai, and it offers visitors a glimpse of the past while embracing the present as a tranquil escape.";
+    document.getElementById('dynamic-title4').innerText = "St. Thomas Mount";
+    document.getElementById('dynamic-content4').innerText = "St. Thomas Mount, the Holy Hill with it's spiritual, historical and Architectural importance just completed celebrating the Quincentennial year. The yearlong celebrations were launched by His Excellency Most Rev Leopoldo Girelli, Nuncio for India and Nepal, on this Holy Hill.The Shrine has seen 500 years of uninterrupted liturgical celebrations with Holy masses and related liturgical activities on a day-to-day basis.";
     document.getElementById('timings4').innerText = "Open 24/7";
+  }
+}
+ 
+
+
+let slideIndex5 = 1;
+
+// Show the current slide
+showSlides5(slideIndex5);
+
+// Show the next or previous slide
+function plusSlides5(n) {
+  showSlides5(slideIndex5 += n);
+}
+
+// Show the slide clicked in thumbnails
+function currentSlide5(n) {
+  showSlides5(slideIndex5 = n);
+}
+
+// Function to display the slide
+function showSlides5(n) {
+  let i;
+  let slides5 = document.getElementsByClassName("slide5");
+  let thumbnails5 = document.getElementsByClassName("thumbnail5");
+  let captionText5 = document.getElementById("caption5");
+
+  // Loop through all slides and hide them
+  if (n > slides5.length) { slideIndex5 = 1 }
+  if (n < 1) { slideIndex5 = slides5.length }
+
+  for (i = 0; i < slides5.length; i++) {
+    slides5[i].style.display = "none";
+  }
+
+  // Loop through thumbnails and remove 'active' class
+  for (i = 0; i < thumbnails5.length; i++) {
+    thumbnails5[i].classList.remove("active5");
+  }
+
+  // Display the current slide and set the active thumbnail
+  slides5[slideIndex5 - 1].style.display = "block";
+  thumbnails5[slideIndex5 - 1].classList.add("active5");
+
+  // Set the caption
+  captionText5.innerHTML = "";
+  if (slideIndex5 === 1) {
+    document.getElementById('dynamic-title5').innerText = "";
+    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('timings5').innerText = "Open 24/7";
+  }
+  else if (slideIndex5 === 2) {
+    document.getElementById('dynamic-title5').innerText = "";
+    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('timings5').innerText = "Open 24/7";
+  }
+  else if (slideIndex5 === 3) {
+    document.getElementById('dynamic-title5').innerText = "";
+    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('timings5').innerText = "Timings: 6:00 AM - 6:00 PM";
+  }
+  else if (slideIndex5 === 4) {
+    document.getElementById('dynamic-title5').innerText = "";
+    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('timings5').innerText = "Open 24/7";
+  }
+  else if (slideIndex5 === 5) {
+    document.getElementById('dynamic-title5').innerText = "";
+    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('timings5').innerText = "Open 24/7";
+  }
+}
+
+let slideIndex6 = 1;
+
+// Show the current slide
+showSlides6(slideIndex6);
+
+// Show the next or previous slide
+function plusSlides6(n) {
+  showSlides6(slideIndex6 += n);
+}
+
+// Show the slide clicked in thumbnails
+function currentSlide6(n) {
+  showSlides6(slideIndex6 = n);
+}
+
+// Function to display the slide
+function showSlides6(n) {
+  let i;
+  let slides6 = document.getElementsByClassName("slide6");
+  let thumbnails6 = document.getElementsByClassName("thumbnail6");
+  let captionText6 = document.getElementById("caption6");
+
+  // Loop through all slides and hide them
+  if (n > slides6.length) { slideIndex6 = 1 }
+  if (n < 1) { slideIndex6 = slides6.length }
+
+  for (i = 0; i < slides6.length; i++) {
+    slides6[i].style.display = "none";
+  }
+
+  // Loop through thumbnails and remove 'active' class
+  for (i = 0; i < thumbnails6.length; i++) {
+    thumbnails6[i].classList.remove("active6");
+  }
+
+  // Display the current slide and set the active thumbnail
+  slides6[slideIndex6 - 1].style.display = "block";
+  thumbnails6[slideIndex6 - 1].classList.add("active6");
+
+  // Set the caption
+  captionText6.innerHTML = "";
+  if (slideIndex6 === 1) {
+    document.getElementById('dynamic-title6').innerText = "";
+    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('timings6').innerText = "Open 24/7";
+  }
+  else if (slideIndex6 === 2) {
+    document.getElementById('dynamic-title6').innerText = "";
+    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('timings6').innerText = "Open 24/7";
+  }
+  else if (slideIndex6 === 3) {
+    document.getElementById('dynamic-title6').innerText = "";
+    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('timings6').innerText = "Timings: 6:00 AM - 6:00 PM";
+  }
+  else if (slideIndex6 === 4) {
+    document.getElementById('dynamic-title6').innerText = "";
+    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('timings6').innerText = "Open 24/7";
+  }
+  else if (slideIndex6 === 5) {
+    document.getElementById('dynamic-title6').innerText = "";
+    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('timings6').innerText = "Open 24/7";
+  }
+}
+
+let slideIndex7 = 1;
+
+// Show the current slide
+showSlides7(slideIndex7);
+
+// Show the next or previous slide
+function plusSlides7(n) {
+  showSlides7(slideIndex7 += n);
+}
+
+// Show the slide clicked in thumbnails
+function currentSlide7(n) {
+  showSlides7(slideIndex7 = n);
+}
+
+// Function to display the slide
+function showSlides7(n) {
+  let i;
+  let slides7 = document.getElementsByClassName("slide7");
+  let thumbnails7 = document.getElementsByClassName("thumbnail7");
+  let captionText7 = document.getElementById("caption7");
+
+  // Loop through all slides and hide them
+  if (n > slides7.length) { slideIndex7 = 1 }
+  if (n < 1) { slideIndex7 = slides7.length }
+
+  for (i = 0; i < slides7.length; i++) {
+    slides7[i].style.display = "none";
+  }
+
+  // Loop through thumbnails and remove 'active' class
+  for (i = 0; i < thumbnails7.length; i++) {
+    thumbnails7[i].classList.remove("active7");
+  }
+
+  // Display the current slide and set the active thumbnail
+  slides7[slideIndex7 - 1].style.display = "block";
+  thumbnails7[slideIndex7 - 1].classList.add("active7");
+
+  // Set the caption
+  captionText7.innerHTML = "";
+  if (slideIndex7 === 1) {
+    document.getElementById('dynamic-title7').innerText = "";
+    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('timings7').innerText = "Open 24/7";
+  }
+  else if (slideIndex7 === 2) {
+    document.getElementById('dynamic-title7').innerText = "";
+    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('timings7').innerText = "Open 24/7";
+  }
+  else if (slideIndex7 === 3) {
+    document.getElementById('dynamic-title7').innerText = "";
+    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('timings7').innerText = "Timings: 6:00 AM - 6:00 PM";
+  }
+  else if (slideIndex7 === 4) {
+    document.getElementById('dynamic-title7').innerText = "";
+    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('timings7').innerText = "Open 24/7";
+  }
+  else if (slideIndex7 === 5) {
+    document.getElementById('dynamic-title7').innerText = "";
+    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('timings7').innerText = "Open 24/7";
+  }
+}
+
+let slideIndex8 = 1;
+
+// Show the current slide
+showSlides8(slideIndex8);
+
+// Show the next or previous slide
+function plusSlides8(n) {
+  showSlides8(slideIndex8 += n);
+}
+
+// Show the slide clicked in thumbnails
+function currentSlide8(n) {
+  showSlides8(slideIndex8 = n);
+}
+
+// Function to display the slide
+function showSlides8(n) {
+  let i;
+  let slides8 = document.getElementsByClassName("slide8");
+  let thumbnails8 = document.getElementsByClassName("thumbnail8");
+  let captionText8 = document.getElementById("caption8");
+
+  // Loop through all slides and hide them
+  if (n > slides8.length) { slideIndex8 = 1 }
+  if (n < 1) { slideIndex8 = slides8.length }
+
+  for (i = 0; i < slides8.length; i++) {
+    slides8[i].style.display = "none";
+  }
+
+  // Loop through thumbnails and remove 'active' class
+  for (i = 0; i < thumbnails8.length; i++) {
+    thumbnails8[i].classList.remove("active8");
+  }
+
+  // Display the current slide and set the active thumbnail
+  slides8[slideIndex8 - 1].style.display = "block";
+  thumbnails8[slideIndex8 - 1].classList.add("active8");
+
+  // Set the caption
+  captionText8.innerHTML = "";
+  if (slideIndex8 === 1) {
+    document.getElementById('dynamic-title8').innerText = "";
+    document.getElementById('dynamic-content8').innerText = "";
+    document.getElementById('timings8').innerText = "Open 24/7";
+  }
+  else if (slideIndex8 === 2) {
+    document.getElementById('dynamic-title8').innerText = "";
+    document.getElementById('dynamic-content8').innerText = "";
+    document.getElementById('timings8').innerText = "Open 24/7";
+  }
+  else if (slideIndex8 === 3) {
+    document.getElementById('dynamic-title8').innerText = "";
+    document.getElementById('dynamic-content8').innerText = "";
+    document.getElementById('timings8').innerText = "Timings: 6:00 AM - 6:00 PM";
+  }
+  else if (slideIndex8 === 4) {
+    document.getElementById('dynamic-title8').innerText = "";
+    document.getElementById('dynamic-content8').innerText = "";
+    document.getElementById('timings8').innerText = "Open 24/7";
+  }
+  else if (slideIndex8 === 5) {
+    document.getElementById('dynamic-title8').innerText = "";
+    document.getElementById('dynamic-content8').innerText = "";
+    document.getElementById('timings8').innerText = "Open 24/7";
   }
 }
 
