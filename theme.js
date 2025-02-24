@@ -199,7 +199,7 @@ function showSlides3(n) {
   }
   else if (slideIndex3 === 4) {
     document.getElementById('dynamic-title3').innerText = "Theosophical Society";
-    document.getElementById('dynamic-content3').innerText = "Theosophical Society is one of the popular attractions in the city of Chennai. A peaceful heaven in the middle of the bustling city situated in Besant Nagar, near Elliot’s beach along the Adyar River. It was founded by Annie Besant in the year 1875. The Society played a vital role in the revival of Hindu culture. It is a lovely oasis in the middle of Chennai.";
+    document.getElementById('dynamic-content3').innerText = "Theosophical Society is one of the popular attractions in the city of Chennai. A peaceful heaven in the middle of the bustling city situated in Besant Nagar, near Elliot’s beach along the Adyar River. It was founded by Annie Besant in the year 1875. The Society played a vital role in the revival of Hindu culture. It is a lovely oasis in the middle of Chennai.It is one of the must to visit place in chennai where you experience a unique atmosphere";
     document.getElementById('timings3').innerText = "Open 24/7";
   }
   else if (slideIndex3 === 5) {
@@ -326,28 +326,28 @@ function showSlides5(n) {
   // Set the caption
   captionText5.innerHTML = "";
   if (slideIndex5 === 1) {
-    document.getElementById('dynamic-title5').innerText = "";
-    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('dynamic-title5').innerText = "Kapaleeshwarar Temple";
+    document.getElementById('dynamic-content5').innerText = "One of the imposing religious sites of Chennai city is the noted Kapaleeswarar Temple that is majestically set in the Mylapore region of Chennai. It is said the Shiva Lingam in the temple is Swayambulingam, which means it is self-manifested.The temple is also known as Vedapuri as the four Vedas are worshipped at this auspicious place. The other name given to the religious site is Sukrapuri as Sage Sukracharya offered his prayers to Lord Shiva at this location to regain his eyesight.";
     document.getElementById('timings5').innerText = "Open 24/7";
   }
   else if (slideIndex5 === 2) {
-    document.getElementById('dynamic-title5').innerText = "";
-    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('dynamic-title5').innerText = "Parthasarathy Temple";
+    document.getElementById('dynamic-content5').innerText = "Pulsating city of Chennai offers a great blend of mouth-watering cuisines and varied cultures. Second largest IT exporter of the country is dotted with majestic beaches, historical gems and splendid religious shrines.Travellers would be delighted to visit the imposing ancient shrines located in the city. Parthasarathy temple is one of the precious charms of Chennai dedicated to Lord Parathasarthy, a manifestation of Lord Vishnu.";
     document.getElementById('timings5').innerText = "Open 24/7";
   }
   else if (slideIndex5 === 3) {
-    document.getElementById('dynamic-title5').innerText = "";
-    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('dynamic-title5').innerText = "Sri Ashtalakshmi Temple";
+    document.getElementById('dynamic-content5').innerText = "Sri Ashtalakshmi Temple was built in 1976 blessed and on the wishes from Sri Chandrashekarendra Saraswati swamigal of Kanchi Mutt. The temple is model of the Sundhararaja Perumal Temple in Uthiramerur.As per the ancient Vedas, when the ocean was swirled during Samudra Manthan by the Devas and Asuras, Goddess Lakshmi emerged out of the ocean and endowed wealth and prosperity to her devotees. It is also believed that Maha Vishnu married Goddess Lakshmi and also the eight forms of Goddess Lakshmi where they together live in the temple. Hence the name Ashtalakshmi (eight forms of Lakshmi).";
     document.getElementById('timings5').innerText = "Timings: 6:00 AM - 6:00 PM";
   }
   else if (slideIndex5 === 4) {
-    document.getElementById('dynamic-title5').innerText = "";
-    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('dynamic-title5').innerText = "Vadapalani Murugan Temple";
+    document.getElementById('dynamic-content5').innerText = "Vadapalani  Murugan Temple also known as the “Vadapalani Andavar Temple” is one of the most famous temples of Tamil Nadu, It is dedicated to the Vadapalani Aandavar (Lord Muruga). The Temple is located in the Vadapalani, Chennai, Tamil Nadu state of India. It is included in the temple, which is managed and administrated by the Government Authority. The temple construction was completed in 1865. This temple has grown in popularity, which is believed to be in part due to the patronage of cinema stars. Many people visit this temple annually across India.";
     document.getElementById('timings5').innerText = "Open 24/7";
   }
   else if (slideIndex5 === 5) {
-    document.getElementById('dynamic-title5').innerText = "";
-    document.getElementById('dynamic-content5').innerText = "";
+    document.getElementById('dynamic-title5').innerText = "The Kandaswamy Temple";
+    document.getElementById('dynamic-content5').innerText = "The Kandaswamy Temple in Thiruporur is a renowned Hindu temple dedicated to Lord Murugan, also known as Kandaswamy. Located about 28 kilometers from Chennai on the Old Mahabalipuram Road, this temple is a must-visit for its rich history, stunning architecture, and spiritual significance.The Kandaswamy Temple in Tirupporur, Tamil Nadu, is a stunning example of Dravidian architecture, showcasing the rich cultural heritage of the region. The temple's inscriptions provide valuable information about the history of the region and the Pallava dynasty.";
     document.getElementById('timings5').innerText = "Open 24/7";
   }
 }
@@ -462,28 +462,28 @@ function showSlides7(n) {
   // Set the caption
   captionText7.innerHTML = "";
   if (slideIndex7 === 1) {
-    document.getElementById('dynamic-title7').innerText = "";
-    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('dynamic-title7').innerText = "The National Art Gallery";
+    document.getElementById('dynamic-content7').innerText = "The National Art Gallery at the Government Museum Complex is one of the prominent heritage buildings in Chennai and one of the latest additions to the art galleries of the country.This massive sandstone building was built by the British in 1906 and was opened to the public after an extensive restoration in January 2021. If you are in the neighbourhood, this colonial and Indo-Saracenic style building is difficult to miss.National Gallery of Art is a must visit not only for the remarkable collection of art but for its magnificent architectural beauty as well.";
     document.getElementById('timings7').innerText = "Open 24/7";
   }
   else if (slideIndex7 === 2) {
-    document.getElementById('dynamic-title7').innerText = "";
-    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('dynamic-title7').innerText = "The Government Museum Chennai";
+    document.getElementById('dynamic-content7').innerText = "The Government Museum Chennai, or Madras Museum, is among the oldest museums in the world, and the second oldest in India. It has a rich collection of artefacts detailing human history and culture.The museum is known for artefacts and bronze sculptures belonging to different South Indian dynasties. But the exhibits also include items from archaeology, geology, numismatics and other varied subjects. Government Museum Chennai even has the largest collection of Roman antiquities outside Europe.";
     document.getElementById('timings7').innerText = "Open 24/7";
   }
   else if (slideIndex7 === 3) {
-    document.getElementById('dynamic-title7').innerText = "";
-    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('dynamic-title7').innerText = "Victoria Public Hall";
+    document.getElementById('dynamic-content7').innerText = "Victoria Public Hall, also known as the Town Hall, is a historic structure in Chennai constructed to honour Queen Victoria's Golden Jubilee. It stands as one of Chennai's best specimens of British architecture. It served as a theatre and a venue for public events in the late 19th and early 20th centuries. It's currently home to the South Indian Athletic Association Club.The hall, a prime example of Indo-Saracenic architecture, was constructed between 1888 and 1890 by Namperumal Chetty and was planned in the Romanesque style by Robert Fellowes Chisholm (1840–1915).";
     document.getElementById('timings7').innerText = "Timings: 6:00 AM - 6:00 PM";
   }
   else if (slideIndex7 === 4) {
-    document.getElementById('dynamic-title7').innerText = "";
-    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('dynamic-title7').innerText = "Birla Planetarium";
+    document.getElementById('dynamic-content7').innerText = "BM Birla Planetarium Chennai is on the premises of Periyar Science and Technology Centre. And it’s considered the most modern planetarium in India.The planetarium was established in 1983. But it was inaugurated in 1988 by R Venkataraman, the then President of India. It is known for its virtual tours of the night sky. It also has multiple galleries with over 500 exhibits for you to explore. The collection is divided into categories like Life Science, Electronics and Communications, Energy and more.";
     document.getElementById('timings7').innerText = "Open 24/7";
   }
   else if (slideIndex7 === 5) {
-    document.getElementById('dynamic-title7').innerText = "";
-    document.getElementById('dynamic-content7').innerText = "";
+    document.getElementById('dynamic-title7').innerText = "The Rail Museum";
+    document.getElementById('dynamic-content7').innerText = "The Rail Museum is a journey of exploration and enlightenment. As you delve into the annals of Indian Railways, you will be inspired by the story of its growth and evolution, from its humble beginnings to its current-day glory. You will learn about the different types of trains, from the express trains that stitch cities together to the local trains that transport people, and the impact they have had on the country and its people";
     document.getElementById('timings7').innerText = "Open 24/7";
   }
 }

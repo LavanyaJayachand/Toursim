@@ -385,6 +385,15 @@ body {
     cursor: pointer;
     opacity: 0.6;
 }
+.end{
+    width:1400px;
+    height:500px;
+    margin:100px;
+    background-color:black;
+    margin-left:0px;
+    border:0px;
+    margin-top:600px;
+}
 
 
 
