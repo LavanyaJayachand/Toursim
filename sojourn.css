@@ -137,12 +137,12 @@ body {
 
     0%,
     20% {
-            opacity: 1;
+        opacity: 1;
     }
 
     25%,
     100% {
-            opacity: 0;
+        opacity: 0;
     }
 }
 
@@ -223,27 +223,32 @@ body {
     margin-left: -100px;
 }
 
-@media(max-width:768px){
-    .cont{
-        
-        display:flex;
+@media(max-width:768px) {
+    .cont {
+
+        display: flex;
         flex-direction: column;
-        width:100%;
-        
+        width: 100%;
+
     }
-    .Title{
-        font-size:7vw;
-    }
-    h1{
+
+    .Title {
         font-size: 7vw;
     }
-    .i-title{
-      font-size: 5vw;
+
+    h1 {
+        font-size: 7vw;
     }
+
+    .i-title {
+        font-size: 5vw;
+    }
+
     .where {
         font-size: 14px;
         margin-top: -60px;
     }
+
     .hey {
         right: 2%;
         height: 90px;
@@ -263,58 +268,63 @@ body {
         margin-left: 700px;
         margin-top: -60px;
     }
-    .img-hold{
-        width:100px;
-        
-        
+
+    .img-hold {
+        width: 100px;
+
+
     }
 
     @media (max-width: 480px) {
         body {
             font-size: 14px;
         }
+
         .Title {
-            font-size: 8vw; /* Smaller font size for mobile */
+            font-size: 8vw;
+            /* Smaller font size for mobile */
         }
+
         h1 {
             font-size: 8vw;
         }
+
         .i-title {
             font-size: 6vw;
         }
-    
+
         .cont {
             width: 100%;
             flex-direction: column;
             margin-left: 0;
         }
-    
+
         .image-container {
             width: 100%;
         }
-    
+
         .img-hold {
             margin-top: 0;
         }
-    
+
         .where {
             font-size: 13px;
             margin-top: -50px;
         }
-    
+
         .hey {
             right: 10%;
             height: 80px;
             width: 130px;
             margin-top: -80px;
         }
-    
+
         .in {
             width: 280px;
             margin-left: 200px;
             margin-top: -50px;
         }
-    
+
         .search {
             width: 30px;
             height: 35px;
@@ -322,8 +332,8 @@ body {
             margin-top: -50px;
         }
     }
-    
-    
+
+
 }
 
 .content {
@@ -385,16 +395,13 @@ body {
     cursor: pointer;
     opacity: 0.6;
 }
-.end{
-    width:1400px;
-    height:500px;
-    margin:100px;
-    background-color:black;
-    margin-left:0px;
-    border:0px;
-    margin-top:600px;
+
+.end {
+    width: 1400px;
+    height: 500px;
+    margin: 100px;
+    background-color: black;
+    margin-left: 0px;
+    border: 0px;
+    margin-top: 600px;
 }
-
-
-
-    
