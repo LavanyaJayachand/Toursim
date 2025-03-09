@@ -225,98 +225,44 @@ body {
 
 @media(max-width:768px) {
 
-    .i-title {
-        font-size: 1.8 em;
-        margin-left: 40px;
-    }
-
-    h1 {
-        font-size: 50px;
+    .i-title{
+        font-size:1.5 em;
+        margin-left:40px;
+            }
+    h1{
+        font-size: 2em;
         padding-left: 10px;
-        white-space: nowrap;
     }
-
-    .icons {
-        width: 50px;
+    .icons{
+        width:50px;
         z-index: 999;
 
     }
-
-    .ib {
-        width: 50px;
-        margin-left: 1px;
-        margin-top: 10px;
-
+    .ib{
+        width:30px;
+        margin-left:-6px;
+        margin-top:-1px;
     }
-
-    .ico,
-    .options {
-        height: 80px;
-        width: 70px;
-
+    .ico,.options{
+        height:40px;
+        width:40px;
+        
     }
-
-    .explore,
-    .cont {
-        display: flex;
+    .explore,.cont{
+        display:flex;
         flex-direction: column;
-        margin: 20px;
-        margin-left: 30px;
-        margin-top: -10px;
-        width: 68%;
-        height: auto;
-        padding: 20px;
-        margin-right: 10px;
+        margin:20px;
+        width:300px;
     }
-
-    .expimg {
-        width: 75%;
-        height: auto;
+    .expimg{
+        width:200px;
+        height:100px;
     }
-
-    .content {
-        margin-top: -300px;
-        font-size: 0.5rem;
+    .content{
+        margin-top:-300px;
+        font-size:0.5rem;
     }
-
-    .Title {
-        font-size: 2.5rem;
-
-    }
-
-    .in {
-
-        margin-top: 2px;
-        margin-left: 80px;
-        padding: 5px;
-        font-size: 1.2rem;
-    }
-
-    .exptitle {
-        position: relative;
-        margin-top: 80px;
-        margin-left: 65px;
-    }
-
-    .search {
-
-        margin-top: 2px;
-        margin-left: 490px;
-        height: 53px;
-        padding: 5px;
-
-    }
-
-    .hey {
-
-        margin-top: 2px;
-        margin-left: -140px;
-        padding: 5px;
-
-
-
-
-    }
+    
 }
 
 .content {
@@ -378,3 +324,4 @@ body {
     cursor: pointer;
     opacity: 0.6;
 }
+
