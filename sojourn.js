@@ -32,6 +32,10 @@ function switchh(event){
         window.location.href="https://www.w3schools.com/"
     }
 
-    
+}
+
+function navigateToShowcase() {
+    // Navigate to page2.html and pass a query parameter for the target section (showcase)
+    window.location.href = 'ThemeExtension.html?main-c4=true';
 
 }

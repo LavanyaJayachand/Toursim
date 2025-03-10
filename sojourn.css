@@ -232,27 +232,35 @@ body {
     h1{
         font-size: 2em;
         padding-left: 10px;
+        white-space: nowrap;
     }
     .icons{
         width:50px;
         z-index: 999;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
 
     }
     .ib{
         width:30px;
-        margin-left:-6px;
-        margin-top:-1px;
+        margin-left:3px;
+        margin-top:8px;
+
     }
     .ico,.options{
-        height:40px;
-        width:40px;
+        height:55px;
+        width:55px;
         
     }
     .explore,.cont{
         display:flex;
         flex-direction: column;
         margin:20px;
-        width:300px;
+        margin-left:30px;
+        width:360px;
+        height: auto;
+        padding:10px;
     }
     .expimg{
         width:200px;
@@ -262,7 +270,29 @@ body {
         margin-top:-300px;
         font-size:0.5rem;
     }
+
+    .tb{
+        width:60px;
+        height: auto;
+        margin-left:3px;
+        margin-top:8px;
+
+    }
+    .Themes{
+        margin-top:-20px;
+        width:100px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        height:auto;
     
+    }
+    .thm1,.thm2,.thm3,.thm4,.thm5,.thm6,.thm7,.thm8{
+        height:70px;
+        width:90px;
+    }
+
 }
 
 .content {
@@ -283,8 +313,6 @@ body {
     padding: 15px;
     font-family: Spectral, serif;
     font-size: 37px;
-
-
 }
 
 .img-hold {
