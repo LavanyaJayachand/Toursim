@@ -353,3 +353,16 @@ body {
     opacity: 0.6;
 }
 
+.about {
+    position: absolute;
+    padding: 10px;
+    background-color: rgb(33, 111, 180);
+    color: white;
+    margin-left: 1000px;
+    margin-top: -70px;
+}
+
+.about:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
