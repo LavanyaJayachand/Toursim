@@ -23,6 +23,10 @@
         .nav-item{
             font-size:22px;  
         }
+        .nav-link:hover{
+         background-color:rgb(152, 163, 163) ;
+         color: rgb(255, 255, 255);
+        }
         .nav-link{
             background-color: rgb(186, 194, 197);
             color:rgb(255, 255, 255);
@@ -37,9 +41,24 @@
             background-color:white;
             border-radius:0px;
             border-width:0px;
-            width:70px;
+    
+        }
+        .dropdown-menu{
+              background-color: lightskyblue;
+        }
+        .options{
+           border: 0px;
+           padding-right:10px;
+           margin-right:15px;
+        }
+        .hey{
+            float:inline-end;
+            width:90px;
+            height:64px;
+            margin-top:-69px;
         }
         
+
     </style>
 </head>
 
@@ -48,43 +67,20 @@
     <header>
         <div class="container mt-5">
             <h1 class="title">Sojourn</h1>
+            <button class="hey" onclick="Toggle('thm')">
+
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
+                        width="80"> <span class="tooltip">Confused where to Start?</span></button>
             <hr>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <ul class="navbar nav">
                         <li class="nav-item">
+                            <button class="options" onclick="Toggle('ico')"><img class="ib"
+                                src="https://cdn2.iconfinder.com/data/icons/essentials-8/100/Menu-512.png"
+                                width="45"></button>
+                        </li>
                             
-                                <div class="dropdown">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                    <img src="https://cdn2.iconfinder.com/data/icons/essentials-8/100/Menu-512.png" width="40px">
-                                </button>
-                                <ul class="dropdown-menu">
-                                   <li class="icon"><img class="icon"
-                                        src="https://th.bing.com/th/id/OIP.uwF5PnA2HTmwjvrA2jKAtwHaHa?rs=1&pid=ImgDetMain"
-                                        width="50"><span class="tooltip">Book your Flight</span></li>
-
-                                    <li class="icon"><img class="icon"
-                                        src="https://th.bing.com/th/id/OIP.amSOwQhvzDFvr5T9wrTiQgHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7"
-                                        width="50">
-                                   <span class="tooltip">Food</span></li>
-                                    <li><img class="ib"
-                                        src="https://cdn.iconscout.com/icon/premium/png-512-thumb/living-room-1447724-1224138.png"
-                                        width="50"><span class="tooltip">Top hotels</span></li>
-                                    <li><img class="ib"
-                                        src="https://www.citypng.com/public/uploads/preview/money-cash-black-icon-transparent-png-11636944062qw6ybhhwy8.png"
-                                        width="50"><span class="tooltip">Packages</span></li>
-                                    <li><img class="ib"
-                                        src="https://cdn4.iconfinder.com/data/icons/business-risks-10/48/ustomer_satisfaction_user_star_feedback_rating-1024.png"
-                                        width="50"><span class="tooltip">Reviews</span></li>
-                                    <li><img
-                                        class="ib"
-                                        src="https://th.bing.com/th/id/OIP.VMWS1G-rMjkWp2DBA_pinwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3"
-                                        width="50"><span class="tooltip">Special events</span></li>
-                                    <li><img class="ib"
-                                        src="https://cdn4.iconfinder.com/data/icons/edit-glyph/64/edit-comment-feed-write-256.png"
-                                        width="50"><span class="tooltip">Price</span></li>
-                                </ul>
-                            </div>
 
                         </li>
                         <li class="nav-item">
@@ -95,6 +91,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact us</a>
+                       </li>
+                       <li class="nav-item">
+                        
                        </li>
 
                     </ul>
