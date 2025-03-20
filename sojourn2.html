@@ -96,14 +96,14 @@
         }
 
         .search {
-            margin-left: 10px;
-            padding: 10px;
+            margin-left: -50px;
+            padding: 5px;
             font-size: 20px;
             border-radius: 3px;
-            width: 50px;
+            width: 40px;
             border: 0px;
-            box-shadow: 2px 2px 3px rgb(123, 120, 120);
-            background-color: rgb(112, 50, 163);
+            background-color: rgb(158, 148, 165);
+
         }
 
         .fas {
@@ -114,38 +114,40 @@
         .sech {
             float: inline-end;
         }
-        .thmdiv{
-         position:absolute;
-        
-         width:100px;
-        
-            
-        }
-        .thm{
-            width:94px;
-            height:64px;
-            margin-left:-20px;
-            
-            
-        
-            
-        }
-        .thmbtn{
-            display:flex;
-            float:inline-end;
-            
-            
-        }
-        .tb{
-            border:2px solid black;
-            height:55px;
-            width:87px;
-        }
-        
-        
-        
 
-   
+        .thmdiv {
+            position: absolute;
+
+            width: 100px;
+
+
+        }
+
+        .thm {
+            width: 94px;
+            height: 64px;
+            margin-left: -20px;
+
+
+
+
+        }
+
+        .thmbtn {
+            display: flex;
+            right: 0;
+            position: absolute;
+            z-index: 999;
+            margin-right: 10px;
+
+
+        }
+
+        .tb {
+            border: 2px solid black;
+            height: 55px;
+            width: 87px;
+        }
     </style>
 </head>
 
@@ -161,69 +163,67 @@
                 <input class="in" type="text" list="suggestions" placeholder="Search"><button class="search"
                     onclick="switchh(event)"><i class="fa-solid fa-magnifying-glass fas"></i></button>
                 <datalist id="suggestions">
-
                     <option value="whatsapp" id="wa">
                     <option value="youtube" id="yo">
                     <option value="w3schools" id="ws">
-
-
                 </datalist>
 
 
             </form>
             <div class="thmbtn">
-             <div class="thmicon">
-                 <button class="hey" >
+                <div class="thmicon">
+                    <button class="hey">
 
-                <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
-                    width="80"> <span class="tooltip">Confused where to Start?</span></button>  </div>
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-thinking-about-creative-idea-5082707-4243292.png"
+                            width="80"> <span class="tooltip">Confused where to Start?</span></button>
+                </div>
 
 
-                    <div class="btn btn-group-vertical thmdiv">
-                        <button class="btn thm thm1"  onclick="navigateTo('mall')">
-        
-                            <img class="tb"
-                                    src="https://img.freepik.com/premium-photo/modern-bright-shopping-mall-interior-with-shoppers-escalator_14117-612734.jpg"
-                                    width="80"> <span class="tooltip">Explore Malls in Chennai</span></button>
-        
+                <div class="btn btn-group-vertical thmdiv">
+                    <button class="btn thm thm1" onclick="navigateTo('mall')">
+
+                        <img class="tb"
+                            src="https://img.freepik.com/premium-photo/modern-bright-shopping-mall-interior-with-shoppers-escalator_14117-612734.jpg"
+                            width="80"> <span class="tooltip">Explore Malls in Chennai</span></button>
+
                     <button class="btn thm thm2" onclick="navigateTo('water')">
                         <img class="tb"
-                                    src="https://img.freepik.com/premium-vector/top-view-ocean-beach-with-soft-waves-summer-landscape-flat-landscap-vector-art-illustration_36900-3645.jpg?w=996"
-                                    width="80"><span class="tooltip">Spend Time in your Favourite
-                                    Beach</span></button>
-        
-                    <button class="btn thm thm3" onclick="navigateTo('zoo')"><img class="tb"
-                                    src="https://img.freepik.com/premium-photo/block-print-style-artwork-tiger-nature_785229-4835.jpg"
-                                    width="80"><span class="tooltip">Get Amused by the Wildlife</span></button>
-        
-                    <button class="btn thm thm4" onclick="navigateTo('res')"><img class="tb"
-                                    src="https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yNF9zaW1wbGlmaWVkX3dlc3Rlcm5fc3R5bGVfcmVzdHVhcmFudF9taW5pbWFsaV8zOGEyNGJiOS0zMDQxLTQ5NDYtOWYxNS0zYjg4YzZiOTExZmVfMS5qcGc.jpg"
-                                    width="80"><span class="tooltip">Delicious Food from top restaurants
-                            </span></button>
-        
-                    <button class="btn thm thm5" onclick="navigateTo('park')"><img class="tb"
-                                    src="https://png.pngtree.com/thumb_back/fw800/background/20230411/pngtree-park-childrens-slide-background-image_2189406.jpg"
-                                    width="80"><span class="tooltip">Explore temples and Rich culture of
-                                    Madras</span></button>
-        
-                    <button class="btn thm thm6" onclick="navigateTo('monu')"><img class="tb"
-                                    src="https://img.freepik.com/premium-vector/india-monuments-vector-illustration_953932-6950.jpg"
-                                    width="80"><span class="tooltip">From Cathedral to St Thomas</span></button>
-        
-                    <button class="btn thm thm7" onclick="navigateTo('jes')"><img class="tb"
-                                    src="https://ofonetree.com/wp-content/uploads/2024/01/image-879.png"
-                                    width="80"><span class="tooltip">Never ending 1000 Light Mosque</span></button>
-        
-                    <button class="btn thm thm8" onclick="navigateTo('alh')"><img class="tb"
-                                    src="https://www.creativefabrica.com/wp-content/uploads/2023/04/05/Islamic-Mosque-flat-illustration-free-Graphics-66333305-1.jpeg"
-                                    width="80"><span class="tooltip">Nothing equals alone time in a evening
-                                    park</span></button>
+                            src="https://img.freepik.com/premium-vector/top-view-ocean-beach-with-soft-waves-summer-landscape-flat-landscap-vector-art-illustration_36900-3645.jpg?w=996"
+                            width="80"><span class="tooltip">Spend Time in your Favourite
+                            Beach</span></button>
 
-                    </div>
+                    <button class="btn thm thm3" onclick="navigateTo('zoo')"><img class="tb"
+                            src="https://img.freepik.com/premium-photo/block-print-style-artwork-tiger-nature_785229-4835.jpg"
+                            width="80"><span class="tooltip">Get Amused by the Wildlife</span></button>
+
+                    <button class="btn thm thm4" onclick="navigateTo('res')"><img class="tb"
+                            src="https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yNF9zaW1wbGlmaWVkX3dlc3Rlcm5fc3R5bGVfcmVzdHVhcmFudF9taW5pbWFsaV8zOGEyNGJiOS0zMDQxLTQ5NDYtOWYxNS0zYjg4YzZiOTExZmVfMS5qcGc.jpg"
+                            width="80"><span class="tooltip">Delicious Food from top restaurants
+                        </span></button>
+
+                    <button class="btn thm thm5" onclick="navigateTo('park')"><img class="tb"
+                            src="https://png.pngtree.com/thumb_back/fw800/background/20230411/pngtree-park-childrens-slide-background-image_2189406.jpg"
+                            width="80"><span class="tooltip">Explore temples and Rich culture of
+                            Madras</span></button>
+
+                    <button class="btn thm thm6" onclick="navigateTo('monu')"><img class="tb"
+                            src="https://img.freepik.com/premium-vector/india-monuments-vector-illustration_953932-6950.jpg"
+                            width="80"><span class="tooltip">From Cathedral to St Thomas</span></button>
+
+                    <button class="btn thm thm7" onclick="navigateTo('jes')"><img class="tb"
+                            src="https://ofonetree.com/wp-content/uploads/2024/01/image-879.png" width="80"><span
+                            class="tooltip">Never ending 1000 Light Mosque</span></button>
+
+                    <button class="btn thm thm8" onclick="navigateTo('alh')"><img class="tb"
+                            src="https://www.creativefabrica.com/wp-content/uploads/2023/04/05/Islamic-Mosque-flat-illustration-free-Graphics-66333305-1.jpeg"
+                            width="80"><span class="tooltip">Nothing equals alone time in a evening
+                            park</span></button>
+
+                </div>
             </div>
-            
-        
-        
+
+
+
             <hr>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -286,7 +286,7 @@
 
             </div>
 
-            
+
 
         </div>
     </header>
@@ -297,7 +297,6 @@
 
 
     <script src="sojourn.js"></script><!--script-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--bootstrap 5-->
 </body>
