@@ -15,7 +15,7 @@
 
     <style>
         .nb {
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            background: linear-gradient(to right, #0bb1b4, #046604);
             /* Warm Sunset Orange to Peach */
 
         }
@@ -26,33 +26,70 @@
 
 
         .nav-link {
+
+            text-shadow: 1px 1px 2px black;
+
+            /* Deep navy blue */
+
+            color: white;
+            /* Dark gray */
             padding: 10px;
-            font-size: 18px;
+            font-size: 20px;
             padding-left: 20px;
             padding-right: 20px;
             font-family: 'rubik', serif;
             margin-left: 10px;
             margin-right: 10px;
-            color: #333333;
-            /* Dark Grey Text */
+
         }
 
 
 
         .navbar-brand {
+            padding-right: 60px;
+            /* Adjust for better mobile view */
+
+            color: orange;
+            /* Elegant gold */
+            /* Warm peach */
+
             font-family: 'Spectral', serif;
-            font-size: 34px;
+            font-size: 38px;
             padding-right: 100px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 3px black;
 
             /* Deep navy blue */
             font-weight: bold;
 
-            color: #333333;
+
             /* Dark gray */
+        }
+
+        .navbar-brand:hover {
+
+
+            color: rgb(98, 122, 166);
+            text-shadow: 1px 1px 3px black;
 
 
 
+        }
+
+        .nav-link:hover {
+
+            color: #e2a23b;
+            /* Golden glow */
+
+        }
+
+        .nav-item.active .nav-link {
+            color: #ffb84d;
+            border-bottom: 2px solid #e2a23b;
+        }
+
+        .navbar-toggler:hover {
+            border: 1px solid #e2a23b;
+            box-shadow: 0px 0px 5px #ffb84d;
         }
     </style>
 </head>
