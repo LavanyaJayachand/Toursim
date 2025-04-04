@@ -1,29 +1,35 @@
 const express = require('express');
 const cors = require('cors');
+const fs = require('fs');
 const app = express();
 const PORT = 3000;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// POST route to handle login form
 app.post('/login', (req, res) => {
-    const { email, password, confirmPassword } = req.body;
+    const { email, password } = req.body;
 
-    if (!email || !password || !confirmPassword) {
-        return res.status(400).send("All fields are required!");
+    // Create a data object
+    const loginData = { email, password };
+
+    // Read existing data
+    let existingData = [];
+    if (fs.existsSync('data.json')) {
+        const fileContent = fs.readFileSync('data.json', 'utf8');
+        if (fileContent) existingData = JSON.parse(fileContent);
     }
 
-    if (password !== confirmPassword) {
-        return res.status(400).send("Passwords do not match!");
-    }
+    // Add new data
+    existingData.push(loginData);
 
-    // For now, just a simple response
-    res.send(`Login successful for email: ${email}`);
+    // Save updated data to file
+    fs.writeFileSync('data.json', JSON.stringify(existingData, null, 2));
+
+    console.log('Saved login data:', loginData);
+    res.json({ message: 'Login data saved successfully!' });
 });
 
-// Start server
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
