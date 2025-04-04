@@ -7,35 +7,25 @@
     <title>Login</title>
     <style>
         body {
-            margin: 0px;
-            border: 0px;
+            margin: 0;
+            border: 0;
             background-size: cover;
             background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg");
             background-position: center;
         }
 
         .bg {
-            margin: 0px;
-            border: 0px;
-
             width: 100%;
-            opacity: 2;
             height: 660px;
-
-
             display: flex;
             justify-content: center;
-
         }
 
         .cont {
             width: 900px;
             height: 500px;
             background-color: rgba(255, 255, 255, 0.3);
-            /* Using rgba for transparency */
-
             margin-top: 100px;
-
             display: flex;
             justify-content: center;
         }
@@ -45,13 +35,13 @@
             font-size: 20px;
             width: 350px;
             margin: 5px;
-
         }
 
         .b1 {
             padding: 10px;
             font-size: 20px;
             margin-left: 240px;
+            cursor: pointer;
         }
 
         .log-title {
@@ -65,7 +55,6 @@
             font-size: 20px;
             margin-left: 40px;
             font-family: sans-serif;
-
         }
 
         #mail {
@@ -78,52 +67,58 @@
 <body>
     <div class="bg">
         <div class="cont">
-
             <form class="fom">
                 <br><br><br>
                 <h1 class="log-title">Login</h1>
                 <br>
-                <label>Enter Email ID
-                </label>
-                <input id="mail" class="username" type="email" name="email" placeholder="Enter your email" required>
-                <span class="tooltip"></span>
+
+                <label>Enter Email ID</label>
+                <input id="mail" class="username" type="email" placeholder="Enter your email" required>
                 <br><br>
 
-                <label>
-                    Enter password
-                </label>
-                <input class="username" type="password" placeholder="password" required></input><br><br>
-
-                <label>
-                    Enter password
-                </label>
-
-                <input class="username" type="password" placeholder="Confirm password" required></input>
+                <label>Enter Password</label>
+                <input class="username password" type="password" placeholder="Password" required>
                 <br><br>
-                <br>
-                <button class="b1" type="submit">
-                    submit
-                </button>
+
+                <label>Confirm Password</label>
+                <input class="username confirm-password" type="password" placeholder="Confirm Password" required>
+                <br><br><br>
+
+                <button class="b1" type="submit">Submit</button>
             </form>
-
         </div>
     </div>
 
     <script>
-        function validate() {
+        document.querySelector('.fom').addEventListener('submit', async function (e) {
+            e.preventDefault();
 
-        }
+            const email = document.getElementById('mail').value;
+            const password = document.querySelector('.password').value;
+            const confirmPassword = document.querySelector('.confirm-password').value;
 
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password, confirmPassword })
+                });
+
+                const result = await response.text();
+                alert(result);
+            } catch (err) {
+                alert("Something went wrong while connecting to the server.");
+                console.error(err);
+            }
+        });
     </script>
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

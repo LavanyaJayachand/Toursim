@@ -1,0 +1,25 @@
+{
+  "name": "tour",
+  "version": "1.0.0",
+  "description": "This is a tourism website project showcasing various destinations and travel options.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LavanyaJayachand/Toursim.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LavanyaJayachand/Toursim/issues"
+  },
+  "homepage": "https://github.com/LavanyaJayachand/Toursim#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
