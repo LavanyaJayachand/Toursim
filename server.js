@@ -71,10 +71,14 @@ app.get('/view-data', (req, res) => {
     <head>
       <title>Login Data</title>
       <style>
-        body { font-family: sans-serif; padding: 20px; }
-        table { border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid #ccc; padding: 10px; }
-        th { background-color: #f2f2f2; }
+      .del{
+        font-size:20px;
+        padding:4px;
+      }
+      body { font-family: sans-serif; padding: 20px; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid #ccc; padding: 10px; }
+      th { background-color: #f2f2f2; }
       </style>
     </head>
     <body>
@@ -83,11 +87,51 @@ app.get('/view-data', (req, res) => {
         <thead><tr><th>Email</th><th>Password</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
+      <button class="del">Clear All</button>
+
+      <script>
+        // Add event listener to the "Clear All" button
+        document.querySelector('.del').addEventListener('click', function() {
+          // Send a GET request to the server to clear the data
+          fetch('/clear-data')
+            .then(response => {
+              if (response.ok) {
+                // Once the data is cleared, reload the page to see the updated data
+                window.location.reload();
+              } else {
+                alert('Error clearing data');
+              }
+            })
+            .catch(err => {
+              console.error('Error:', err);
+              alert('Failed to connect to the server.');
+            });
+        });
+      </script>
     </body>
     </html>
     `;
 
     res.send(html);
+});
+
+// Handle "Clear All" data request
+app.get('/clear-data', (req, res) => {
+    const filePath = path.join(__dirname, 'data.json');
+
+    if (fs.existsSync(filePath)) {
+        try {
+            // Clear the content of the file (set it to an empty array)
+            fs.writeFileSync(filePath, JSON.stringify([], null, 2));
+            console.log('All data cleared successfully!');
+            res.redirect('/view-data');  // Redirect back to the view-data page to show the updated data (empty)
+        } catch (err) {
+            console.error('Error clearing the file:', err);
+            return res.status(500).json({ message: 'Error clearing login data' });
+        }
+    } else {
+        res.status(404).json({ message: 'Data file not found' });
+    }
 });
 
 app.listen(PORT, () => {
