@@ -8,7 +8,12 @@ const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public')); // for your HTML login page
+app.use(express.static('public')); // Serve static files from the "public" folder
+
+// Serve the login page at the root ("/")
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));  // Adjust this path to your HTML file
+});
 
 // Handle login POST request
 app.post('/login', (req, res) => {
