@@ -4,245 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Sojourn - Explore Top Sites</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Swiper CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Swiper CSS (optional) -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Spectral|Rubik&display=swap" rel="stylesheet">
     <style>
+        /* Navbar gradient */
         .nb {
             background: linear-gradient(to right, #642f0b, chocolate);
-            /* Warm Sunset Orange to Peach */
-        }
-
-        .nav-link {
-            text-shadow: 1px 1px 2px black;
-            color: rgb(255, 255, 255);
-            padding: 10px;
-            font-size: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            font-family: 'rubik', serif;
-            margin-left: 10px;
-            margin-right: 10px;
         }
 
         .navbar-brand {
-            padding-right: 60px;
-            color: orange;
             font-family: 'Spectral', serif;
-            font-size: 38px;
-            text-shadow: 2px 2px 3px black;
+            font-size: 2.5rem;
+            color: orange;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
             font-weight: bold;
         }
 
         .navbar-brand:hover {
             color: lightcoral;
-            text-shadow: 1px 1px 3px black;
+        }
+
+        .nav-link {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.125rem;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .nav-link:hover {
             color: orange;
         }
 
+        .nav-item.active .nav-link {
+            color: lightcoral;
+            border-bottom: 2px solid lightcoral;
+        }
+
         .navbar-toggler:hover {
             border: 1px solid lightcoral;
-            box-shadow: 0px 0px 5px lightcoral;
+            box-shadow: 0 0 5px lightcoral;
         }
 
-        .explore {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            opacity: 1;
-            animation: cycleImages 15s infinite;
+        html {
+            scroll-behavior: smooth;
         }
-        @keyframes cycleImages {
-
-0%,
-20% {
-    opacity: 1;
-    z-index: 1;
-}
-
-25%,
-100% {
-    opacity: 0;
-    z-index: 0;
-}
-}
-        .e1 { animation-delay: 0s; }
-        .e2 { animation-delay: 3s; }
-        .e3 { animation-delay: 6s; }
-        .e4 { animation-delay: 9s; }
-        .e5 { animation-delay: 12s; }
 
         .exptitle {
-            margin-left: 100px;
+            font-family: 'Spectral', serif;
+            font-size: 2rem;
+            margin: 2rem auto;
+            text-align: center;
         }
 
-        .expimg {
-            border: 0;
-            width: 100%;
-            height: auto;
-        }
-
+        /* Slider container with 4:3 ratio */
         .image-container {
             position: relative;
-            max-width: 100%;
-            background-color: grey;
-            margin: 0 auto;
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            background-color: #ccc;
+            overflow: hidden;
         }
 
+        /* Animated slides */
+        .explore {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: cycleImages 15s infinite;
+        }
+
+        .e1 {
+            animation-delay: 0s;
+        }
+
+        .e2 {
+            animation-delay: 3s;
+        }
+
+        .e3 {
+            animation-delay: 6s;
+        }
+
+        .e4 {
+            animation-delay: 9s;
+        }
+
+        .e5 {
+            animation-delay: 12s;
+        }
+
+        @keyframes cycleImages {
+
+            0%,
+            20% {
+                opacity: 1;
+                z-index: 1;
+            }
+
+            25%,
+            100% {
+                opacity: 0;
+                z-index: 0;
+            }
+        }
+
+        /* Card layout inside each slide */
         .cont {
-            background-color: rgb(255, 255, 255);
-            box-shadow: 10px 10px 15px black;
-            margin: 20px;
-        }
-
-        .content {
-            font-size: 16px;
-            font-family: Rubik;
-            padding: 30px;
-            line-height: 1.5;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            height: 100%;
         }
 
         .i-title {
-            margin: 10px;
-            margin-top: 50px;
-            margin-bottom: 15px;
-            border: 0;
-            padding: 15px;
-            font-family: Spectral, serif;
-            font-size: 37px;
+            font-family: 'Spectral', serif;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            white-space: nowrap;
+        }
+
+        .content {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
         .rate {
-            font-size: 16px;
-            margin-top: -20px;
+            font-size: 1rem;
+            margin-top: 1rem;
         }
 
-        .book {
-            font-size: 16px;
-            margin-top: 10px;
-            background-color: rgb(112, 108, 102);
+        .btn-book {
+            font-size: 1rem;
+            margin-top: 0.5rem;
         }
-
-        .book:hover {
-            cursor: pointer;
-            background-color: rgb(97, 94, 88);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .i-title {
-                font-size: 28px;
-                margin-bottom: 10px;
-            }
-
-            .cont {
-                margin: 10px 0;
-                padding: 10px;
-            }
-
-            .img-hold,
-            .para-hold {
-                margin-bottom: 15px;
-            }
-
-            .explore {
-                opacity: 1;
-            }
-        }
-
     </style>
 </head>
 
 <body>
-
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg nb">
         <div class="container-fluid">
-            <a class="navbar-brand text-12" href="#">Sojourn</a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <a class="navbar-brand" href="#">Sojourn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa-solid fa-home"></i> Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-plane"></i> Flight</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-utensils"></i> Food</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-hotel"></i> Hotels</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-box"></i> Packages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-star"></i> Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-plane"></i> Flight</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-utensils"></i> Food</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-hotel"></i> Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-box"></i> Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-star"></i> Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <h1 class="exptitle">Explore top sites</h1>
+    <!-- Section Title -->
+    <h1 class="exptitle">Explore Top Sites</h1>
 
-    <div class="container-fluid">
-        <div class="image-container">
-            <div class="explore e1">
-                <div class="cont row">
-                    <div class="img-hold col-md-6">
+    <!-- Explore Slider -->
+    <div class="ratio ratio-4x3 image-container">
+        <!-- Slide 1 -->
+        <div class="explore e1">
+            <div class="cont container h-100 d-flex align-items-center">
+                <div class="row w-100 align-items-center">
+                    <div class="col-12 col-md-6">
                         <h2 class="i-title">Semmozhi Poonga</h2>
-                        <img class="expimg" src="https://yometro.com/images/places/Semmozhi-Poonga.jpg" alt="Semmozhi Poonga">
+                        <img src="https://yometro.com/images/places/Semmozhi-Poonga.jpg"
+                            alt="Semmozhi Poonga botanical garden" class="img-fluid" loading="lazy">
                     </div>
-                    <div class="para-hold col-md-6">
-                        <p class="content">Semmozhi Poonga is one of the most visited botanical gardens in all of Chennai. <a href="more.html">..more</a></p>
-                        <h2 class="rate">4.4 ★ ★ ★ ★ ☆ (over 70)</h2><br>
-                        <h2 class="rate">From ₹10 to ₹100</h2>
-                        <button class="book">Book your Journey</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="explore e2">
-                <div class="cont row">
-                    <div class="img-hold col-md-6">
-                        <h2 class="i-title">Vandaloor Zoo</h2>
-                        <img class="expimg" src="https://www.veethi.com/images/city-images/fullsize/Chennai-2233.jpg" alt="Vandaloor Zoo">
-                    </div>
-                    <div class="para-hold col-md-6">
-                        <p class="content">Arignar Anna Zoological Park was the first Zoo established in the country in 1855. <a href="more.html">..more</a></p>
-                        <h2 class="rate">4.5 ★ ★ ★ ★ ☆ (over 70)</h2><br>
-                        <h2 class="rate">From ₹10 to ₹100</h2>
-                        <button class="book">Book your Journey</button>
+                    <div class="col-12 col-md-6">
+                        <p class="content">Semmozhi Poonga is one of the most visited botanical gardens in Chennai. The
+                            beautiful landscaping has made it a delight for morning walkers and filmmakers alike.<a
+                                href="more.html">..more</a></p>
+                        <p class="rate">4.4 ★★★★☆ (over 70)</p>
+                        <p class="rate">From ₹10 to ₹100</p>
+                        <button class="btn btn-outline-dark btn-book">Book your Journey</button>
                     </div>
                 </div>
             </div>
-
-            <!-- Repeat for other explore sections -->
-            <!-- ... -->
-
         </div>
-    </div>
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+        <!-- Slide 2 -->
+        <div class="explore e2">
+            <div class="cont container h-100 d-flex align-items-center">
+                <div class="row w-100 align-items-center">
+                    <div class="col-12 col-md-6 order-md-2">
+                        <h2 class="i-title">Vandaloor Zoo</h2>
+                        <img src="https://www.veethi.com/images/city-images/fullsize/Chennai-2233.jpg"
+                            alt="Arignar Anna Zoological Park" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-6 order-md-1">
+                        <p class="content">Arignar Anna Zoological Park is one of the largest and most modern zoos in
+                            Southeast Asia, rated "Best Zoo" in India.<a href="more.html">..more</a></p>
+                        <p class="rate">4.5 ★★★★☆ (over 70)</p>
+                        <p class="rate">From ₹10 to ₹100</p>
+                        <button class="btn btn-outline-dark btn-book">Book your Journey</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="explore e3">
+            <div class="cont container h-100 d-flex align-items-center">
+                <div class="row w-100 align-items-center">
+                    <div class="col-12 col-md-6">
+                        <h2 class="i-title">Marina Beach</h2>
+                        <img src="https://static.toiimg.com/photo/79753510/MARINA.jpg?width=748&resize=4"
+                            alt="Marina Beach Chennai" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="content">Marina Beach is known for its golden sand and rhythmic waves, offering
+                            relaxation and cultural immersion.<a href="more.html">..more</a></p>
+                        <p class="rate">4.2 ★★★★☆ (over 70)</p>
+                        <p class="rate">From ₹10 to ₹100</p>
+                        <button class="btn btn-outline-dark btn-book">Book your Journey</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="explore e4">
+            <div class="cont container h-100 d-flex align-items-center">
+                <div class="row w-100 align-items-center">
+                    <div class="col-12 col-md-6 order-md-2">
+                        <h2 class="

