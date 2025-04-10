@@ -161,7 +161,7 @@
 
         .cont {
             width: 70%;
-            height: 450px;
+            height: auto;
             background-color: rgb(255, 255, 255);
             box-shadow: 10px 10px 15px black;
             padding: 50px;
@@ -223,14 +223,34 @@
         }
 
 
-        @media(max-width:768px) {
+        @media (max-width: 768px) {
+    .cont {
+        flex-direction: column;
+        padding: 20px;
+        width: 90%;
+    }
 
+    .i-title {
+        font-size: 28px;
+        margin-left: 0;
+    }
 
-            .cont {
-                display: flex;
-                flex-direction: column;
-            }
-        }
+    .img-hold, .para-hold {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .exptitle {
+        margin-left: 20px;
+        font-size: 28px;
+    }
+
+    .boss {
+        margin-left: 0;
+    }
+}
+
     </style>
 </head>
 
@@ -239,10 +259,12 @@
     <nav class="navbar navbar-expand-lg nb">
         <div class="container-fluid">
             <a class="navbar-brand text-12" href="#">Sojourn</a>
+            
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+           
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
 
@@ -273,6 +295,10 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user"></i> Login
                         </a>
                     </li>
 
@@ -415,7 +441,34 @@
     </div>
 
 
-
+    <script>
+        document.querySelectorAll(".book").forEach(button => {
+            button.addEventListener("click", () => {
+                const title = button.closest(".cont").querySelector(".i-title").innerText;
+    
+                fetch('http://localhost:3000/book', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: "John Doe", // Replace with user input if you have it
+                        date: new Date().toISOString(),
+                        place: title
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message + " (Booking ID: " + data.bookingId + ")");
+                })
+                .catch(error => {
+                    console.error("Booking failed:", error);
+                    alert("Booking failed.");
+                });
+            });
+        });
+    </script>
+    
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
