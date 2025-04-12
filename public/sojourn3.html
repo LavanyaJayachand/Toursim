@@ -221,7 +221,11 @@
         .boss {
             margin-left: 200px;
         }
-
+        footer{
+    position:relative;
+    margin-top:700px;
+    
+}
 
         @media (max-width: 768px) {
     .cont {
@@ -249,7 +253,49 @@
     .boss {
         margin-left: 0;
     }
+    footer{
+    position:relative;
+    margin-top:1100px;
+    
 }
+}
+
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .popup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px black;
+    font-family: sans-serif;
+  }
+  .popup-box input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  .popup-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: chocolate;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .end{
+    background-color: black;
+    height:400px;
+  }
+
 
     </style>
 </head>
@@ -439,37 +485,117 @@
 
         </div>
     </div>
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+          <div class="row">
+            <!-- Branding -->
+            <div class="col-md-3">
+              <h5>Sojourn</h5>
+              <p>Your journey begins here. Discover amazing destinations.</p>
+            </div>
+      
+            <!-- Quick Links -->
+            <div class="col-md-2">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Terms</a></li>
+              </ul>
+            </div>
+      
+            <!-- Contact Info -->
+            <div class="col-md-3">
+              <h5>Contact</h5>
+              <p>Email: support@sojourn.com</p>
+              <p>Phone: +91 12345 67890</p>
+              <p>Chennai, India</p>
+            </div>
+      
+            <!-- Social Media -->
+            <div class="col-md-2">
+              <h5>Follow Us</h5>
+              <a href="#"><i class="fab fa-facebook me-2 text-white"></i></a>
+              <a href="#"><i class="fab fa-instagram me-2 text-white"></i></a>
+              <a href="#"><i class="fab fa-twitter text-white"></i></a>
+            </div>
+      
+            <!-- Newsletter -->
+            <div class="col-md-2">
+              <h5>Newsletter</h5>
+              <form>
+                <input type="email" class="form-control mb-2" placeholder="Your email">
+                <button class="btn btn-sm btn-warning">Subscribe</button>
+              </form>
+            </div>
+          </div>
+      
+          <hr class="bg-light" />
+      
+          <p class="text-center m-0">© 2025 Sojourn. All rights reserved.</p>
+        </div>
+      </footer>
+      
+    
 
 
     <script>
         document.querySelectorAll(".book").forEach(button => {
             button.addEventListener("click", () => {
-                const title = button.closest(".cont").querySelector(".i-title").innerText;
-    
-                fetch('http://localhost:3000/book', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        name: "John Doe", // Replace with user input if you have it
-                        date: new Date().toISOString(),
-                        place: title
+                const exploreDiv = button.closest(".explore");
+                const title = exploreDiv.querySelector(".i-title")?.innerText || "Unknown";
+        
+                // Create the popup form
+                const popup = document.createElement('div');
+                popup.className = 'popup-overlay';
+                popup.innerHTML = `
+                    <div class="popup-box">
+                        <h3>Enter Booking Details</h3>
+                        <input type="text" id="bookerName" placeholder="Your Name" required>
+                        <input type="text" id="mobile" placeholder="10-digit Mobile Number" required>
+                        <button id="confirmBooking">Confirm</button>
+                    </div>
+                `;
+                document.body.appendChild(popup);
+        
+                // Handle confirm button click inside popup
+                document.getElementById('confirmBooking').addEventListener('click', () => {
+                    const name = document.getElementById('bookerName').value.trim();
+                    const mobile = document.getElementById('mobile').value.trim();
+        
+                    if (mobile.length !== 10 || !/^\d{10}$/.test(mobile)) {
+                        alert("Please enter a valid 10-digit mobile number.");
+                        return;
+                    }
+        
+                    fetch('http://localhost:3000/book', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            name,
+                            mobile,
+                            place: title,
+                            date: new Date().toISOString()
+                        })
                     })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    alert(data.message + " (Booking ID: " + data.bookingId + ")");
-                })
-                .catch(error => {
-                    console.error("Booking failed:", error);
-                    alert("Booking failed.");
+                    .then(res => res.json())
+                    .then(data => {
+                        alert(`You have successfully booked for "${title}"!\nBooking ID: ${data.bookingId}`);
+                        popup.remove(); // Close popup after booking
+                    })
+                    .catch(error => {
+                        console.error("Booking failed:", error);
+                        alert("Booking failed.");
+                        popup.remove();
+                    });
                 });
             });
         });
-    </script>
-    
-
+        </script>
+        
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
