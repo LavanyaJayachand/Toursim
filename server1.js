@@ -25,6 +25,72 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'booking.html'));  // Adjust this path to your HTML file
 });
 
+// Serve the view-bookings page that displays all bookings in a table
+app.get('/view-bookings', (req, res) => {
+  const bookings = readBookings();  // Get the latest bookings from the JSON file
+  const rows = bookings.map(d => `
+    <tr>
+      <td>${d.bookingId}</td>
+      <td>${d.name}</td>
+      <td>${d.mobile}</td>
+      <td>${d.place}</td>
+      <td>${new Date(d.date).toLocaleString()}</td>
+    </tr>
+  `).join('');
+
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Booking Data</title>
+      <style>
+        body { font-family: sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 10px; }
+        th { background-color: #f2f2f2; }
+        .del { font-size: 20px; padding: 4px; }
+      </style>
+    </head>
+    <body>
+      <h2>Booking Details</h2>
+      <table>
+        <thead><tr><th>Booking ID</th><th>Name</th><th>Mobile</th><th>Place</th><th>Date</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <button class="del">Clear All</button>
+
+      <script>
+        // Add event listener to the "Clear All" button
+        document.querySelector('.del').addEventListener('click', function() {
+          // Send a GET request to the server to clear the bookings
+          fetch('/clear-bookings')
+            .then(response => {
+              if (response.ok) {
+                // Once the bookings are cleared, reload the page to show the updated (empty) data
+                window.location.reload();
+              } else {
+                alert('Error clearing bookings');
+              }
+            })
+            .catch(err => {
+              console.error('Error:', err);
+              alert('Failed to connect to the server.');
+            });
+        });
+      </script>
+    </body>
+    </html>
+  `;
+
+  res.send(html);
+});
+
+// Add a route to fetch all bookings (for API access)
+app.get('/bookings', (req, res) => {
+  const bookings = readBookings();
+  res.json(bookings);
+});
+
 // Handle booking POST request
 app.post('/book', (req, res) => {
   const { name, mobile, place, date } = req.body;
@@ -45,62 +111,6 @@ app.post('/book', (req, res) => {
     message: 'Booking confirmed!',
     bookingId
   });
-});
-
-// View all bookings in a table
-app.get('/view-bookings', (req, res) => {
-  const bookings = readBookings();
-
-  if (bookings.length === 0) {
-    return res.send('<p>No bookings found yet.</p>');
-  }
-
-  const rows = bookings.map(b => `<tr><td>${b.bookingId}</td><td>${b.name}</td><td>${b.mobile}</td><td>${b.place}</td><td>${b.date}</td></tr>`).join('');
-
-  const html = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Booking Data</title>
-      <style>
-        body { font-family: sans-serif; padding: 20px; }
-        table { border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid #ccc; padding: 10px; }
-        th { background-color: #f2f2f2; }
-        .del { font-size: 20px; padding: 4px; }
-      </style>
-    </head>
-    <body>
-      <h2>Stored Booking Data</h2>
-      <table>
-        <thead><tr><th>Booking ID</th><th>Name</th><th>Mobile</th><th>Place</th><th>Date</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-      <button class="del">Clear All</button>
-
-      <script>
-        // Add event listener to the "Clear All" button
-        document.querySelector('.del').addEventListener('click', function() {
-          // Send a GET request to the server to clear the data
-          fetch('/clear-bookings')
-            .then(response => {
-              if (response.ok) {
-                window.location.reload();  // Reload the page to see the updated data (empty)
-              } else {
-                alert('Error clearing data');
-              }
-            })
-            .catch(err => {
-              console.error('Error:', err);
-              alert('Failed to connect to the server.');
-            });
-        });
-      </script>
-    </body>
-    </html>
-  `;
-
-  res.send(html);
 });
 
 // Handle "Clear All" bookings data request
