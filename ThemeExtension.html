@@ -154,9 +154,9 @@
     .mySlides6,
     .mySlides7,
     .mySlides8 {
-      width: 600px;
+      width: 100%;
       /* Fixed width for slides */
-      height: 300px;
+      height: 100%;
       /* Fixed height for slides */
     }
 
@@ -220,47 +220,85 @@
 
     .zoo-title,
     .beach-title,
-    .malls-title,
-    .food-title,
     .parks-title,
-    .temples-title,
+    .churches-title,
+    .food-title,
     .mosques-title,
-    .church-title {
-      font-family: Spectral, serif;
+    .histry-title {
+      color: rgb(0, 0, 0);
       font-size: 44px;
+      font-family: Spectral, serif;
+
 
     }
-    @media(max-width:780px){
-      #main-c{
+
+
+
+
+    @media (max-width: 780px) {
+
+      /* Main container for slideshows */
+      #main-c,
+      #main-c2,
+      #main-c3,
+      #main-c4,
+      #main-c5,
+      #main-c6,
+      #main-c7,
+      #main-c8 {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
       }
-      #timings,
-    #dynamic-content,
-    #timings2,
-    #dynamic-content2,
-    #timings3,
-    #dynamic-content3,
-    #timings4,
-    #dynamic-content4,
-    #timings5,
-    #dynamic-content5,
-    #timings6,
-    #dynamic-content6,
-    #timings7,
-    #dynamic-content7,
-    #timings8,
-    #dynamic-content8 {
-      font-size: 3vw;
-      line-height: 1.5;
 
-      font-family: Rubik, serif;
-    }
-    img{
-      width:auto;
-      height:auto;
-    }
-      
+      /* Dynamic content (titles and descriptions) for each slide */
+      #timings,
+      #dynamic-content,
+      #timings2,
+      #dynamic-content2,
+      #timings3,
+      #dynamic-content3,
+      #timings4,
+      #dynamic-content4,
+      #timings5,
+      #dynamic-content5,
+      #timings6,
+      #dynamic-content6,
+      #timings7,
+      #dynamic-content7,
+      #timings8,
+      #dynamic-content8 {
+        font-size: 3vw;
+        line-height: 1.5;
+        font-family: Rubik, serif;
+      }
+
+      .zoo-title,
+      .beach-title,
+      .parks-title,
+      .churches-title,
+      .food-title,
+      .mosques-title,
+      .histry-title {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        font-family: Spectral, serif;
+
+
+      }
+
+      #dynamic-title,
+      #dynamic-title1,
+      #dynamic-title2,
+      #dynamic-title3,
+      #dynamic-title4,
+      #dynamic-title5,
+      #dynamic-title6,
+      #dynamic-title7,
+      #dynamic-title8 {
+        font-family: Spectral, serif;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+      }
 
     }
   </style>
@@ -320,17 +358,15 @@
     <div id="dynamic">
       <h1 id="dynamic-title">Vandalur zoo</h1>
       <p id="dynamic-content">Arignar Anna Zoological Park was the first Zoo established in the country in 1855. It
-        is
-        one of the largest Zoos in Southeast Asia, spreading across 602 hectares of land. It is one of the most modern
-        and
-        scientifically managed Zoos in the country and it is rated as the "Best Zoo" in the country with a top score
-        of
-        82% in the first Management Effectiveness Evaluation conducted by the Central Zoo Authority, MOEF & CC. The
-        park
-        works with the mission of conservation breeding of rare and endangered animals, veterinary care & conservation
-        education.
+        is one of the largest Zoos in Southeast Asia, spreading across 602 hectares of land. It is one of the most
+        modern and scientifically managed Zoos in the country and it is rated as the "Best Zoo" in the country with a
+        top score
+        of 82% in the first Management Effectiveness Evaluation conducted by the Central Zoo Authority, MOEF & CC. The
+        park works with the mission of conservation breeding of rare and endangered animals, veterinary care &
+        conservation
+        education. </p>
       <p id="timings"><b>Timings:</b>9:00 AM - 5:00 PM (Closed on Tuesdays) </p>
-      </p>
+
 
     </div>
   </div>
@@ -475,7 +511,7 @@
 
 
 
-  <h1 id="jes" class="-title" style="text-align:center">Churches in Chennai</h1>
+  <h1 id="jes" class="churches-title" style="text-align:center">Churches in Chennai</h1>
   <div id="main-c4">
 
     <div class="showcase4">
@@ -536,7 +572,7 @@
   <br>
   <hr>
 
-  <h1 id="res" class="-title" style="text-align:center">Restaurants in Chennai</h1>
+  <h1 id="res" class="food-title" style="text-align:center">Restaurants in Chennai</h1>
   <div id="main-c5">
 
     <div class="showcase5">
@@ -600,26 +636,31 @@
   <hr>
 
 
-  <h1 id="alh" class="-title" style="text-align:center">Mosques in Chennai</h1>
+  <h1 id="alh" class="mosques-title" style="text-align:center">Mosques in Chennai</h1>
   <div id="main-c6">
 
     <div class="showcase6">
       <div class="container6">
         <!-- Image Slides -->
         <div class="slide6">
-          <img src="" class="mySlides6">
+          <img src="https://yometro.com/images/places/thousand-lights-mosque.jpg" class="mySlides6">
         </div>
         <div class="slide6">
-          <img src="" class="mySlides6">
+          <img
+            src="https://abirpothi.com/wp-content/uploads/2023/01/The-Mecca-Masjid-of-Hyderabad-was-built-with-stones-or-bricks-made-from-the-soil-brought-from-Mecca.-1024x730.jpg"
+            class="mySlides6">
         </div>
         <div class="slide6">
-          <img src="" class="mySlides6">
+          <img src="https://th.bing.com/th/id/OIP.q0ccASL3zjde7av6eb7YNQHaFj?w=800&h=600&rs=1&pid=ImgDetMain"
+            class="mySlides6">
         </div>
         <div class="slide6">
-          <img src="" class="mySlides6">
+          <img
+            src="https://c8.alamy.com/comp/ET0DD3/wallajah-masjid-known-big-mosque-in-madras-chennai-tamil-nadu-india-ET0DD3.jpg"
+            class="mySlides6">
         </div>
         <div class="slide6">
-          <img src="" class="mySlides6">
+          <img src="https://th.bing.com/th/id/OIP.I90h96rRrwQbwLWP3DX3lgHaE9?rs=1&pid=ImgDetMain" class="mySlides6">
         </div>
 
         <!-- Navigation Buttons -->
@@ -634,11 +675,18 @@
 
       <!-- Thumbnail Row -->
       <div class="thumbnail-row6">
-        <img src="" class="thumbnail6" onclick="currentSlide6(1)">
-        <img src="" class="thumbnail6" onclick="currentSlide6(2)">
-        <img src="" class="thumbnail6" onclick="currentSlide6(3)">
-        <img src="" class="thumbnail6" onclick="currentSlide6(4)">
-        <img src="" class="thumbnail6" onclick="currentSlide6(5)">
+        <img src="https://yometro.com/images/places/thousand-lights-mosque.jpg" class="thumbnail6"
+          onclick="currentSlide6(1)">
+        <img
+          src="https://abirpothi.com/wp-content/uploads/2023/01/The-Mecca-Masjid-of-Hyderabad-was-built-with-stones-or-bricks-made-from-the-soil-brought-from-Mecca.-1024x730.jpg"
+          class="thumbnail6" onclick="currentSlide6(2)">
+        <img src="https://th.bing.com/th/id/OIP.q0ccASL3zjde7av6eb7YNQHaFj?w=800&h=600&rs=1&pid=ImgDetMain"
+          class="thumbnail6" onclick="currentSlide6(3)">
+        <img
+          src="https://c8.alamy.com/comp/ET0DD3/wallajah-masjid-known-big-mosque-in-madras-chennai-tamil-nadu-india-ET0DD3.jpg"
+          class="thumbnail6" onclick="currentSlide6(4)">
+        <img src="https://th.bing.com/th/id/OIP.I90h96rRrwQbwLWP3DX3lgHaE9?rs=1&pid=ImgDetMain" class="thumbnail6"
+          onclick="currentSlide6(5)">
       </div>
     </div>
     <div id="dynamic6">
@@ -652,7 +700,7 @@
   <br>
   <hr>
 
-  <h1 id="mall" class="-title" style="text-align:center">Malls in Chennai</h1>
+  <h1 id="mall" class="histry-title" style="text-align:center">Historical Chennai</h1>
   <div id="main-c7">
 
     <div class="showcase7">
@@ -718,57 +766,6 @@
   <br>
   <hr>
 
-  <h1 id="monu" class="-title" style="text-align:center">Monuments in chennai</h1>
-  <div id="main-c8">
-
-    <div class="showcase8">
-      <div class="container8">
-        <!-- Image Slides -->
-        <div class="slide8">
-          <img src="" class="mySlides8">
-        </div>
-        <div class="slide8">
-          <img src="" class="mySlides8">
-        </div>
-        <div class="slide8">
-          <img src="" class="mySlides8">
-        </div>
-        <div class="slide8">
-          <img src="" class="mySlides8">
-        </div>
-        <div class="slide8">
-          <img src="" class="mySlides8">
-        </div>
-
-        <!-- Navigation Buttons -->
-        <a class="prev8" onclick="plusSlides8(-1)">❮</a>
-        <a class="next8" onclick="plusSlides8(1)">❯</a>
-
-        <!-- Caption -->
-        <div class="caption-container8">
-          <p id="caption8">Image Caption</p>
-        </div>
-      </div>
-
-      <!-- Thumbnail Row -->
-      <div class="thumbnail-row8">
-        <img src="" class="thumbnail8" onclick="currentSlide8(1)">
-        <img src="" class="thumbnail8" onclick="currentSlide8(2)">
-        <img src="" class="thumbnail8" onclick="currentSlide8(3)">
-        <img src="" class="thumbnail8" onclick="currentSlide8(4)">
-        <img src="" class="thumbnail8" onclick="currentSlide8(5)">
-      </div>
-    </div>
-    <div id="dynamic8">
-      <h1 id="dynamic-title8"></h1>
-      <p id="dynamic-content8">
-      <p id="timings8"><b>Timings:</b>9:00 AM - 5:00 PM (Closed on Tuesdays) </p>
-      </p>
-
-    </div>
-  </div>
-  <br>
-  <hr>
 
 
 

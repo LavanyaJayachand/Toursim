@@ -207,7 +207,7 @@ function showSlides3(n) {
     document.getElementById('dynamic-content3').innerText = "Anna Park is a popular destination with many attractions and activities, making it the perfect place to visit for those seeking relaxation, relaxation and natural beauty. Located in the heart of the crowded city, This Park offers its visitors a peaceful urban environment where they can be in touch with nature and enjoy many fun activities.One of the main reasons to visit Anna Park is its natural beauty and peaceful environment. The park is adorned with green trees, beautiful flowers and well-maintained creating a beautiful place for a walk or picnic.";
     document.getElementById('timings3').innerText = "Open 24/7";
   }
-}   
+}
 
 
 
@@ -254,7 +254,7 @@ function showSlides4(n) {
   thumbnails4[slideIndex4 - 1].classList.add("active4");
 
   // Set the caption
-  captionText4.innerHTML = "";
+  captionText4.innerHTML = "Hearts find peace where faith lives";
   if (slideIndex4 === 1) {
     document.getElementById('dynamic-title4').innerText = "Santhome Church";
     document.getElementById('dynamic-content4').innerText = " Santhome Church in  Chennai also known as Santhome Cathedral Basilica and International Shrine of Saint Thomas Cathedral Basilica, sits on the tomb built over the mortal remains of one of the twelve Apostles of Jesus Christ.The historical significance of this place makes it a holy place  Saint Thomas had come to India in A.D.52, was martyred in A.D.72 and buried in this very site then known as Mylapore.  “San Thome” assumes its name from Saint Thomas.Anyone can visit this sacred place of god and feel his presence in every breath of air.";
@@ -281,7 +281,7 @@ function showSlides4(n) {
     document.getElementById('timings4').innerText = "Open 24/7";
   }
 }
- 
+
 
 
 let slideIndex5 = 1;
@@ -324,7 +324,7 @@ function showSlides5(n) {
   thumbnails5[slideIndex5 - 1].classList.add("active5");
 
   // Set the caption
-  captionText5.innerHTML = "";
+  captionText5.innerHTML = "Steps to the temple, paths to the divine";
   if (slideIndex5 === 1) {
     document.getElementById('dynamic-title5').innerText = "Kapaleeshwarar Temple";
     document.getElementById('dynamic-content5').innerText = "One of the imposing religious sites of Chennai city is the noted Kapaleeswarar Temple that is majestically set in the Mylapore region of Chennai. It is said the Shiva Lingam in the temple is Swayambulingam, which means it is self-manifested.The temple is also known as Vedapuri as the four Vedas are worshipped at this auspicious place. The other name given to the religious site is Sukrapuri as Sage Sukracharya offered his prayers to Lord Shiva at this location to regain his eyesight.";
@@ -392,30 +392,30 @@ function showSlides6(n) {
   thumbnails6[slideIndex6 - 1].classList.add("active6");
 
   // Set the caption
-  captionText6.innerHTML = "";
+  captionText6.innerHTML = "Timeless beauty, boundless devotion";
   if (slideIndex6 === 1) {
-    document.getElementById('dynamic-title6').innerText = "";
-    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('dynamic-title6').innerText = "Thousand Lights Mosque";
+    document.getElementById('dynamic-content6').innerText = "Thousand Lights Mosque in Chennai is among the most revered mosques of the city. It’s a prominent gathering place for daily prayers and other festive occasions.The mosque got its name from a legend that thousand oil lamps were needed back in the days to illuminate the prayer hall.Some also believe that the mosque is called so because of the thousand lights provided by the Indian National Congress party on their first visit to the city.Although Thousand Lights Mosque Chennai is revered among the entire Muslim community, it holds a special significance for the Shia Muslims.The shrine is dedicated to Imam Hossain, the grandson of Prophet Muhammad.And he is respected among the Shia sect around the world.";
     document.getElementById('timings6').innerText = "Open 24/7";
   }
   else if (slideIndex6 === 2) {
-    document.getElementById('dynamic-title6').innerText = "";
-    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('dynamic-title6').innerText = " Makkah Mosque";
+    document.getElementById('dynamic-content6').innerText = "The Makkah Mosque is a mosque in the city of Chennai, India. The dargah of Syed Musa Sha Khaderi is located near the mosque. The masjid is located on Anna Salai.[1] The five-storeyed mosque is one of the largest in India and can house 5,000 worshippers at a time. It  is another holy mosque in Chennai that draws visitors for its peaceful environment and traditional architecture. Situated near major markets, the mosque offers a serene place for prayer amidst the city’s hustle. It’s an ideal stop for those exploring famous mosques while indulging in shopping and local cuisine. The mosque’s design and atmosphere provide a refreshing spiritual break in the middle of a busy day.";
     document.getElementById('timings6').innerText = "Open 24/7";
   }
   else if (slideIndex6 === 3) {
-    document.getElementById('dynamic-title6').innerText = "";
-    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('dynamic-title6').innerText = "Wallajah Mosque";
+    document.getElementById('dynamic-content6').innerText = "Nestled in the heart of Chennai, amidst the bustling city life, lies a serene oasis of faith—the Wallajah Mosque also known as the Triplicane Big Mosque. This historic mosque, a testament to the city's rich multicultural heritage, whispers tales of a bygone era. Built in the 18th century by the Nawab of the Carnatic, Wallajah Muhammad Ali Khan, the mosque stands as a symbol of the harmonious coexistence of different religions in the region. The mosque's architecture, a blend of Mughal and Indo-Saracenic styles, is captivating. Its towering minarets pierce the sky, while intricate carvings adorn its walls, telling stories of faith and devotion.";
     document.getElementById('timings6').innerText = "Timings: 6:00 AM - 6:00 PM";
   }
   else if (slideIndex6 === 4) {
-    document.getElementById('dynamic-title6').innerText = "";
-    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('dynamic-title6').innerText = "Masjid-e-Qudusiya";
+    document.getElementById('dynamic-content6').innerText = "Masjid-e-Qudusiya is a mosque located in Chennai, Tamil Nadu. The average rating of this place is 4.60 out of 5 stars based on 63 reviews. The street address of this place is 377H+V7F, Bells Road-Walajah Road Corner, Wallahjah Rd, Triplicane, Chennai, Tamil Nadu 600014, India. It is about 1.01 kilometers away from the Chennai Beac railway station.Small, beautiful and neat air conditioned mosque. Wudu and toilet facilities available. Walkable distance from Marina beach Labour statue, Chepauk Stadium, Madras University, Ezhilagam and Omandurar Medical College.";
     document.getElementById('timings6').innerText = "Open 24/7";
   }
   else if (slideIndex6 === 5) {
-    document.getElementById('dynamic-title6').innerText = "";
-    document.getElementById('dynamic-content6').innerText = "";
+    document.getElementById('dynamic-title6').innerText = "Periamet Masjid";
+    document.getElementById('dynamic-content6').innerText = "Periamet Masjid is a mosque located in Chennai, Tamil Nadu. The average rating of this place is 4.80 out of 5 stars based on 1164 reviews. The street address of this place is 61, Raja Muthiah Rd, Periamet, Periyamedu, Periyamet, Chennai, Tamil Nadu 600003, India. It is about 0.40 kilometers away from the Chennai Cent railway station.A historical structure now renovated and is like a jewel in the crown of chennai. The lighting during evening brings the mesmeric effect of this Ripon building.Talking of Periamet masjid, it's a very beautiful masjid and a right place to pray and meditate here. You will feel your soul uplifted.";
     document.getElementById('timings6').innerText = "Open 24/7";
   }
 }
@@ -460,7 +460,7 @@ function showSlides7(n) {
   thumbnails7[slideIndex7 - 1].classList.add("active7");
 
   // Set the caption
-  captionText7.innerHTML = "";
+  captionText7.innerHTML = "Preserving heritage, celebrating history.";
   if (slideIndex7 === 1) {
     document.getElementById('dynamic-title7').innerText = "The National Art Gallery";
     document.getElementById('dynamic-content7').innerText = "The National Art Gallery at the Government Museum Complex is one of the prominent heritage buildings in Chennai and one of the latest additions to the art galleries of the country.This massive sandstone building was built by the British in 1906 and was opened to the public after an extensive restoration in January 2021. If you are in the neighbourhood, this colonial and Indo-Saracenic style building is difficult to miss.National Gallery of Art is a must visit not only for the remarkable collection of art but for its magnificent architectural beauty as well.";
