@@ -279,8 +279,9 @@
         .popup-box {
             background: white;
             padding: 30px;
-            border-radius: 10px;
-            width: 300px;
+            border-radius: 5px;
+            width: 400px;
+            height: 300px;
             box-shadow: 0 0 10px black;
             font-family: sans-serif;
         }
@@ -303,6 +304,11 @@
         .end {
             background-color: black;
             height: 400px;
+        }
+
+        #closebtn {
+            width: 40px;
+            float: inline-end;
         }
     </style>
 </head>
@@ -560,14 +566,22 @@
                 const popup = document.createElement('div');
                 popup.className = 'popup-overlay';
                 popup.innerHTML = `
-                    <div class="popup-box">
-                        <h3>Enter Booking Details</h3>
-                        <input type="text" id="bookerName" placeholder="Your Name" required>
-                        <input type="text" id="mobile" placeholder="10-digit Mobile Number" required>
-                        <button id="confirmBooking">Confirm</button>
-                    </div>
-                `;
+            <div class="popup-box">
+                <button id="closebtn"><i class="fa-solid fa-times"></i></button>
+                <h3>Enter Booking Details</h3>
+                <br>
+                <input type="text" id="bookerName" placeholder="Your Name" required>
+                <input type="text" id="mobile" placeholder="10-digit Mobile Number" required>
+                <button id="confirmBooking">Confirm</button>
+            </div>
+        `;
                 document.body.appendChild(popup);
+
+                // Add event listener for close button
+                const closeButton = popup.querySelector('#closebtn');
+                closeButton.addEventListener('click', () => {
+                    popup.remove();  // Close the popup
+                });
 
                 // Handle confirm button click inside popup
                 document.getElementById('confirmBooking').addEventListener('click', () => {
@@ -604,9 +618,8 @@
                 });
             });
         });
+
     </script>
-
-
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>

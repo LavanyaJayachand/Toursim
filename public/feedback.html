@@ -1,0 +1,144 @@
+<!-- public/feedback.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+
+        .optional-note {
+            font-size: 12px;
+            color: #888;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your feedback makes our site better for everyone!</h1>
+        <form action="/submit-feedback" method="POST">
+            <label for="name">Name: <span style="color: red;">*</span></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place">
+
+            <label for="feedback">Your Feedback: <span style="color: red;">*</span></label>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+<script>
+    document.querySelector('form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const place = document.getElementById('place').value;
+        const feedback = document.getElementById('feedback').value;
+
+        try {
+            const response = await fetch('/submit-feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, place, feedback })
+            });
+
+            const result = await response.json();
+            alert(result.message);
+            if (result.message === 'Feedback submitted successfully!') {
+                document.querySelector('form').reset();
+            }
+        } catch (err) {
+            alert('Error submitting feedback!');
+            console.error(err);
+        }
+    });
+</script>
+
+
+</html>
